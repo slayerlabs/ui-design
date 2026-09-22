@@ -1,0 +1,24 @@
+:root{
+/* Everything is square. Radius exists only for dots and pills. */
+--radius-0:0px;
+--radius-pill:999px;
+--radius-dot:50%;
+
+--border-hair:1px;
+--border-rule:1.5px;
+--border-heavy:3px;
+
+--border:var(--border-hair) solid var(--rule);
+--border-soft:var(--border-hair) solid var(--rule-soft);
+--border-faint:var(--border-hair) solid var(--rule-faint);
+--border-heavy-solid:var(--border-heavy) solid var(--rule);
+
+/* No soft startup shadows. Only hard offset "printed" shadows, sparingly. */
+--shadow-none:none;
+--shadow-stamp:3px 3px 0 var(--carbon);
+--shadow-stamp-red:3px 3px 0 var(--red);
+--shadow-overlay:0 24px 60px rgba(17,17,17,.28);
+
+--dot-size:8px;
+--rivet-size:5px;
+}

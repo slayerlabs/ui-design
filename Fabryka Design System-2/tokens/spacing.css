@@ -1,0 +1,32 @@
+:root{
+/* 4px base, but the system leans on large industrial gutters */
+--space-0:0;
+--space-1:4px;
+--space-2:8px;
+--space-3:12px;
+--space-4:16px;
+--space-5:24px;
+--space-6:32px;
+--space-7:48px;
+--space-8:64px;
+--space-9:96px;
+--space-10:128px;
+--space-11:176px;
+
+--gutter:24px;            /* page gutter, mobile */
+--gutter-lg:40px;         /* page gutter, desktop */
+--measure:66ch;           /* max body measure */
+--page-max:1440px;
+--col-gap:24px;
+--grid-cols:12; /* @kind other */
+
+--section-pad-y:96px;
+--plate-pad:16px;
+--card-pad:20px;
+--control-pad-x:16px;
+--control-pad-y:10px;
+
+--control-h-sm:28px;
+--control-h:36px;
+--control-h-lg:46px;
+}

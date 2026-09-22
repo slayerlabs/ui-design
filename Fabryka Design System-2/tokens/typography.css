@@ -1,0 +1,38 @@
+:root{
+--font-display:"Archivo","Archivo Narrow","DIN Condensed","Helvetica Neue",Helvetica,sans-serif;
+--font-text:"Instrument Sans","Suisse Int'l","Helvetica Neue",Helvetica,sans-serif;
+--font-mono:"IBM Plex Mono","Berkeley Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+/* Display is always compressed + tight + caps */
+--display-stretch:68%;
+--display-weight:800;
+--display-tracking:-0.015em;
+--display-leading:0.86;
+
+/* Type scale (px) — display sizes are deliberately extreme */
+--size-display-1:132px;
+--size-display-2:88px;
+--size-display-3:56px;
+--size-display-4:38px;
+--size-heading:22px;
+--size-body-lg:19px;
+--size-body:16px;
+--size-body-sm:14px;
+--size-mono:13px;
+--size-mono-sm:11.5px;
+--size-label:11px;
+
+--leading-tight:1.08;
+--leading-body:1.5;
+--leading-mono:1.55;
+
+--track-label:0.14em;   /* mono/eyebrow labels: wide, all caps */
+--track-mono:0.02em;
+--track-body:0; /* @kind other */
+
+--weight-regular:400;
+--weight-medium:500;
+--weight-semibold:600;
+--weight-bold:700;
+--weight-black:900;
+}

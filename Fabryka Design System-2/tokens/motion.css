@@ -1,0 +1,12 @@
+:root{
+/* Mechanical, short, no bounce, no spring. Things switch state; they don't float. */
+--dur-instant:60ms; /* @kind other */
+--dur-fast:110ms; /* @kind other */
+--dur-base:180ms; /* @kind other */
+--dur-slow:320ms; /* @kind other */
+--ease-mech:cubic-bezier(.2,0,.2,1); /* @kind other */
+--ease-linear:linear; /* @kind other */
+--ease-step:steps(4,end); /* @kind other */
+--transition-control:background-color var(--dur-fast) var(--ease-mech),color var(--dur-fast) var(--ease-mech),border-color var(--dur-fast) var(--ease-mech);
+--blink:1.6s; /* @kind other */
+}
