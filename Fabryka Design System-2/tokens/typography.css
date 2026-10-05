@@ -1,19 +1,19 @@
 :root{
---font-display:"Archivo","Archivo Narrow","DIN Condensed","Helvetica Neue",Helvetica,sans-serif;
---font-text:"Instrument Sans","Suisse Int'l","Helvetica Neue",Helvetica,sans-serif;
---font-mono:"IBM Plex Mono","Berkeley Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+--font-display:"EB Garamond",Georgia,serif;
+--font-text:Inter,Arial,sans-serif;
+--font-mono:"JetBrains Mono",Menlo,monospace;
 
-/* Display is always compressed + tight + caps */
---display-stretch:68%;
---display-weight:800;
---display-tracking:-0.015em;
---display-leading:0.86;
+/* Editorial headlines use natural width and sentence case. */
+--display-stretch:normal;
+--display-weight:500;
+--display-tracking:-0.035em;
+--display-leading:0.96;
 
 /* Type scale (px) — display sizes are deliberately extreme */
---size-display-1:132px;
---size-display-2:88px;
---size-display-3:56px;
---size-display-4:38px;
+--size-display-1:108px;
+--size-display-2:86px;
+--size-display-3:66px;
+--size-display-4:42px;
 --size-heading:22px;
 --size-body-lg:19px;
 --size-body:16px;
@@ -36,3 +36,5 @@
 --weight-bold:700;
 --weight-black:900;
 }
+
+:root{--font-ui:var(--font-text);--font-research:Geist,system-ui,sans-serif;--serif:var(--font-display);--sans:var(--font-text);--mono:var(--font-mono);--size-nav:16px;--size-nav-mobile:15px;}

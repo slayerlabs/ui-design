@@ -12,7 +12,7 @@ export function ProductionPlate({ title = "Production Plate", serial, territory 
   return (
     <div style={{ width, background: bg, color: fg, border: `1.5px solid ${carbon ? "var(--paper)" : "var(--carbon)"}`, position: "relative", ...style }} {...rest}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 12px", borderBottom: `1px solid ${rule}` }}>
-        <span style={{ fontFamily: "var(--font-display)", fontWeight: 900, fontStretch: "66%", fontSize: 17, textTransform: "uppercase", letterSpacing: "-0.02em", lineHeight: 1 }}>
+        <span style={{ fontFamily: "var(--font-display)", fontWeight: 500, fontStretch: "normal", fontSize: 17, textTransform: "uppercase", letterSpacing: "-0.02em", lineHeight: 1 }}>
           Fabryka<span style={{ color: "var(--red)" }}>.</span>
         </span>
         <span style={{ ...mono, color: carbon ? "var(--grey)" : "var(--text-muted)" }}>{territory}</span>

@@ -1,5 +1,5 @@
 :root{
-/* Everything is square. Radius exists only for dots and pills. */
+/* Square editorial panels; production hero actions may use 4px corners. */
 --radius-0:0px;
 --radius-pill:999px;
 --radius-dot:50%;
@@ -22,3 +22,5 @@
 --dot-size:8px;
 --rivet-size:5px;
 }
+
+:root{--radius-control:4px;--radius-card:0px;}

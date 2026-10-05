@@ -1,0 +1,27 @@
+{
+  "name": "fabryka-ui-design-20261005",
+  "version": "1.0.0",
+  "description": "Fabryka production design system",
+  "main": "index.js",
+  "scripts": {
+    "build": "node \"Fabryka Design System-2/scripts/build.cjs\"",
+    "check": "node \"Fabryka Design System-2/scripts/check.cjs\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slayerlabs/ui-design.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/slayerlabs/ui-design/issues"
+  },
+  "homepage": "https://github.com/slayerlabs/ui-design#readme",
+  "devDependencies": {
+    "@babel/core": "^8.0.6",
+    "@babel/plugin-transform-react-jsx": "^8.0.1"
+  },
+  "private": true
+}

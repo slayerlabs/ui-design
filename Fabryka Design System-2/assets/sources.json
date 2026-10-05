@@ -1,0 +1,50 @@
+{
+  "checkedOn": "2026-10-05",
+  "sources": [
+    {
+      "file": "fabryka-lockup-ink.svg",
+      "url": "https://fabryka.ai/assets/brand/fabryka-lockup-ink.svg",
+      "sha256": "8eabd051f2e36ff75d29e8b56515a4d49c709cdc140c92f2687ef699c49292a5"
+    },
+    {
+      "file": "fabryka-lockup-paper.svg",
+      "url": "https://fabryka.ai/assets/brand/fabryka-lockup-paper.svg",
+      "sha256": "5833fe6fb177403afd3f21c0fd6f47bfa0919afc02651229d8eb9c2b4d809c40"
+    },
+    {
+      "file": "fabryka-mark-ink.svg",
+      "url": "https://fabryka.ai/assets/brand/fabryka-mark-ink.svg",
+      "sha256": "df321f41235dcd3a39d60512fdcae86815efadb6f36e4bb920b9717a18e35fe4"
+    },
+    {
+      "file": "fabryka-mark-paper.svg",
+      "url": "https://fabryka.ai/assets/brand/fabryka-mark-paper.svg",
+      "sha256": "805c3def547a083aa1a43a31443bfc8df634c8f2f26727fbb12f3b57cb1486c9"
+    },
+    {
+      "file": "fabryka-mark.svg",
+      "url": "https://fabryka.ai/assets/brand/fabryka-mark.svg",
+      "sha256": "140f208dcda87f9310b9d5db10b87941a3977290474d8f2a27b1b957b8181431"
+    },
+    {
+      "file": "source-factory-landing.css",
+      "url": "https://fabryka.ai/factory-landing.css",
+      "sha256": "891703c5d46ddc0a4c507326657d2f0e66360cb114db602681711276dcbe82f0"
+    },
+    {
+      "file": "source-home.html",
+      "url": "https://fabryka.ai/",
+      "sha256": "9bdaf0f2cef1141f7183fbeb2cc4f7dc760468cf30acc4059135609d5da61046"
+    },
+    {
+      "file": "source-research.css",
+      "url": "https://fabryka.ai/research.css",
+      "sha256": "ad5cdab73d15dbc3959fb06cb00a6f0ff4e55b446586b0fe436f973fa2829850"
+    },
+    {
+      "file": "source-styles.css",
+      "url": "https://fabryka.ai/styles.css",
+      "sha256": "377dbf68659163e6975744396347ea70b10beb37cb3ca349d81e24c60a5cd8c6"
+    }
+  ]
+}

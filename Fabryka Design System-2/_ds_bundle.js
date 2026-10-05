@@ -1,16 +1,7 @@
-/* @ds-bundle: {"format":4,"namespace":"FabrykaDesignSystem_ec938d","components":[{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"StatusBadge","sourcePath":"components/core/StatusBadge.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"FigureFrame","sourcePath":"components/factory/FigureFrame.jsx"},{"name":"MachineLog","sourcePath":"components/factory/MachineLog.jsx"},{"name":"MetricReadout","sourcePath":"components/factory/MetricReadout.jsx"},{"name":"ProductionPlate","sourcePath":"components/factory/ProductionPlate.jsx"},{"name":"SpecTable","sourcePath":"components/factory/SpecTable.jsx"},{"name":"TestStamp","sourcePath":"components/factory/TestStamp.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"Tooltip","sourcePath":"components/feedback/Tooltip.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Radio","sourcePath":"components/forms/Radio.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Icon","sourcePath":"components/identity/Icon.jsx"},{"name":"Wordmark","sourcePath":"components/identity/Wordmark.jsx"},{"name":"Fmark","sourcePath":"components/identity/Wordmark.jsx"},{"name":"SectionMarker","sourcePath":"components/navigation/SectionMarker.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"}],"sourceHashes":{"components/core/Button.jsx":"8ecfe5ced1b3","components/core/Card.jsx":"9f74bba6f101","components/core/IconButton.jsx":"535adc7f5524","components/core/StatusBadge.jsx":"16aa56635fe7","components/core/Tag.jsx":"1a036cba0e63","components/factory/FigureFrame.jsx":"533dd88b9a60","components/factory/MachineLog.jsx":"8923d564866b","components/factory/MetricReadout.jsx":"5b27c8a24ebf","components/factory/ProductionPlate.jsx":"576deb818401","components/factory/SpecTable.jsx":"80c3a66d1d16","components/factory/TestStamp.jsx":"7aa2e20f179f","components/feedback/Dialog.jsx":"efa21c822fdc","components/feedback/Tooltip.jsx":"7f808acc02d6","components/forms/Checkbox.jsx":"ebb0606d8bed","components/forms/Input.jsx":"f06d0b1ca8f5","components/forms/Radio.jsx":"474b1c56a2f1","components/forms/Select.jsx":"01edd1377a02","components/forms/Switch.jsx":"92a8f077fdb6","components/identity/Icon.jsx":"298295f687f0","components/identity/Wordmark.jsx":"d01c252666c0","components/navigation/SectionMarker.jsx":"257b8001a30c","components/navigation/Tabs.jsx":"5902dd85cb56","ui_kits/codesota/Leaderboard.jsx":"7d34bad9f57c","ui_kits/website/Chrome.jsx":"8169bc06c1eb","ui_kits/website/Home.jsx":"c8c1a345fbcc","ui_kits/website/Pages.jsx":"bff75b588242","ui_kits/website/_archive/Home.v1.jsx":"eceb9b574063","ui_kits/website/doc-page.js":"f52ae9c02fca"},"inlinedExternals":[],"unexposedExports":[]} */
-
-(() => {
-
-const __ds_ns = (window.FabrykaDesignSystem_ec938d = window.FabrykaDesignSystem_ec938d || {});
-
-const __ds_scope = {};
-
-(__ds_ns.__errors = __ds_ns.__errors || []);
-
+/* @ds-bundle: {"format":4,"namespace":"FabrykaDesignSystem_ec938d","components":[{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"StatusBadge","sourcePath":"components/core/StatusBadge.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"FigureFrame","sourcePath":"components/factory/FigureFrame.jsx"},{"name":"MachineLog","sourcePath":"components/factory/MachineLog.jsx"},{"name":"MetricReadout","sourcePath":"components/factory/MetricReadout.jsx"},{"name":"ProductionPlate","sourcePath":"components/factory/ProductionPlate.jsx"},{"name":"SpecTable","sourcePath":"components/factory/SpecTable.jsx"},{"name":"TestStamp","sourcePath":"components/factory/TestStamp.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"Tooltip","sourcePath":"components/feedback/Tooltip.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Radio","sourcePath":"components/forms/Radio.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Icon","sourcePath":"components/identity/Icon.jsx"},{"name":"Wordmark","sourcePath":"components/identity/Wordmark.jsx"},{"name":"Fmark","sourcePath":"components/identity/Wordmark.jsx"},{"name":"SectionMarker","sourcePath":"components/navigation/SectionMarker.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"}],"sourceHashes":{"components/core/Button.jsx":"421ad699e385","components/core/Card.jsx":"9f74bba6f101","components/core/IconButton.jsx":"535adc7f5524","components/core/StatusBadge.jsx":"16aa56635fe7","components/core/Tag.jsx":"1a036cba0e63","components/factory/FigureFrame.jsx":"533dd88b9a60","components/factory/MachineLog.jsx":"8923d564866b","components/factory/MetricReadout.jsx":"595557abdeb9","components/factory/ProductionPlate.jsx":"5ba81933b6be","components/factory/SpecTable.jsx":"80c3a66d1d16","components/factory/TestStamp.jsx":"174de6ddfc71","components/feedback/Dialog.jsx":"efa21c822fdc","components/feedback/Tooltip.jsx":"7f808acc02d6","components/forms/Checkbox.jsx":"ebb0606d8bed","components/forms/Input.jsx":"9781ca8e48c5","components/forms/Radio.jsx":"474b1c56a2f1","components/forms/Select.jsx":"73bc029e5b50","components/forms/Switch.jsx":"92a8f077fdb6","components/identity/Icon.jsx":"298295f687f0","components/identity/Wordmark.jsx":"679806ce6025","components/navigation/SectionMarker.jsx":"257b8001a30c","components/navigation/Tabs.jsx":"79897284c8c1","ui_kits/codesota/Leaderboard.jsx":"7d34bad9f57c","ui_kits/website/Chrome.jsx":"36ee1703f86e","ui_kits/website/Home.jsx":"e8bbe5ced97e","ui_kits/website/Pages.jsx":"bff75b588242","ui_kits/website/_archive/Home.v1.jsx":"eceb9b574063","ui_kits/website/doc-page.js":"f52ae9c02fca"},"inlinedExternals":[],"unexposedExports":[]} */
+(()=>{const __ds_ns=(window.FabrykaDesignSystem_ec938d=window.FabrykaDesignSystem_ec938d||{});const __ds_scope={};__ds_ns.__errors=[];
 // components/core/Button.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const SIZES = {
   sm: {
     h: "var(--control-h-sm)",
@@ -54,11 +45,11 @@ function Button({
     gap: s.gap,
     height: s.h,
     padding: `0 ${s.px}px`,
-    fontFamily: "var(--font-mono)",
+    fontFamily: "var(--font-text)",
     fontSize: s.fs,
     fontWeight: 500,
-    letterSpacing: "var(--track-label)",
-    textTransform: "uppercase",
+    letterSpacing: "normal",
+    textTransform: "none",
     borderRadius: 0,
     border: "1px solid var(--rule)",
     cursor: disabled ? "not-allowed" : "pointer",
@@ -137,22 +128,25 @@ function Button({
     onMouseUp: () => setDown(false)
   };
   const inner = /*#__PURE__*/React.createElement(React.Fragment, null, iconLeft, children, iconRight);
-  if (href && !disabled) return /*#__PURE__*/React.createElement("a", _extends({
+  if (href && !disabled) return /*#__PURE__*/React.createElement("a", {
     href: href,
-    style: st
-  }, handlers, rest), inner);
-  return /*#__PURE__*/React.createElement("button", _extends({
+    style: st,
+    ...handlers,
+    ...rest
+  }, inner);
+  return /*#__PURE__*/React.createElement("button", {
     type: "button",
     disabled: disabled,
-    style: st
-  }, handlers, rest), inner);
+    style: st,
+    ...handlers,
+    ...rest
+  }, inner);
 }
-Object.assign(__ds_scope, { Button });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/Button.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Button=Button;__ds_ns.Button=Button;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/core/Button.jsx",error:String(e.message||e)});}
 
 // components/core/Card.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Hairline square panel. Optional mono header rail and corner index. */
 function Card({
   label,
@@ -183,7 +177,7 @@ function Card({
       color: "var(--paper)"
     }
   };
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/React.createElement("div", {
     onMouseEnter: () => setOver(true),
     onMouseLeave: () => setOver(false),
     style: {
@@ -195,8 +189,9 @@ function Card({
         background: tone === "carbon" ? "var(--carbon-3)" : "var(--paper-2)"
       } : null),
       ...style
-    }
-  }, rest), (label || index) && /*#__PURE__*/React.createElement("div", {
+    },
+    ...rest
+  }, (label || index) && /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       justifyContent: "space-between",
@@ -215,12 +210,97 @@ function Card({
     }
   }, children));
 }
-Object.assign(__ds_scope, { Card });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/Card.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Card=Card;__ds_ns.Card=Card;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/core/Card.jsx",error:String(e.message||e)});}
+
+// components/core/IconButton.jsx
+try { (() => {
+const {
+  Icon
+} = __ds_scope;
+
+/* Square icon button. Same chassis as Button, 1:1 footprint. */
+function IconButton({
+  icon,
+  label,
+  variant = "secondary",
+  size = "md",
+  disabled,
+  style,
+  ...rest
+}) {
+  const dim = size === "sm" ? 28 : size === "lg" ? 46 : 36;
+  const [over, setOver] = React.useState(false);
+  const variants = {
+    primary: {
+      background: "var(--carbon)",
+      color: "var(--paper)",
+      borderColor: "var(--carbon)"
+    },
+    accent: {
+      background: "var(--red)",
+      color: "var(--paper)",
+      borderColor: "var(--red)"
+    },
+    solid: {
+      background: "var(--carbon)",
+      color: "var(--paper)",
+      borderColor: "var(--carbon)"
+    },
+    secondary: {
+      background: "transparent",
+      color: "var(--text-body)",
+      borderColor: "var(--rule)"
+    },
+    ghost: {
+      background: "transparent",
+      color: "var(--text-muted)",
+      borderColor: "transparent"
+    }
+  };
+  const hovered = over && !disabled ? variant === "accent" ? {
+    background: "var(--red-dark)"
+  } : variant === "primary" ? {
+    background: "var(--carbon-3)"
+  } : variant === "ghost" ? {
+    color: "var(--red)"
+  } : {
+    background: "var(--carbon)",
+    color: "var(--surface)",
+    borderColor: "var(--carbon)"
+  } : null;
+  return /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    "aria-label": label,
+    title: label,
+    disabled: disabled,
+    onMouseEnter: () => setOver(true),
+    onMouseLeave: () => setOver(false),
+    style: {
+      display: "inline-grid",
+      placeItems: "center",
+      width: dim,
+      height: dim,
+      border: "1px solid var(--rule)",
+      borderRadius: 0,
+      cursor: disabled ? "not-allowed" : "pointer",
+      opacity: disabled ? 0.38 : 1,
+      transition: "var(--transition-control)",
+      ...variants[variant],
+      ...hovered,
+      ...style
+    },
+    ...rest
+  }, typeof icon === "string" ? /*#__PURE__*/React.createElement(Icon, {
+    name: icon,
+    size: size === "sm" ? 13 : 16
+  }) : icon);
+}
+__ds_scope.IconButton=IconButton;__ds_ns.IconButton=IconButton;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/core/IconButton.jsx",error:String(e.message||e)});}
 
 // components/core/StatusBadge.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const STATES = {
   live: {
     label: "LIVE",
@@ -263,7 +343,7 @@ function StatusBadge({
   ...rest
 }) {
   const s = STATES[state] || STATES.live;
-  return /*#__PURE__*/React.createElement("span", _extends({
+  return /*#__PURE__*/React.createElement("span", {
     style: {
       display: "inline-flex",
       alignItems: "center",
@@ -274,8 +354,9 @@ function StatusBadge({
       textTransform: "uppercase",
       color: "var(--text-body)",
       ...style
-    }
-  }, rest), showDot && /*#__PURE__*/React.createElement("span", {
+    },
+    ...rest
+  }, showDot && /*#__PURE__*/React.createElement("span", {
     style: {
       width: "var(--dot-size)",
       height: "var(--dot-size)",
@@ -285,12 +366,11 @@ function StatusBadge({
     }
   }), /*#__PURE__*/React.createElement("span", null, label || s.label), /*#__PURE__*/React.createElement("style", null, "@keyframes f-blink{0%,60%{opacity:1}61%,100%{opacity:.25}}"));
 }
-Object.assign(__ds_scope, { StatusBadge });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/StatusBadge.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.StatusBadge=StatusBadge;__ds_ns.StatusBadge=StatusBadge;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/core/StatusBadge.jsx",error:String(e.message||e)});}
 
 // components/core/Tag.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Machine-label tag: mono, caps, hairline box. Used for routes, quantizations, lines. */
 function Tag({
   children,
@@ -327,7 +407,7 @@ function Tag({
     }
   };
   const pad = size === "sm" ? "2px 5px" : "3px 7px";
-  return /*#__PURE__*/React.createElement("span", _extends({
+  return /*#__PURE__*/React.createElement("span", {
     style: {
       display: "inline-block",
       fontFamily: "var(--font-mono)",
@@ -340,15 +420,15 @@ function Tag({
       borderRadius: 0,
       ...tones[tone],
       ...style
-    }
-  }, rest), children);
+    },
+    ...rest
+  }, children);
 }
-Object.assign(__ds_scope, { Tag });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/Tag.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Tag=Tag;__ds_ns.Tag=Tag;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/core/Tag.jsx",error:String(e.message||e)});}
 
 // components/factory/FigureFrame.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Annotated figure frame: hard-flash hardware photography or a technical chart,
    captioned like a plate in an equipment manual. `src` optional — an empty frame
    renders the annotation block only, ready for a real photograph. */
@@ -363,12 +443,13 @@ function FigureFrame({
   style,
   ...rest
 }) {
-  return /*#__PURE__*/React.createElement("figure", _extends({
+  return /*#__PURE__*/React.createElement("figure", {
     style: {
       margin: 0,
       ...style
-    }
-  }, rest), /*#__PURE__*/React.createElement("div", {
+    },
+    ...rest
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
       position: "relative",
       aspectRatio: ratio,
@@ -438,12 +519,11 @@ function FigureFrame({
     key: i
   }, a))));
 }
-Object.assign(__ds_scope, { FigureFrame });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/factory/FigureFrame.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.FigureFrame=FigureFrame;__ds_ns.FigureFrame=FigureFrame;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/factory/FigureFrame.jsx",error:String(e.message||e)});}
 
 // components/factory/MachineLog.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Terminal/console block: aligned key–value machine output on carbon.
    Pass `lines` as [{k,v}] or raw strings. */
 function MachineLog({
@@ -457,7 +537,7 @@ function MachineLog({
   const carbon = tone === "carbon";
   const fg = carbon ? "var(--paper)" : "var(--carbon)";
   const width = lines.reduce((m, l) => l && l.k ? Math.max(m, String(l.k).length) : m, 0);
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       background: carbon ? "var(--carbon)" : "var(--paper-2)",
       color: fg,
@@ -466,8 +546,9 @@ function MachineLog({
       fontSize: 12.5,
       lineHeight: "var(--leading-mono)",
       ...style
-    }
-  }, rest), title && /*#__PURE__*/React.createElement("div", {
+    },
+    ...rest
+  }, title && /*#__PURE__*/React.createElement("div", {
     style: {
       padding: `${pad - 6}px ${pad}px`,
       borderBottom: `1px solid ${carbon ? "rgba(241,239,232,.2)" : "var(--rule-faint)"}`,
@@ -502,12 +583,11 @@ function MachineLog({
     }, l.v), i < lines.length - 1 ? "\n" : "");
   })));
 }
-Object.assign(__ds_scope, { MachineLog });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/factory/MachineLog.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.MachineLog=MachineLog;__ds_ns.MachineLog=MachineLog;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/factory/MachineLog.jsx",error:String(e.message||e)});}
 
 // components/factory/MetricReadout.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Giant measured number + mono caption. The primary "hero graphic" of the brand. */
 function MetricReadout({
   value,
@@ -521,7 +601,7 @@ function MetricReadout({
   ...rest
 }) {
   const fs = size === "xl" ? 96 : size === "lg" ? 64 : size === "md" ? 44 : 30;
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       flexDirection: "column",
@@ -529,8 +609,9 @@ function MetricReadout({
       alignItems: align === "right" ? "flex-end" : "flex-start",
       textAlign: align,
       ...style
-    }
-  }, rest), label && /*#__PURE__*/React.createElement("span", {
+    },
+    ...rest
+  }, label && /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: "var(--font-mono)",
       fontSize: 11,
@@ -549,7 +630,7 @@ function MetricReadout({
     style: {
       fontFamily: "var(--font-display)",
       fontWeight: 800,
-      fontStretch: "66%",
+      fontStretch: "normal",
       fontSize: fs,
       lineHeight: 0.82,
       letterSpacing: "-0.02em",
@@ -571,12 +652,15 @@ function MetricReadout({
     }
   }, note));
 }
-Object.assign(__ds_scope, { MetricReadout });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/factory/MetricReadout.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.MetricReadout=MetricReadout;__ds_ns.MetricReadout=MetricReadout;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/factory/MetricReadout.jsx",error:String(e.message||e)});}
 
 // components/factory/ProductionPlate.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const {
+  StatusBadge
+} = __ds_scope;
+
 /* THE core brand device. A riveted machine plate, rendered in HTML.
    Header rail (brand + territory) → plate title + serial → spec rows → footer stamp. */
 function ProductionPlate({
@@ -601,7 +685,7 @@ function ProductionPlate({
     letterSpacing: "var(--track-label)",
     textTransform: "uppercase"
   };
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width,
       background: bg,
@@ -609,8 +693,9 @@ function ProductionPlate({
       border: `1.5px solid ${carbon ? "var(--paper)" : "var(--carbon)"}`,
       position: "relative",
       ...style
-    }
-  }, rest), /*#__PURE__*/React.createElement("div", {
+    },
+    ...rest
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       justifyContent: "space-between",
@@ -621,8 +706,8 @@ function ProductionPlate({
   }, /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: "var(--font-display)",
-      fontWeight: 900,
-      fontStretch: "66%",
+      fontWeight: 500,
+      fontStretch: "normal",
       fontSize: 17,
       textTransform: "uppercase",
       letterSpacing: "-0.02em",
@@ -689,7 +774,7 @@ function ProductionPlate({
       padding: "8px 12px",
       borderTop: `1px solid ${rule}`
     }
-  }, status ? /*#__PURE__*/React.createElement(__ds_scope.StatusBadge, {
+  }, status ? /*#__PURE__*/React.createElement(StatusBadge, {
     state: status
   }) : /*#__PURE__*/React.createElement("span", null), tested && /*#__PURE__*/React.createElement("span", {
     style: {
@@ -698,12 +783,11 @@ function ProductionPlate({
     }
   }, "Tested ", tested)));
 }
-Object.assign(__ds_scope, { ProductionPlate });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/factory/ProductionPlate.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.ProductionPlate=ProductionPlate;__ds_ns.ProductionPlate=ProductionPlate;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/factory/ProductionPlate.jsx",error:String(e.message||e)});}
 
 // components/factory/SpecTable.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Measurement table — hairline rules, mono figures, right-aligned numerics.
    Looks like a table in an equipment manual, not a dashboard widget. */
 function SpecTable({
@@ -716,11 +800,12 @@ function SpecTable({
   ...rest
 }) {
   const pad = dense ? "5px 10px" : "9px 12px";
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       ...style
-    }
-  }, rest), (figure || caption) && /*#__PURE__*/React.createElement("div", {
+    },
+    ...rest
+  }, (figure || caption) && /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       gap: 12,
@@ -777,12 +862,11 @@ function SpecTable({
     }, typeof cell === "object" && cell !== null ? cell : cell);
   }))))));
 }
-Object.assign(__ds_scope, { SpecTable });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/factory/SpecTable.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.SpecTable=SpecTable;__ds_ns.SpecTable=SpecTable;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/factory/SpecTable.jsx",error:String(e.message||e)});}
 
 // components/factory/TestStamp.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Inspection stamp: F / test number / pass-fail lines. Never stars, never scores out of 10. */
 function TestStamp({
   code = "F/WAW",
@@ -793,7 +877,7 @@ function TestStamp({
   ...rest
 }) {
   const c = tone === "red" ? "var(--red)" : "var(--carbon)";
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       display: "inline-block",
       border: `2px solid ${c}`,
@@ -801,8 +885,9 @@ function TestStamp({
       padding: "8px 10px",
       background: "transparent",
       ...style
-    }
-  }, rest), /*#__PURE__*/React.createElement("div", {
+    },
+    ...rest
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       alignItems: "center",
@@ -814,8 +899,8 @@ function TestStamp({
   }, /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: "var(--font-display)",
-      fontWeight: 900,
-      fontStretch: "66%",
+      fontWeight: 500,
+      fontStretch: "normal",
       fontSize: 26,
       lineHeight: 0.8,
       textTransform: "uppercase"
@@ -846,12 +931,104 @@ function TestStamp({
     }
   }, /*#__PURE__*/React.createElement("span", null, ch.k), /*#__PURE__*/React.createElement("span", null, ch.v)))));
 }
-Object.assign(__ds_scope, { TestStamp });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/factory/TestStamp.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.TestStamp=TestStamp;__ds_ns.TestStamp=TestStamp;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/factory/TestStamp.jsx",error:String(e.message||e)});}
+
+// components/feedback/Dialog.jsx
+try { (() => {
+const {
+  IconButton
+} = __ds_scope;
+
+/* Square modal on a carbon scrim. Header is a mono rail with a document number. */
+function Dialog({
+  open = true,
+  title,
+  docNumber,
+  children,
+  footer,
+  onClose,
+  width = 520,
+  style,
+  ...rest
+}) {
+  if (!open) return null;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "fixed",
+      inset: 0,
+      background: "rgba(17,17,17,.62)",
+      display: "grid",
+      placeItems: "center",
+      zIndex: 100,
+      padding: 24
+    },
+    onClick: onClose
+  }, /*#__PURE__*/React.createElement("div", {
+    onClick: e => e.stopPropagation(),
+    style: {
+      width,
+      maxWidth: "100%",
+      background: "var(--surface-raised)",
+      border: "1px solid var(--rule)",
+      boxShadow: "var(--shadow-overlay)",
+      ...style
+    },
+    ...rest
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: 16,
+      padding: "10px 12px",
+      borderBottom: "1px solid var(--rule)",
+      background: "var(--carbon)",
+      color: "var(--paper)"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: "flex",
+      gap: 12,
+      alignItems: "baseline",
+      fontFamily: "var(--font-mono)",
+      fontSize: 11,
+      letterSpacing: "var(--track-label)",
+      textTransform: "uppercase"
+    }
+  }, /*#__PURE__*/React.createElement("span", null, title), docNumber && /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: "var(--grey)"
+    }
+  }, docNumber)), onClose && /*#__PURE__*/React.createElement(IconButton, {
+    icon: "x",
+    label: "Close",
+    variant: "ghost",
+    size: "sm",
+    onClick: onClose,
+    style: {
+      color: "var(--paper)"
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: 20
+    }
+  }, children), footer && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "flex-end",
+      gap: 8,
+      padding: 12,
+      borderTop: "1px solid var(--rule-soft)",
+      background: "var(--paper-2)"
+    }
+  }, footer)));
+}
+__ds_scope.Dialog=Dialog;__ds_ns.Dialog=Dialog;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/feedback/Dialog.jsx",error:String(e.message||e)});}
 
 // components/feedback/Tooltip.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Carbon mono tooltip, square, instant. Appears on hover with no fade-in delay theatre. */
 function Tooltip({
   content,
@@ -883,15 +1060,16 @@ function Tooltip({
       transform: "translateY(-50%)"
     }
   }[side];
-  return /*#__PURE__*/React.createElement("span", _extends({
+  return /*#__PURE__*/React.createElement("span", {
     style: {
       position: "relative",
       display: "inline-flex",
       ...style
     },
     onMouseEnter: () => setOver(true),
-    onMouseLeave: () => setOver(false)
-  }, rest), children, over && /*#__PURE__*/React.createElement("span", {
+    onMouseLeave: () => setOver(false),
+    ...rest
+  }, children, over && /*#__PURE__*/React.createElement("span", {
     style: {
       position: "absolute",
       ...pos,
@@ -907,12 +1085,11 @@ function Tooltip({
     }
   }, content));
 }
-Object.assign(__ds_scope, { Tooltip });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/Tooltip.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Tooltip=Tooltip;__ds_ns.Tooltip=Tooltip;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/feedback/Tooltip.jsx",error:String(e.message||e)});}
 
 // components/forms/Checkbox.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Square box, red fill, hard tick. Inspection-form logic. */
 function Checkbox({
   label,
@@ -931,7 +1108,7 @@ function Checkbox({
     if (checked === undefined) setInner(!on);
     onChange && onChange(!on);
   };
-  return /*#__PURE__*/React.createElement("label", _extends({
+  return /*#__PURE__*/React.createElement("label", {
     onClick: toggle,
     style: {
       display: "inline-flex",
@@ -940,8 +1117,9 @@ function Checkbox({
       cursor: disabled ? "not-allowed" : "pointer",
       opacity: disabled ? 0.4 : 1,
       ...style
-    }
-  }, rest), /*#__PURE__*/React.createElement("span", {
+    },
+    ...rest
+  }, /*#__PURE__*/React.createElement("span", {
     style: {
       width: 16,
       height: 16,
@@ -980,12 +1158,11 @@ function Checkbox({
     }
   }, hint)));
 }
-Object.assign(__ds_scope, { Checkbox });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/Checkbox.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Checkbox=Checkbox;__ds_ns.Checkbox=Checkbox;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/forms/Checkbox.jsx",error:String(e.message||e)});}
 
 // components/forms/Input.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Field label sits above in mono caps; the input itself is a hairline box, no radius. */
 function Input({
   label,
@@ -1009,10 +1186,10 @@ function Input({
     }
   }, label && /*#__PURE__*/React.createElement("span", {
     style: {
-      fontFamily: "var(--font-mono)",
+      fontFamily: "var(--font-text)",
       fontSize: 11,
-      letterSpacing: "var(--track-label)",
-      textTransform: "uppercase",
+      letterSpacing: "normal",
+      textTransform: "none",
       color: "var(--text-muted)"
     }
   }, label), /*#__PURE__*/React.createElement("span", {
@@ -1027,11 +1204,11 @@ function Input({
   }, prefix && /*#__PURE__*/React.createElement("span", {
     style: {
       padding: "0 8px",
-      fontFamily: "var(--font-mono)",
+      fontFamily: "var(--font-text)",
       fontSize: 12,
       color: "var(--text-faint)"
     }
-  }, prefix), /*#__PURE__*/React.createElement("input", _extends({
+  }, prefix), /*#__PURE__*/React.createElement("input", {
     onFocus: () => setFocus(true),
     onBlur: () => setFocus(false),
     style: {
@@ -1043,34 +1220,34 @@ function Input({
       outline: "none",
       background: "transparent",
       color: "var(--text-body)",
-      fontFamily: "var(--font-mono)",
+      fontFamily: "var(--font-text)",
       fontSize: 13,
       letterSpacing: "var(--track-mono)",
       ...style
-    }
-  }, rest)), suffix && /*#__PURE__*/React.createElement("span", {
+    },
+    ...rest
+  }), suffix && /*#__PURE__*/React.createElement("span", {
     style: {
       padding: "0 8px",
-      fontFamily: "var(--font-mono)",
+      fontFamily: "var(--font-text)",
       fontSize: 11,
-      letterSpacing: "var(--track-label)",
-      textTransform: "uppercase",
+      letterSpacing: "normal",
+      textTransform: "none",
       color: "var(--text-faint)"
     }
   }, suffix)), (hint || error) && /*#__PURE__*/React.createElement("span", {
     style: {
-      fontFamily: "var(--font-mono)",
+      fontFamily: "var(--font-text)",
       fontSize: 11,
       color: error ? "var(--red)" : "var(--text-faint)"
     }
   }, error || hint));
 }
-Object.assign(__ds_scope, { Input });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/Input.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Input=Input;__ds_ns.Input=Input;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/forms/Input.jsx",error:String(e.message||e)});}
 
 // components/forms/Radio.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Radio group. Square dots — the system has no circles except status LEDs. */
 function Radio({
   name,
@@ -1085,15 +1262,16 @@ function Radio({
 }) {
   const [inner, setInner] = React.useState(defaultValue);
   const sel = value === undefined ? inner : value;
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/React.createElement("div", {
     role: "radiogroup",
     style: {
       display: "flex",
       flexDirection: direction,
       gap: direction === "row" ? 20 : 10,
       ...style
-    }
-  }, rest), options.map(o => {
+    },
+    ...rest
+  }, options.map(o => {
     const v = typeof o === "string" ? o : o.value;
     const l = typeof o === "string" ? o : o.label;
     const on = sel === v;
@@ -1136,12 +1314,11 @@ function Radio({
     }, l));
   }));
 }
-Object.assign(__ds_scope, { Radio });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/Radio.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Radio=Radio;__ds_ns.Radio=Radio;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/forms/Radio.jsx",error:String(e.message||e)});}
 
 // components/forms/Select.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 function Select({
   label,
   options = [],
@@ -1161,10 +1338,10 @@ function Select({
     }
   }, label && /*#__PURE__*/React.createElement("span", {
     style: {
-      fontFamily: "var(--font-mono)",
+      fontFamily: "var(--font-text)",
       fontSize: 11,
-      letterSpacing: "var(--track-label)",
-      textTransform: "uppercase",
+      letterSpacing: "normal",
+      textTransform: "none",
       color: "var(--text-muted)"
     }
   }, label), /*#__PURE__*/React.createElement("span", {
@@ -1172,7 +1349,7 @@ function Select({
       position: "relative",
       display: "block"
     }
-  }, /*#__PURE__*/React.createElement("select", _extends({
+  }, /*#__PURE__*/React.createElement("select", {
     style: {
       appearance: "none",
       width: "100%",
@@ -1182,12 +1359,13 @@ function Select({
       border: "1px solid var(--rule-soft)",
       borderRadius: 0,
       color: "var(--text-body)",
-      fontFamily: "var(--font-mono)",
+      fontFamily: "var(--font-text)",
       fontSize: 13,
       cursor: "pointer",
       ...style
-    }
-  }, rest), options.map(o => {
+    },
+    ...rest
+  }, options.map(o => {
     const v = typeof o === "string" ? o : o.value;
     const l = typeof o === "string" ? o : o.label;
     return /*#__PURE__*/React.createElement("option", {
@@ -1201,24 +1379,23 @@ function Select({
       top: "50%",
       transform: "translateY(-50%)",
       pointerEvents: "none",
-      fontFamily: "var(--font-mono)",
+      fontFamily: "var(--font-text)",
       fontSize: 11,
       color: "var(--text-muted)"
     }
-  }, "\u25BE")), hint && /*#__PURE__*/React.createElement("span", {
+  }, "▾")), hint && /*#__PURE__*/React.createElement("span", {
     style: {
-      fontFamily: "var(--font-mono)",
+      fontFamily: "var(--font-text)",
       fontSize: 11,
       color: "var(--text-faint)"
     }
   }, hint));
 }
-Object.assign(__ds_scope, { Select });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/Select.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Select=Select;__ds_ns.Select=Select;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/forms/Select.jsx",error:String(e.message||e)});}
 
 // components/forms/Switch.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Industrial rocker switch: square travel, ON/OFF legend, no easing bounce. */
 function Switch({
   checked,
@@ -1237,7 +1414,7 @@ function Switch({
     if (checked === undefined) setInner(!on);
     onChange && onChange(!on);
   };
-  return /*#__PURE__*/React.createElement("label", _extends({
+  return /*#__PURE__*/React.createElement("label", {
     onClick: toggle,
     style: {
       display: "inline-flex",
@@ -1246,8 +1423,9 @@ function Switch({
       cursor: disabled ? "not-allowed" : "pointer",
       opacity: disabled ? 0.4 : 1,
       ...style
-    }
-  }, rest), /*#__PURE__*/React.createElement("span", {
+    },
+    ...rest
+  }, /*#__PURE__*/React.createElement("span", {
     style: {
       position: "relative",
       width: 44,
@@ -1276,12 +1454,11 @@ function Switch({
     }
   }, label || (on ? "ON" : "OFF")));
 }
-Object.assign(__ds_scope, { Switch });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/Switch.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Switch=Switch;__ds_ns.Switch=Switch;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/forms/Switch.jsx",error:String(e.message||e)});}
 
 // components/identity/Icon.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Lucide (stroke 1.5) loaded from CDN as a CSS mask so the glyph inherits currentColor.
    Fabryka uses icons sparingly — labels and numbers do most of the work. */
 function Icon({
@@ -1292,7 +1469,7 @@ function Icon({
   ...rest
 }) {
   const url = `https://unpkg.com/lucide-static@0.469.0/icons/${name}.svg`;
-  return /*#__PURE__*/React.createElement("span", _extends({
+  return /*#__PURE__*/React.createElement("span", {
     "aria-hidden": "true",
     style: {
       display: "inline-block",
@@ -1308,187 +1485,16 @@ function Icon({
       flex: "0 0 auto",
       opacity: strokeWidth ? 1 : 1,
       ...style
-    }
-  }, rest));
+    },
+    ...rest
+  });
 }
-Object.assign(__ds_scope, { Icon });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/identity/Icon.jsx", error: String((e && e.message) || e) }); }
-
-// components/core/IconButton.jsx
-try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/* Square icon button. Same chassis as Button, 1:1 footprint. */
-function IconButton({
-  icon,
-  label,
-  variant = "secondary",
-  size = "md",
-  disabled,
-  style,
-  ...rest
-}) {
-  const dim = size === "sm" ? 28 : size === "lg" ? 46 : 36;
-  const [over, setOver] = React.useState(false);
-  const variants = {
-    primary: {
-      background: "var(--carbon)",
-      color: "var(--paper)",
-      borderColor: "var(--carbon)"
-    },
-    accent: {
-      background: "var(--red)",
-      color: "var(--paper)",
-      borderColor: "var(--red)"
-    },
-    solid: {
-      background: "var(--carbon)",
-      color: "var(--paper)",
-      borderColor: "var(--carbon)"
-    },
-    secondary: {
-      background: "transparent",
-      color: "var(--text-body)",
-      borderColor: "var(--rule)"
-    },
-    ghost: {
-      background: "transparent",
-      color: "var(--text-muted)",
-      borderColor: "transparent"
-    }
-  };
-  const hovered = over && !disabled ? variant === "accent" ? {
-    background: "var(--red-dark)"
-  } : variant === "primary" ? {
-    background: "var(--carbon-3)"
-  } : variant === "ghost" ? {
-    color: "var(--red)"
-  } : {
-    background: "var(--carbon)",
-    color: "var(--surface)",
-    borderColor: "var(--carbon)"
-  } : null;
-  return /*#__PURE__*/React.createElement("button", _extends({
-    type: "button",
-    "aria-label": label,
-    title: label,
-    disabled: disabled,
-    onMouseEnter: () => setOver(true),
-    onMouseLeave: () => setOver(false),
-    style: {
-      display: "inline-grid",
-      placeItems: "center",
-      width: dim,
-      height: dim,
-      border: "1px solid var(--rule)",
-      borderRadius: 0,
-      cursor: disabled ? "not-allowed" : "pointer",
-      opacity: disabled ? 0.38 : 1,
-      transition: "var(--transition-control)",
-      ...variants[variant],
-      ...hovered,
-      ...style
-    }
-  }, rest), typeof icon === "string" ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: icon,
-    size: size === "sm" ? 13 : 16
-  }) : icon);
-}
-Object.assign(__ds_scope, { IconButton });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/IconButton.jsx", error: String((e && e.message) || e) }); }
-
-// components/feedback/Dialog.jsx
-try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/* Square modal on a carbon scrim. Header is a mono rail with a document number. */
-function Dialog({
-  open = true,
-  title,
-  docNumber,
-  children,
-  footer,
-  onClose,
-  width = 520,
-  style,
-  ...rest
-}) {
-  if (!open) return null;
-  return /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: "fixed",
-      inset: 0,
-      background: "rgba(17,17,17,.62)",
-      display: "grid",
-      placeItems: "center",
-      zIndex: 100,
-      padding: 24
-    },
-    onClick: onClose
-  }, /*#__PURE__*/React.createElement("div", _extends({
-    onClick: e => e.stopPropagation(),
-    style: {
-      width,
-      maxWidth: "100%",
-      background: "var(--surface-raised)",
-      border: "1px solid var(--rule)",
-      boxShadow: "var(--shadow-overlay)",
-      ...style
-    }
-  }, rest), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      gap: 16,
-      padding: "10px 12px",
-      borderBottom: "1px solid var(--rule)",
-      background: "var(--carbon)",
-      color: "var(--paper)"
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      display: "flex",
-      gap: 12,
-      alignItems: "baseline",
-      fontFamily: "var(--font-mono)",
-      fontSize: 11,
-      letterSpacing: "var(--track-label)",
-      textTransform: "uppercase"
-    }
-  }, /*#__PURE__*/React.createElement("span", null, title), docNumber && /*#__PURE__*/React.createElement("span", {
-    style: {
-      color: "var(--grey)"
-    }
-  }, docNumber)), onClose && /*#__PURE__*/React.createElement(__ds_scope.IconButton, {
-    icon: "x",
-    label: "Close",
-    variant: "ghost",
-    size: "sm",
-    onClick: onClose,
-    style: {
-      color: "var(--paper)"
-    }
-  })), /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: 20
-    }
-  }, children), footer && /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      justifyContent: "flex-end",
-      gap: 8,
-      padding: 12,
-      borderTop: "1px solid var(--rule-soft)",
-      background: "var(--paper-2)"
-    }
-  }, footer)));
-}
-Object.assign(__ds_scope, { Dialog });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/Dialog.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Icon=Icon;__ds_ns.Icon=Icon;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/identity/Icon.jsx",error:String(e.message||e)});}
 
 // components/identity/Wordmark.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/* FABRYKA. wordmark — set in type, not an image. The period is part of the mark. */
+/* Production text signature. Official factory marks are distributed under assets/. */
 function Wordmark({
   size = 32,
   color,
@@ -1502,22 +1508,23 @@ function Wordmark({
 }) {
   const Tag = as;
   const fg = color || (tone === "inverse" ? "var(--paper)" : tone === "paper" ? "var(--carbon)" : "currentColor");
-  return /*#__PURE__*/React.createElement(Tag, _extends({
+  return /*#__PURE__*/React.createElement(Tag, {
     style: {
       display: "inline-flex",
       alignItems: "flex-end",
       gap: Math.round(size * 0.42),
       color: fg,
       ...style
-    }
-  }, rest), /*#__PURE__*/React.createElement("span", {
+    },
+    ...rest
+  }, /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: "var(--font-display)",
-      fontWeight: 900,
-      fontStretch: "66%",
-      textTransform: "uppercase",
+      fontWeight: 500,
+      fontStretch: "normal",
+      textTransform: "none",
       letterSpacing: "-0.02em",
-      lineHeight: 0.8,
+      lineHeight: 1,
       fontSize: size
     }
   }, "Fabryka", /*#__PURE__*/React.createElement("span", {
@@ -1529,7 +1536,7 @@ function Wordmark({
       fontFamily: "var(--font-mono)",
       fontSize: Math.max(9, Math.round(size * 0.26)),
       letterSpacing: "var(--track-label)",
-      textTransform: "uppercase",
+      textTransform: "none",
       lineHeight: 1,
       paddingBottom: Math.round(size * 0.06),
       color: "var(--text-muted)",
@@ -1539,44 +1546,40 @@ function Wordmark({
   }, unit && /*#__PURE__*/React.createElement("span", null, unit), place && /*#__PURE__*/React.createElement("span", null, place)));
 }
 
-/* The secondary mark: F. — stamped on machines, avatars, repos, stickers. */
+/* Compatibility component: renders the official factory symbol, never an invented F. badge. */
 function Fmark({
   size = 40,
   tone = "red",
+  assetBase = "https://fabryka.ai/assets/brand",
   style,
   ...rest
 }) {
-  const bg = tone === "red" ? "var(--red)" : tone === "carbon" ? "var(--carbon)" : "transparent";
-  const fg = tone === "outline" ? "var(--carbon)" : "var(--paper)";
-  return /*#__PURE__*/React.createElement("span", _extends({
+  const inverse = tone === "carbon";
+  const file = inverse ? "fabryka-mark-paper.svg" : "fabryka-mark-ink.svg";
+  return /*#__PURE__*/React.createElement("span", {
     style: {
-      display: "inline-grid",
-      placeItems: "center",
-      width: size,
-      height: size,
-      background: bg,
-      color: fg,
-      border: tone === "outline" ? "var(--border-heavy) solid var(--carbon)" : "none",
+      display: "inline-flex",
+      padding: Math.round(size * .2),
+      background: inverse ? "var(--carbon)" : "transparent",
       ...style
-    }
-  }, rest), /*#__PURE__*/React.createElement("span", {
+    },
+    ...rest
+  }, /*#__PURE__*/React.createElement("img", {
+    src: `${assetBase}/${file}`,
+    width: size,
+    height: size,
+    alt: "Fabryka",
     style: {
-      fontFamily: "var(--font-display)",
-      fontWeight: 900,
-      fontStretch: "66%",
-      fontSize: size * 0.62,
-      lineHeight: 1,
-      letterSpacing: "-0.03em",
-      transform: `translateY(${size * 0.02}px)`
+      objectFit: "contain"
     }
-  }, "F."));
+  }));
 }
-Object.assign(__ds_scope, { Wordmark, Fmark });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/identity/Wordmark.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Wordmark=Wordmark;__ds_ns.Wordmark=Wordmark;
+__ds_scope.Fmark=Fmark;__ds_ns.Fmark=Fmark;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/identity/Wordmark.jsx",error:String(e.message||e)});}
 
 // components/navigation/SectionMarker.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* §-numbered section head with a full-width rule. The spine of every long page. */
 function SectionMarker({
   number,
@@ -1586,14 +1589,15 @@ function SectionMarker({
   style,
   ...rest
 }) {
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       flexDirection: "column",
       gap: 10,
       ...style
-    }
-  }, rest), /*#__PURE__*/React.createElement("div", {
+    },
+    ...rest
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
       borderTop: rule === "heavy" ? "var(--border-heavy) solid var(--rule)" : "1px solid var(--rule)"
     }
@@ -1618,7 +1622,7 @@ function SectionMarker({
       letterSpacing: "var(--track-label)",
       color: "var(--red)"
     }
-  }, "\xA7", number), /*#__PURE__*/React.createElement("span", {
+  }, "§", number), /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: "var(--font-display)",
       fontWeight: 800,
@@ -1638,12 +1642,11 @@ function SectionMarker({
     }
   }, meta)));
 }
-Object.assign(__ds_scope, { SectionMarker });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/navigation/SectionMarker.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.SectionMarker=SectionMarker;__ds_ns.SectionMarker=SectionMarker;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/navigation/SectionMarker.jsx",error:String(e.message||e)});}
 
 // components/navigation/Tabs.jsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* Numbered tabs — 01 / 02 / 03. Active tab is carbon-underlined, mono caps. */
 function Tabs({
   tabs = [],
@@ -1657,14 +1660,15 @@ function Tabs({
   const first = typeof tabs[0] === "string" ? tabs[0] : tabs[0] && tabs[0].value;
   const [inner, setInner] = React.useState(defaultValue || first);
   const sel = value === undefined ? inner : value;
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       borderBottom: "1px solid var(--rule)",
       gap: 0,
       ...style
-    }
-  }, rest), tabs.map((t, i) => {
+    },
+    ...rest
+  }, tabs.map((t, i) => {
     const v = typeof t === "string" ? t : t.value;
     const l = typeof t === "string" ? t : t.label;
     const on = sel === v;
@@ -1686,10 +1690,10 @@ function Tabs({
         display: "inline-flex",
         alignItems: "baseline",
         gap: 8,
-        fontFamily: "var(--font-mono)",
-        fontSize: 12,
-        letterSpacing: "var(--track-label)",
-        textTransform: "uppercase",
+        fontFamily: "var(--font-text)",
+        fontSize: 16,
+        letterSpacing: "normal",
+        textTransform: "none",
         color: on ? "var(--text-body)" : "var(--text-muted)",
         transition: "var(--transition-control)"
       }
@@ -1701,8 +1705,8 @@ function Tabs({
     }, String(i + 1).padStart(2, "0")), /*#__PURE__*/React.createElement("span", null, l));
   }));
 }
-Object.assign(__ds_scope, { Tabs });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/navigation/Tabs.jsx", error: String((e && e.message) || e) }); }
+__ds_scope.Tabs=Tabs;__ds_ns.Tabs=Tabs;
+})(); } catch(e){__ds_ns.__errors.push({path:"components/navigation/Tabs.jsx",error:String(e.message||e)});}
 
 // ui_kits/codesota/Leaderboard.jsx
 try { (() => {
@@ -1860,7 +1864,7 @@ function CodeSOTA() {
       color: "var(--grey)",
       marginTop: 8
     }
-  }, "Measurement by Fabryka. \xB7 Suites, methodology and raw results in public")), /*#__PURE__*/React.createElement("div", {
+  }, "Measurement by Fabryka. · Suites, methodology and raw results in public")), /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "right",
       display: "flex",
@@ -1914,7 +1918,7 @@ function CodeSOTA() {
   }, /*#__PURE__*/React.createElement(SectionMarker, {
     number: "03",
     title: "Leaderboard",
-    meta: "Updated 03 SEP 2026 \xB7 02:31 CET"
+    meta: "Updated 03 SEP 2026 · 02:31 CET"
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 18
@@ -2075,675 +2079,169 @@ Object.assign(window, {
   CodeSOTA,
   CS_PAGE
 });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/codesota/Leaderboard.jsx", error: String((e && e.message) || e) }); }
+
+})(); } catch(e){__ds_ns.__errors.push({path:"ui_kits/codesota/Leaderboard.jsx",error:String(e.message||e)});}
 
 // ui_kits/website/Chrome.jsx
 try { (() => {
 const {
-  Wordmark,
-  Button,
-  StatusBadge,
-  Icon
+  Wordmark
 } = window.FabrykaDesignSystem_ec938d;
 function TopRail({
   view,
   setView
 }) {
-  const items = [["home", "Fabryka"], ["production", "Production"], ["laboratory", "Laboratory"], ["codesota", "CodeSOTA"]];
   return /*#__PURE__*/React.createElement("header", {
     style: {
-      position: "sticky",
-      top: 0,
-      zIndex: 20,
-      background: "var(--paper)",
-      borderBottom: "1px solid var(--rule)"
+      background: 'var(--paper)',
+      borderBottom: '1px solid var(--rule)'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       maxWidth: 1440,
-      margin: "0 auto",
-      padding: "0 40px",
-      height: 56,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      gap: 24
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      alignItems: "center",
-      gap: 28
+      margin: 'auto',
+      padding: '24px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: 24,
+      flexWrap: 'wrap'
     }
   }, /*#__PURE__*/React.createElement("a", {
-    href: "#",
-    onClick: e => {
-      e.preventDefault();
-      setView("home");
-    },
+    href: "https://fabryka.ai",
     style: {
-      border: 0,
-      textDecoration: "none",
-      color: "var(--carbon)"
+      border: 0
     }
   }, /*#__PURE__*/React.createElement(Wordmark, {
-    size: 22
+    size: 32
   })), /*#__PURE__*/React.createElement("nav", {
+    "aria-label": "Nawigacja",
     style: {
-      display: "flex",
-      gap: 22
+      display: 'flex',
+      gap: 24,
+      flexWrap: 'wrap',
+      fontFamily: 'var(--font-text)',
+      fontSize: 16
     }
-  }, items.slice(1).map(([k, l]) => /*#__PURE__*/React.createElement("a", {
-    key: k,
-    href: "#",
-    onClick: e => {
-      e.preventDefault();
-      setView(k);
-    },
-    style: {
-      border: 0,
-      textDecoration: "none",
-      fontFamily: "var(--font-mono)",
-      fontSize: 11,
-      letterSpacing: "var(--track-label)",
-      textTransform: "uppercase",
-      color: view === k ? "var(--red)" : "var(--text-muted)"
-    }
-  }, l)))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      alignItems: "center",
-      gap: 18
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "f-label"
-  }, "Warsaw / 2026"), /*#__PURE__*/React.createElement(StatusBadge, {
-    state: "live"
-  }), /*#__PURE__*/React.createElement(Button, {
-    size: "sm",
-    variant: "secondary",
-    iconRight: /*#__PURE__*/React.createElement(Icon, {
-      name: "arrow-right",
-      size: 12
-    })
-  }, "Docs"))));
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "https://fabryka.ai/research"
+  }, "Badania"), /*#__PURE__*/React.createElement("a", {
+    href: "https://fabryka.ai/publications"
+  }, "Publikacje"), /*#__PURE__*/React.createElement("a", {
+    href: "https://fabryka.ai/doing"
+  }, "Praca"), /*#__PURE__*/React.createElement("a", {
+    href: "https://fabryka.ai/platform"
+  }, "Platforma API"))));
 }
 function PageFooter() {
   return /*#__PURE__*/React.createElement("footer", {
-    "data-theme": "carbon",
     style: {
-      background: "var(--carbon)",
-      color: "var(--paper)",
-      borderTop: "3px solid var(--rule)"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
+      borderTop: '1px solid var(--rule)',
+      padding: 24,
       maxWidth: 1440,
-      margin: "0 auto",
-      padding: "48px 40px",
-      display: "grid",
-      gridTemplateColumns: "2fr 1fr 1fr 1fr",
-      gap: 32
+      margin: 'auto'
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("p", null, "Fabryka AI · niezależne laboratorium badawcze · Warszawa"), /*#__PURE__*/React.createElement("div", {
     style: {
-      display: "flex",
-      flexDirection: "column",
-      gap: 14
+      display: 'flex',
+      gap: 24,
+      flexWrap: 'wrap',
+      marginTop: 20
     }
-  }, /*#__PURE__*/React.createElement(Wordmark, {
-    size: 34,
-    tone: "inverse"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "f-label",
-    style: {
-      color: "var(--grey)",
-      lineHeight: 1.9
-    }
-  }, "Open model factory", /*#__PURE__*/React.createElement("br", null), "Warsaw \xB7 Poland \xB7 est. 2026", /*#__PURE__*/React.createElement("br", null), "52\xB013\u2032N 21\xB000\u2032E")), [["Production", ["Inference API", "Routing", "Pricing", "Status"]], ["Laboratory", ["Models", "Experiments", "Quantization", "Papers"]], ["Measurement", ["CodeSOTA", "Suites", "Methodology", "Slayer archive"]]].map(([h, links]) => /*#__PURE__*/React.createElement("div", {
-    key: h,
-    style: {
-      display: "flex",
-      flexDirection: "column",
-      gap: 10
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "f-label",
-    style: {
-      color: "var(--paper)"
-    }
-  }, h), links.map(l => /*#__PURE__*/React.createElement("a", {
-    key: l,
-    href: "#",
-    style: {
-      border: 0,
-      textDecoration: "none",
-      fontFamily: "var(--font-mono)",
-      fontSize: 11.5,
-      color: "var(--grey)"
-    }
-  }, l))))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      borderTop: "1px solid rgba(241,239,232,.2)",
-      padding: "12px 40px"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 1440,
-      margin: "0 auto",
-      display: "flex",
-      justifyContent: "space-between"
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "f-label",
-    style: {
-      color: "var(--grey-dark)"
-    }
-  }, "Fabryka sp. z o.o. \u2014 formerly Slayer Lab"), /*#__PURE__*/React.createElement("span", {
-    className: "f-label",
-    style: {
-      color: "var(--grey-dark)"
-    }
-  }, "More intelligence per GPU."))));
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "https://fabryka.ai/media"
+  }, "Materiały marki"), /*#__PURE__*/React.createElement("a", {
+    href: "https://fabryka.ai/story"
+  }, "Historia"), /*#__PURE__*/React.createElement("a", {
+    href: "https://fabryka.ai/docs"
+  }, "Dokumentacja API")));
 }
 Object.assign(window, {
   TopRail,
   PageFooter
 });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/website/Chrome.jsx", error: String((e && e.message) || e) }); }
+
+})(); } catch(e){__ds_ns.__errors.push({path:"ui_kits/website/Chrome.jsx",error:String(e.message||e)});}
 
 // ui_kits/website/Home.jsx
 try { (() => {
 const {
-  MetricReadout,
-  ProductionPlate,
-  MachineLog,
-  FigureFrame,
-  SectionMarker,
-  Button,
-  Tag,
-  Icon,
-  StatusBadge,
-  SpecTable,
-  TestStamp
+  Button
 } = window.FabrykaDesignSystem_ec938d;
-const PAGE = {
-  maxWidth: 1440,
-  margin: "0 auto",
-  padding: "0 40px"
-};
-const MONO = {
-  fontFamily: "var(--font-mono)",
-  fontSize: 11,
-  letterSpacing: "var(--track-label)",
-  textTransform: "uppercase"
-};
-
-/* Plate rail: the mono key/value run used inside every plate frame on the page. */
-function PlateRows({
-  rows
-}) {
-  return /*#__PURE__*/React.createElement("div", null, rows.map((r, i) => /*#__PURE__*/React.createElement("div", {
-    key: r.k,
-    style: {
-      display: "grid",
-      gridTemplateColumns: "minmax(88px,42%) 1fr",
-      gap: 12,
-      padding: "7px 14px",
-      borderBottom: i === rows.length - 1 ? "none" : "1px solid var(--rule-faint)"
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      ...MONO,
-      color: "var(--text-muted)"
-    }
-  }, r.k), /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: "var(--font-mono)",
-      fontSize: 12.5,
-      letterSpacing: "var(--track-mono)",
-      textAlign: "right",
-      color: r.accent ? "var(--red)" : "inherit"
-    }
-  }, r.v))));
-}
-
-/* A framed plate: title rail + serial, everything on the page lives in one of these. */
-function Frame({
-  title,
-  serial,
-  meta,
-  children,
-  tone,
-  style,
-  onClick
-}) {
-  const carbon = tone === "carbon";
-  return /*#__PURE__*/React.createElement("div", {
-    onClick: onClick,
-    "data-theme": carbon ? "carbon" : undefined,
-    style: {
-      border: "1.5px solid var(--rule)",
-      background: carbon ? "var(--carbon)" : "var(--surface-raised)",
-      color: carbon ? "var(--paper)" : "var(--text-body)",
-      cursor: onClick ? "pointer" : undefined,
-      ...style
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "baseline",
-      gap: 16,
-      padding: "9px 14px",
-      borderBottom: "1px solid var(--rule-soft)",
-      background: "var(--plate-tint)"
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      ...MONO,
-      fontSize: 12
-    }
-  }, title), /*#__PURE__*/React.createElement("span", {
-    style: {
-      ...MONO,
-      fontSize: 12,
-      color: serial ? "var(--red)" : "var(--text-muted)"
-    }
-  }, serial || meta)), children);
-}
 function Home({
   setView
 }) {
-  const sections = [{
-    n: "01",
-    t: "Production",
-    v: "production",
-    serial: "F-00482",
-    rows: [{
-      k: "Lines",
-      v: "04"
-    }, {
-      k: "Endpoint",
-      v: "api.fabryka.ai/v1"
-    }, {
-      k: "Compatibility",
-      v: "OpenAI"
-    }, {
-      k: "Served / 30d",
-      v: "41.2M tok",
-      accent: true
-    }],
-    status: "live"
-  }, {
-    n: "02",
-    t: "Laboratory",
-    v: "laboratory",
-    serial: "F-00521",
-    rows: [{
-      k: "Experiments",
-      v: "21 / 2026"
-    }, {
-      k: "Running",
-      v: "01"
-    }, {
-      k: "Checkpoints",
-      v: "03 public"
-    }, {
-      k: "Best delta",
-      v: "+18.4% decode",
-      accent: true
-    }],
-    status: "running"
-  }, {
-    n: "03",
-    t: "Measurement",
-    v: "codesota",
-    serial: "F-00104",
-    rows: [{
-      k: "Project",
-      v: "CodeSOTA"
-    }, {
-      k: "Suites",
-      v: "06"
-    }, {
-      k: "Models rated",
-      v: "48"
-    }, {
-      k: "Method",
-      v: "Public",
-      accent: true
-    }],
-    status: "pass"
-  }];
   return /*#__PURE__*/React.createElement("main", {
-    className: "f-grid"
-  }, /*#__PURE__*/React.createElement("section", {
     style: {
-      ...PAGE,
-      paddingTop: 32,
-      paddingBottom: 48
+      maxWidth: 1440,
+      margin: 'auto',
+      padding: '64px 24px'
     }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      justifyContent: "space-between",
-      borderTop: "3px solid var(--rule)",
-      paddingTop: 10,
-      paddingBottom: 14
-    }
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement("p", {
     className: "f-label"
-  }, "Fabryka \u2014 open model factory"), /*#__PURE__*/React.createElement("span", {
-    className: "f-label"
-  }, "Production 01 \xB7 Warsaw \xB7 2026")), /*#__PURE__*/React.createElement(Frame, {
-    title: "Production 01 \u2014 open model factory",
-    serial: "F-00482"
-  }, /*#__PURE__*/React.createElement("div", {
+  }, "Fabryka AI / niezależne laboratorium badawcze"), /*#__PURE__*/React.createElement("h1", {
     style: {
-      display: "grid",
-      gridTemplateColumns: "1fr 340px",
-      alignItems: "stretch"
+      maxWidth: 900,
+      margin: '24px 0'
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, "Budujemy modele.", /*#__PURE__*/React.createElement("br", null), "Potem je wykorzystujemy."), /*#__PURE__*/React.createElement("p", {
     style: {
-      padding: "34px 32px 28px",
-      borderRight: "1px solid var(--rule-soft)",
-      display: "flex",
-      flexDirection: "column",
-      gap: 24
-    }
-  }, /*#__PURE__*/React.createElement("h1", {
-    style: {
-      fontSize: 108,
-      maxWidth: "15ch"
-    }
-  }, "We turn GPUs", /*#__PURE__*/React.createElement("br", null), "into intelligence", /*#__PURE__*/React.createElement("span", {
-    style: {
-      color: "var(--red)"
-    }
-  }, ".")), /*#__PURE__*/React.createElement("p", {
-    style: {
+      maxWidth: 660,
       fontSize: 19,
-      maxWidth: "50ch"
+      lineHeight: 1.7
     }
-  }, "Open-weight inference, routing, measurement and applied research. Named machines in Warsaw, measured output, visible provenance."), /*#__PURE__*/React.createElement("div", {
+  }, "Badamy małe modele językowe, wydajną inferencję oraz polskie dane i ewaluację."), /*#__PURE__*/React.createElement("div", {
     style: {
-      display: "flex",
-      gap: 8
+      display: 'flex',
+      gap: 16,
+      flexWrap: 'wrap',
+      margin: '32px 0'
     }
   }, /*#__PURE__*/React.createElement(Button, {
-    variant: "primary",
-    iconRight: /*#__PURE__*/React.createElement(Icon, {
-      name: "arrow-right",
-      size: 13
-    })
-  }, "Read the docs"), /*#__PURE__*/React.createElement(Button, {
-    variant: "secondary",
-    onClick: () => setView("production")
-  }, "Current production")), /*#__PURE__*/React.createElement("div", {
+    href: "https://fabryka.ai/research"
+  }, "Zobacz badania"), /*#__PURE__*/React.createElement(Button, {
+    href: "https://fabryka.ai/doing",
+    variant: "secondary"
+  }, "Zobacz bieżącą pracę")), /*#__PURE__*/React.createElement("section", {
     style: {
-      display: "flex",
-      gap: 8,
-      flexWrap: "wrap"
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))',
+      gap: 24,
+      marginTop: 64
     }
-  }, /*#__PURE__*/React.createElement(Tag, {
-    tone: "carbon"
-  }, "OpenAI compatible"), /*#__PURE__*/React.createElement(Tag, null, "Open weights"), /*#__PURE__*/React.createElement(Tag, null, "EU / Warsaw"), /*#__PURE__*/React.createElement(Tag, {
-    tone: "outlineRed"
-  }, "Measured"))), /*#__PURE__*/React.createElement("div", {
+  }, [['01', 'Małe modele', 'Trening, tokenizacja, mieszanki danych i destylacja.', 'https://fabryka.ai/research#slm'], ['02', 'Wydajna inferencja', 'Koszt, opóźnienie i jakość na opisanym sprzęcie.', 'https://fabryka.ai/research#sys'], ['03', 'Polskie dane i ewaluacja', 'DynaWord, benchmarki i powtarzalny pomiar.', 'https://fabryka.ai/research#data']].map(([id, title, text, url]) => /*#__PURE__*/React.createElement("article", {
+    key: id,
     style: {
-      display: "flex",
-      flexDirection: "column"
+      borderTop: '1px solid var(--rule)',
+      paddingTop: 24
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "f-label"
+  }, id, " / program badań"), /*#__PURE__*/React.createElement("h2", {
     style: {
-      padding: "9px 14px",
-      borderBottom: "1px solid var(--rule-soft)",
-      display: "flex",
-      justifyContent: "space-between"
+      fontSize: 38,
+      margin: '16px 0'
     }
-  }, /*#__PURE__*/React.createElement("span", {
+  }, title), /*#__PURE__*/React.createElement("p", {
     style: {
-      ...MONO,
-      color: "var(--text-muted)"
+      fontSize: 16,
+      lineHeight: 1.6,
+      marginBottom: 20
     }
-  }, "Line 03 \u2014 live"), /*#__PURE__*/React.createElement(StatusBadge, {
-    state: "live"
-  })), /*#__PURE__*/React.createElement(PlateRows, {
-    rows: [{
-      k: "Model",
-      v: "Qwen3.8 27B"
-    }, {
-      k: "Route",
-      v: "agents"
-    }, {
-      k: "Machine",
-      v: "2 × RTX 3090"
-    }, {
-      k: "Quantization",
-      v: "AWQ"
-    }, {
-      k: "Context",
-      v: "131,072"
-    }, {
-      k: "Output",
-      v: "71.4 tok/s",
-      accent: true
-    }, {
-      k: "Cost",
-      v: "0.21 PLN / 1M"
-    }]
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: "auto",
-      borderTop: "1px solid var(--rule-soft)",
-      padding: 14,
-      display: "flex",
-      justifyContent: "center"
-    }
-  }, /*#__PURE__*/React.createElement(TestStamp, {
-    code: "F/WAW",
-    number: "0271",
-    checks: [{
-      k: "Throughput",
-      v: "Pass"
-    }, {
-      k: "Legal QA",
-      v: "Pass"
-    }, {
-      k: "Drift 30d",
-      v: "None"
-    }],
-    style: {
-      width: "100%"
-    }
-  })))))), /*#__PURE__*/React.createElement("section", {
-    "data-theme": "carbon",
-    className: "f-grid",
-    style: {
-      background: "var(--carbon)",
-      color: "var(--paper)",
-      padding: "44px 0",
-      borderTop: "1.5px solid var(--rule)",
-      borderBottom: "1.5px solid var(--rule)"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: PAGE
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "baseline",
-      borderBottom: "1px solid var(--rule-soft)",
-      paddingBottom: 12
-    }
-  }, /*#__PURE__*/React.createElement("span", {
+  }, text), /*#__PURE__*/React.createElement("a", {
+    href: url
+  }, "Przeczytaj program ↗")))), /*#__PURE__*/React.createElement("p", {
     className: "f-label",
     style: {
-      color: "var(--paper)"
+      marginTop: 64
     }
-  }, "Instrument panel \u2014 30-day mean"), /*#__PURE__*/React.createElement("span", {
-    className: "f-label"
-  }, "Read 03 SEP 2026 \xB7 02:31 CET")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "grid",
-      gridTemplateColumns: "repeat(4,1fr)",
-      marginTop: 4
-    }
-  }, [["A", "04", "models", "In production", false], ["B", "82.7", "tok/s", "Decode mean", true], ["C", "41.2M", "tokens", "Last 30 days", false], ["D", "99.94", "%", "Uptime 30d", false]].map(([ix, v, u, l, acc], i) => /*#__PURE__*/React.createElement("div", {
-    key: ix,
-    style: {
-      padding: "22px 24px 4px",
-      borderLeft: i === 0 ? "none" : "1px solid var(--rule-soft)"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      ...MONO,
-      color: "var(--grey)",
-      marginBottom: 14
-    }
-  }, "Datum ", ix), /*#__PURE__*/React.createElement(MetricReadout, {
-    value: v,
-    unit: u,
-    label: l,
-    size: "lg",
-    accent: acc
-  })))))), /*#__PURE__*/React.createElement("section", {
-    style: {
-      ...PAGE,
-      paddingTop: 48,
-      paddingBottom: 52
-    }
-  }, /*#__PURE__*/React.createElement(FigureFrame, {
-    figure: "FIG. 01",
-    caption: "Machine hall F-WAW-002",
-    annotations: ["NVIDIA RTX 3090 × 8", "192 GB VRAM", "Photographed 2026-09-03"],
-    ratio: "16 / 6"
-  })), /*#__PURE__*/React.createElement("section", {
-    style: {
-      ...PAGE,
-      paddingBottom: 64
-    }
-  }, /*#__PURE__*/React.createElement(SectionMarker, {
-    number: "00",
-    title: "Divisions",
-    meta: "Three plates, one factory"
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "grid",
-      gridTemplateColumns: "repeat(3,1fr)",
-      gap: 24,
-      marginTop: 20
-    }
-  }, sections.map(s => /*#__PURE__*/React.createElement(ProductionPlate, {
-    key: s.n,
-    title: "§" + s.n + " " + s.t,
-    serial: s.serial,
-    rows: s.rows,
-    status: s.status,
-    tested: "03 SEP 2026",
-    onClick: () => setView(s.v),
-    style: {
-      cursor: "pointer"
-    }
-  }))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "grid",
-      gridTemplateColumns: "repeat(3,1fr)",
-      gap: 24,
-      marginTop: 12
-    }
-  }, sections.map(s => /*#__PURE__*/React.createElement(Button, {
-    key: s.n,
-    variant: "secondary",
-    size: "sm",
-    onClick: () => setView(s.v),
-    iconRight: /*#__PURE__*/React.createElement(Icon, {
-      name: "arrow-right",
-      size: 12
-    })
-  }, "Open ", s.t.toLowerCase())))), /*#__PURE__*/React.createElement("section", {
-    style: {
-      ...PAGE,
-      paddingBottom: 80,
-      display: "grid",
-      gridTemplateColumns: "1fr 1fr",
-      gap: 40,
-      alignItems: "start"
-    }
-  }, /*#__PURE__*/React.createElement(MachineLog, {
-    title: "Line 03 \u2014 live",
-    lines: [{
-      k: "Model",
-      v: "QWEN3.8-27B"
-    }, {
-      k: "Machine",
-      v: "F-WAW-3090-04"
-    }, {
-      k: "Quant",
-      v: "FP8"
-    }, {
-      k: "Batch",
-      v: "24"
-    }, {
-      k: "Decode",
-      v: "82.4 TOK/S",
-      accent: true
-    }, {
-      k: "Status",
-      v: "RUNNING",
-      ok: true
-    }, {
-      k: "Updated",
-      v: "02:31:08 CET"
-    }]
-  }), /*#__PURE__*/React.createElement(SpecTable, {
-    figure: "TAB. 01",
-    caption: "Production lines \u2014 30-day mean",
-    columns: [{
-      key: "line",
-      label: "Line"
-    }, {
-      key: "model",
-      label: "Model"
-    }, {
-      key: "tok",
-      label: "Tok/s"
-    }, {
-      key: "cost",
-      label: "PLN / 1M"
-    }],
-    rows: [{
-      line: "01",
-      model: "Bielik 11B",
-      tok: "138.0",
-      cost: "0.09"
-    }, {
-      line: "02",
-      model: "Llama 4 17B",
-      tok: "104.2",
-      cost: "0.17"
-    }, {
-      line: "03",
-      model: "Qwen3.8 27B",
-      tok: "82.4",
-      cost: "0.21"
-    }, {
-      line: "04",
-      model: "Mistral 24B",
-      tok: "91.5",
-      cost: "0.19"
-    }]
-  })));
+  }, "Przykład interfejsu. Aktualne wyniki i dostępność: fabryka.ai."));
 }
 Object.assign(window, {
-  Home,
-  PAGE,
-  PlateRows,
-  Frame
+  Home
 });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/website/Home.jsx", error: String((e && e.message) || e) }); }
+
+})(); } catch(e){__ds_ns.__errors.push({path:"ui_kits/website/Home.jsx",error:String(e.message||e)});}
 
 // ui_kits/website/Pages.jsx
 try { (() => {
@@ -2855,9 +2353,9 @@ function Production() {
     }
   }, /*#__PURE__*/React.createElement("span", {
     className: "f-label"
-  }, "\xA701 Production \u2014 inference & routing"), /*#__PURE__*/React.createElement("span", {
+  }, "§01 Production — inference & routing"), /*#__PURE__*/React.createElement("span", {
     className: "f-label"
-  }, "OpenAI compatible \xB7 api.fabryka.ai/v1")), /*#__PURE__*/React.createElement("h1", {
+  }, "OpenAI compatible · api.fabryka.ai/v1")), /*#__PURE__*/React.createElement("h1", {
     style: {
       fontSize: 88,
       marginTop: 24,
@@ -2993,7 +2491,7 @@ function Production() {
     }
   }, /*#__PURE__*/React.createElement(SpecTable, {
     figure: "TAB. 02",
-    caption: "Price list \u2014 PLN per 1M tokens, September 2026",
+    caption: "Price list — PLN per 1M tokens, September 2026",
     columns: [{
       key: "model",
       label: "Model"
@@ -3108,7 +2606,7 @@ function Production() {
     label: "Autoscale"
   }), /*#__PURE__*/React.createElement(Tag, {
     tone: "muted"
-  }, "2 \xD7 RTX 3090 available")))));
+  }, "2 × RTX 3090 available")))));
 }
 function Laboratory() {
   return /*#__PURE__*/React.createElement("main", {
@@ -3127,7 +2625,7 @@ function Laboratory() {
     }
   }, /*#__PURE__*/React.createElement("span", {
     className: "f-label"
-  }, "\xA702 Laboratory \u2014 optimisation & post-training"), /*#__PURE__*/React.createElement("span", {
+  }, "§02 Laboratory — optimisation & post-training"), /*#__PURE__*/React.createElement("span", {
     className: "f-label"
   }, "21 experiments / 2026")), /*#__PURE__*/React.createElement("h1", {
     style: {
@@ -3241,7 +2739,8 @@ Object.assign(window, {
   Production,
   Laboratory
 });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/website/Pages.jsx", error: String((e && e.message) || e) }); }
+
+})(); } catch(e){__ds_ns.__errors.push({path:"ui_kits/website/Pages.jsx",error:String(e.message||e)});}
 
 // ui_kits/website/_archive/Home.v1.jsx
 try { (() => {
@@ -3280,9 +2779,9 @@ function Home({
     }
   }, /*#__PURE__*/React.createElement("span", {
     className: "f-label"
-  }, "Open model factory \u2014 production 01"), /*#__PURE__*/React.createElement("span", {
+  }, "Open model factory — production 01"), /*#__PURE__*/React.createElement("span", {
     className: "f-label"
-  }, "\xA700 \u2014 Warsaw / 2026")), /*#__PURE__*/React.createElement("h1", {
+  }, "§00 — Warsaw / 2026")), /*#__PURE__*/React.createElement("h1", {
     style: {
       fontSize: 132,
       marginTop: 28,
@@ -3477,7 +2976,7 @@ function Home({
       alignItems: "start"
     }
   }, /*#__PURE__*/React.createElement(MachineLog, {
-    title: "Line 03 \u2014 live",
+    title: "Line 03 — live",
     lines: [{
       k: "Model",
       v: "QWEN3.8-27B"
@@ -3504,7 +3003,7 @@ function Home({
     }]
   }), /*#__PURE__*/React.createElement(SpecTable, {
     figure: "TAB. 01",
-    caption: "Production lines \u2014 30-day mean",
+    caption: "Production lines — 30-day mean",
     columns: [{
       key: "line",
       label: "Line"
@@ -3545,7 +3044,8 @@ Object.assign(window, {
   Home,
   PAGE
 });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/website/_archive/Home.v1.jsx", error: String((e && e.message) || e) }); }
+
+})(); } catch(e){__ds_ns.__errors.push({path:"ui_kits/website/_archive/Home.v1.jsx",error:String(e.message||e)});}
 
 // ui_kits/website/doc-page.js
 try { (() => {
@@ -4288,52 +3788,7 @@ try { (() => {
     customElements.define('doc-page', DocPage);
   }
 })();
-})(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/website/doc-page.js", error: String((e && e.message) || e) }); }
 
-__ds_ns.Button = __ds_scope.Button;
-
-__ds_ns.Card = __ds_scope.Card;
-
-__ds_ns.IconButton = __ds_scope.IconButton;
-
-__ds_ns.StatusBadge = __ds_scope.StatusBadge;
-
-__ds_ns.Tag = __ds_scope.Tag;
-
-__ds_ns.FigureFrame = __ds_scope.FigureFrame;
-
-__ds_ns.MachineLog = __ds_scope.MachineLog;
-
-__ds_ns.MetricReadout = __ds_scope.MetricReadout;
-
-__ds_ns.ProductionPlate = __ds_scope.ProductionPlate;
-
-__ds_ns.SpecTable = __ds_scope.SpecTable;
-
-__ds_ns.TestStamp = __ds_scope.TestStamp;
-
-__ds_ns.Dialog = __ds_scope.Dialog;
-
-__ds_ns.Tooltip = __ds_scope.Tooltip;
-
-__ds_ns.Checkbox = __ds_scope.Checkbox;
-
-__ds_ns.Input = __ds_scope.Input;
-
-__ds_ns.Radio = __ds_scope.Radio;
-
-__ds_ns.Select = __ds_scope.Select;
-
-__ds_ns.Switch = __ds_scope.Switch;
-
-__ds_ns.Icon = __ds_scope.Icon;
-
-__ds_ns.Wordmark = __ds_scope.Wordmark;
-
-__ds_ns.Fmark = __ds_scope.Fmark;
-
-__ds_ns.SectionMarker = __ds_scope.SectionMarker;
-
-__ds_ns.Tabs = __ds_scope.Tabs;
+})(); } catch(e){__ds_ns.__errors.push({path:"ui_kits/website/doc-page.js",error:String(e.message||e)});}
 
 })();

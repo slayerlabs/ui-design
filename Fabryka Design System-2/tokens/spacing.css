@@ -14,13 +14,13 @@
 --space-11:176px;
 
 --gutter:24px;            /* page gutter, mobile */
---gutter-lg:40px;         /* page gutter, desktop */
+--gutter-lg:56px;         /* page gutter, desktop */
 --measure:66ch;           /* max body measure */
 --page-max:1440px;
 --col-gap:24px;
 --grid-cols:12; /* @kind other */
 
---section-pad-y:96px;
+--section-pad-y:80px;
 --plate-pad:16px;
 --card-pad:20px;
 --control-pad-x:16px;

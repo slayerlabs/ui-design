@@ -1,0 +1,13 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),crypto=require('crypto'),assert=require('assert');
+const root=path.resolve(__dirname,'..'),code=fs.readFileSync(path.join(root,'_ds_bundle.js'),'utf8');
+const meta=JSON.parse(code.split('/* @ds-bundle: ')[1].split(' */')[0]);
+for(const [file,hash] of Object.entries(meta.sourceHashes))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex').slice(0,12),hash,file);
+const ctx={window:{},React:{createElement:(type,props,...children)=>({type,props,children}),useState:x=>[x,()=>{}],useEffect:()=>{},useRef:()=>({current:null})},navigator:{language:"en-US"},HTMLElement:class{},customElements:{get:()=>true,define:()=>{}},console};
+ctx.window.React=ctx.React;vm.runInNewContext(code,ctx);
+const ns=ctx.window[meta.namespace];assert.deepEqual(ns.__errors,[]);
+for(const c of meta.components)assert.equal(typeof ns[c.name],'function',c.name);
+const button=ns.Button({children:'Zobacz badania'});assert.equal(button.props.style.textTransform,'none');
+const mark=ns.Wordmark({});assert.equal(mark.children[0].props.style.textTransform,'none');
+const symbol=ns.Fmark({});assert(symbol.children[0].props.src.endsWith('fabryka-mark-ink.svg'));
+for(const font of ['EB Garamond','Inter','JetBrains Mono'])assert(fs.readFileSync(path.join(root,'tokens/typography.css'),'utf8').includes(font));
+console.log('Verified',meta.components.length,'exports, source hashes, font roles, sentence case and official mark');

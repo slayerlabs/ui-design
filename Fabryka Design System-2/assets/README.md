@@ -1,7 +1,7 @@
-# assets/
+# Official Fabryka assets
 
-**Empty by design.** No logo files, icon set, photography or illustrations were supplied with the brief, and none were invented.
-
-- The identity is type: use the `Wordmark` component (FABRYKA. with its red period) and `Fmark` (the square `F.` badge). Do not draw a symbol.
-- Icons come from Lucide via CDN through the `Icon` component (flagged substitution — see readme.md § ICONOGRAPHY).
-- Photography: drop real hard-flash hardware photographs here and pass them to `FigureFrame`. Until then the frames stay gridded and empty on purpose.
+Factory symbols and signatures are copied from https://fabryka.ai/media.
+Keep proportions, sufficient clear space, and strong contrast. Source stylesheet
+and homepage snapshots document the production reference on 5 October 2026.
+They are evidence snapshots, not a second deployable website. See sources.json
+for URLs and SHA-256 hashes. Do not replace these marks with an invented F. badge.

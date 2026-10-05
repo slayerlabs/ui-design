@@ -1,22 +1,22 @@
 :root{
-/* --- Base palette: paper, carbon, machine grey, one red, state colors only --- */
---paper:#EAEAE5;
---paper-2:#E1E1DB;
---paper-3:#D3D3CC;
---paper-4:#C1C1B9;
+/* Fabryka production palette: https://fabryka.ai/media. Legacy red/carbon names are compatibility aliases. */
+--paper:#FCFAF6;
+--paper-2:#F3EFE9;
+--paper-3:#E9E2DA;
+--paper-4:#D7D1CA;
 
---carbon:#111111;
---carbon-2:#1A1A19;
---carbon-3:#252524;
---carbon-4:#383837;
+--carbon:#1A1512;
+--carbon-2:#1D1916;
+--carbon-3:#49423D;
+--carbon-4:#655D56;
 
---grey:#A5A5A1;
---grey-dark:#6B6B67;
---grey-light:#C6C6C1;
+--grey:#A69C93;
+--grey-dark:#766E68;
+--grey-light:#D7D1CA;
 
---red:#E43D26;
---red-dark:#B92E1B;
---red-wash:#F2DAD4;
+--red:#B33B00;
+--red-dark:#963200;
+--red-wash:#F3E3D8;
 
 /* State only. Never decorative. */
 --signal-green:#1E9E4A;
@@ -25,9 +25,9 @@
 
 /* --- Semantic aliases (light / paper surface, the default) --- */
 --surface:var(--paper);
---surface-raised:#F4F4F0;
+--surface-raised:#FCFAF6;
 --surface-sunken:var(--paper-2);
---surface-card:#F4F4F0;
+--surface-card:#FCFAF6;
 --surface-inverse:var(--carbon);
 --surface-accent:var(--red);
 
@@ -39,9 +39,9 @@
 --text-on-inverse:var(--paper);
 --text-on-accent:var(--paper);
 
---rule:#111111;               /* hairlines are carbon, not grey */
---rule-soft:rgba(17,17,17,.22);
---rule-faint:rgba(17,17,17,.11);
+--rule:#D7D1CA;               /* observed production rule colour */
+--rule-soft:rgba(26,21,18,.22);
+--rule-faint:rgba(26,21,18,.11);
 
 --link:var(--red);
 --link-hover:var(--red-dark);
@@ -54,9 +54,13 @@
 --status-warn:var(--signal-amber);
 --status-idle:var(--signal-grey);
 
+--ink:var(--carbon);
+--ink-2:#49423D;
+--mute:var(--grey-dark);
+--sota:var(--red);
 /* Grid / plate texture */
---grid-line:rgba(17,17,17,.08);
---plate-tint:rgba(17,17,17,.04);
+--grid-line:rgba(26,21,18,.08);
+--plate-tint:rgba(26,21,18,.04);
 }
 
 /* Inverse scope: carbon sections, machine panels, terminal blocks */
@@ -73,12 +77,12 @@
 --text-faint:var(--grey-dark);
 --text-on-inverse:var(--carbon);
 
---rule:rgba(234,234,229,.9);
---rule-soft:rgba(234,234,229,.28);
---rule-faint:rgba(234,234,229,.14);
+--rule:rgba(252,250,246,.9);
+--rule-soft:rgba(252,250,246,.28);
+--rule-faint:rgba(252,250,246,.14);
 
---grid-line:rgba(234,234,229,.09);
---plate-tint:rgba(234,234,229,.04);
+--grid-line:rgba(252,250,246,.09);
+--plate-tint:rgba(252,250,246,.04);
 --link:#FF6A52;
 --link-hover:#FF8B77;
 }

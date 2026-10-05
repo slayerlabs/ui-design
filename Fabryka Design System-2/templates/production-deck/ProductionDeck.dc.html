@@ -8,228 +8,228 @@
 <body>
 <x-dc>
 <!-- @template name="Production deck" description="Fabryka industrial slide deck — production plates, instrument readouts, spec tables." -->
-<helmet><script src="./ds-base.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900&family=Instrument+Sans:wght@400..700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"><style>body{margin:0;background:#0B0B0B}</style></helmet>
+<!-- Demo figures are illustrative, not live Fabryka measurements. --><helmet><script src="./ds-base.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"><style>body{margin:0;background:#0B0B0B}</style></helmet>
 <x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
 
-<section data-label="Masthead" data-screen-label="01" style="background:#EAEAE5;color:#111;background-image:linear-gradient(rgba(17,17,17,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.06) 1px,transparent 1px);background-size:48px 48px;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Instrument Sans',sans-serif">
+<section data-label="Masthead" data-screen-label="01" style="background:#FCFAF6;color:#111;background-image:linear-gradient(rgba(17,17,17,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.06) 1px,transparent 1px);background-size:48px 48px;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Inter',sans-serif">
 <div style="display:flex;justify-content:space-between;border-top:5px solid #111;padding-top:18px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Fabryka — open model factory</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Production 01 · Warsaw · 2026</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Fabryka — open model factory</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Production 01 · Warsaw · 2026</span>
 </div>
-<h1 style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;text-transform:uppercase;font-size:184px;margin:64px 0 0;max-width:19ch">We turn GPUs into intelligence<span style="color:#E43D26">.</span></h1>
+<h1 style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;text-transform:none;font-size:150px;margin:64px 0 0;max-width:19ch">We turn GPUs into intelligence<span style="color:#B33B00">.</span></h1>
 <div style="margin-top:auto;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid #111;padding-top:22px;gap:32px">
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Serial</span><span style="font-family:'IBM Plex Mono',monospace;font-size:30px;color:#E43D26">F-00482</span></div>
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Lines in production</span><span style="font-family:'IBM Plex Mono',monospace;font-size:30px">04</span></div>
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Machines</span><span style="font-family:'IBM Plex Mono',monospace;font-size:30px">8 × RTX 3090</span></div>
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Territory</span><span style="font-family:'IBM Plex Mono',monospace;font-size:30px">PL / WAW</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Serial</span><span style="font-family:'JetBrains Mono',monospace;font-size:30px;color:#B33B00">F-00482</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Lines in production</span><span style="font-family:'JetBrains Mono',monospace;font-size:30px">04</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Machines</span><span style="font-family:'JetBrains Mono',monospace;font-size:30px">8 × RTX 3090</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Territory</span><span style="font-family:'JetBrains Mono',monospace;font-size:30px">PL / WAW</span></div>
 </div>
 </section>
 
-<section data-label="Production plate" data-screen-label="02" style="background:#EAEAE5;color:#111;background-image:linear-gradient(rgba(17,17,17,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.06) 1px,transparent 1px);background-size:48px 48px;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Instrument Sans',sans-serif">
+<section data-label="Production plate" data-screen-label="02" style="background:#FCFAF6;color:#111;background-image:linear-gradient(rgba(17,17,17,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.06) 1px,transparent 1px);background-size:48px 48px;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Inter',sans-serif">
 <div style="display:flex;justify-content:space-between;border-top:5px solid #111;padding-top:18px;margin-bottom:44px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">§01 Production — inference &amp; routing</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Plate F-00482</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">§01 Production — inference &amp; routing</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Plate F-00482</span>
 </div>
 <div style="flex:1;border:2px solid #111;background:#F4F4F0;display:grid;grid-template-columns:1fr 560px">
 <div style="padding:56px 56px 48px;border-right:2px solid rgba(17,17,17,.22);display:flex;flex-direction:column;gap:36px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#E43D26">Production plate</span>
-<h2 style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;text-transform:uppercase;font-size:104px;margin:0;max-width:16ch">More intelligence per GPU<span style="color:#E43D26">.</span></h2>
+<span style="font-family:'JetBrains Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#B33B00">Production plate</span>
+<h2 style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;text-transform:none;font-size:104px;margin:0;max-width:16ch">More intelligence per GPU<span style="color:#B33B00">.</span></h2>
 <p style="font-size:34px;line-height:1.4;max-width:34ch;margin:0;text-wrap:pretty">Open weights served on named machines, with published throughput and published cost.</p>
 <div style="margin-top:auto;display:flex;gap:14px;flex-wrap:wrap">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;background:#111;color:#EAEAE5;padding:10px 16px">OpenAI compatible</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;border:2px solid #111;padding:10px 16px">Open weights</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;border:2px solid #E43D26;color:#E43D26;padding:10px 16px">Measured</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;background:#111;color:#FCFAF6;padding:10px 16px">OpenAI compatible</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;border:2px solid #111;padding:10px 16px">Open weights</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;border:2px solid #B33B00;color:#B33B00;padding:10px 16px">Measured</span>
 </div>
 </div>
 <div style="display:flex;flex-direction:column">
 <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 28px;border-bottom:2px solid rgba(17,17,17,.22);background:rgba(17,17,17,.04)">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Line 03 — live</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Live</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Line 03 — live</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Live</span>
 </div>
-<div style="display:flex;justify-content:space-between;padding:16px 28px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Model</span><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">Qwen3.8 27B</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 28px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Machine</span><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">2 × RTX 3090</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 28px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Quantization</span><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">AWQ</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 28px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Context</span><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">131,072</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 28px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Output</span><span style="font-family:'IBM Plex Mono',monospace;font-size:26px;color:#E43D26">71.4 tok/s</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 28px"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Cost</span><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">0.21 PLN / 1M</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 28px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Model</span><span style="font-family:'JetBrains Mono',monospace;font-size:26px">Qwen3.8 27B</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 28px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Machine</span><span style="font-family:'JetBrains Mono',monospace;font-size:26px">2 × RTX 3090</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 28px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Quantization</span><span style="font-family:'JetBrains Mono',monospace;font-size:26px">AWQ</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 28px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Context</span><span style="font-family:'JetBrains Mono',monospace;font-size:26px">131,072</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 28px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Output</span><span style="font-family:'JetBrains Mono',monospace;font-size:26px;color:#B33B00">71.4 tok/s</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 28px"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Cost</span><span style="font-family:'JetBrains Mono',monospace;font-size:26px">0.21 PLN / 1M</span></div>
 <div style="margin-top:auto;border-top:2px solid rgba(17,17,17,.22);padding:28px">
-<div style="border:3px solid #E43D26;color:#E43D26;padding:20px 22px">
-<div style="display:flex;align-items:center;gap:18px;border-bottom:2px solid #E43D26;padding-bottom:14px;margin-bottom:14px">
-<span style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;text-transform:uppercase;font-size:64px;line-height:.8">F.</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;line-height:1.3">F/WAW<br>Tested 0271</span>
+<div style="border:3px solid #B33B00;color:#B33B00;padding:20px 22px">
+<div style="display:flex;align-items:center;gap:18px;border-bottom:2px solid #B33B00;padding-bottom:14px;margin-bottom:14px">
+<span style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;text-transform:uppercase;font-size:64px;line-height:.8">F.</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;line-height:1.3">F/WAW<br>Tested 0271</span>
 </div>
-<div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase"><span>Throughput</span><span>Pass</span></div>
-<div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase"><span>Legal QA</span><span>Pass</span></div>
-<div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase"><span>Drift 30d</span><span>None</span></div>
+<div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase"><span>Throughput</span><span>Pass</span></div>
+<div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase"><span>Legal QA</span><span>Pass</span></div>
+<div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase"><span>Drift 30d</span><span>None</span></div>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<section data-label="Instrument panel" data-screen-label="03" style="background:#111;color:#EAEAE5;background-image:linear-gradient(rgba(234,234,229,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(234,234,229,.07) 1px,transparent 1px);background-size:48px 48px;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Instrument Sans',sans-serif">
-<div style="display:flex;justify-content:space-between;border-top:5px solid #EAEAE5;padding-top:18px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">Instrument panel — 30-day mean</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">Read 03 SEP 2026 · 02:31 CET</span>
+<section data-label="Instrument panel" data-screen-label="03" style="background:#111;color:#FCFAF6;background-image:linear-gradient(rgba(234,234,229,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(234,234,229,.07) 1px,transparent 1px);background-size:48px 48px;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Inter',sans-serif">
+<div style="display:flex;justify-content:space-between;border-top:5px solid #FCFAF6;padding-top:18px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">Instrument panel — 30-day mean</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">Read 03 SEP 2026 · 02:31 CET</span>
 </div>
-<h2 style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;text-transform:uppercase;font-size:96px;margin:52px 0 0;color:#EAEAE5">Measured output</h2>
+<h2 style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;text-transform:uppercase;font-size:96px;margin:52px 0 0;color:#FCFAF6">Measured output</h2>
 <div style="margin-top:auto;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid rgba(234,234,229,.28)">
 <div style="padding:36px 32px 0 0;display:flex;flex-direction:column;gap:18px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">Datum A</span>
-<span style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;font-size:132px">04</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">Models in production</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">Datum A</span>
+<span style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;font-size:132px">04</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">Models in production</span>
 </div>
 <div style="padding:36px 32px 0;border-left:2px solid rgba(234,234,229,.28);display:flex;flex-direction:column;gap:18px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">Datum B</span>
-<span style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;font-size:132px;color:#E43D26">82.7</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">Tok/s decode mean</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">Datum B</span>
+<span style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;font-size:132px;color:#B33B00">82.7</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">Tok/s decode mean</span>
 </div>
 <div style="padding:36px 32px 0;border-left:2px solid rgba(234,234,229,.28);display:flex;flex-direction:column;gap:18px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">Datum C</span>
-<span style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;font-size:132px">41.2M</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">Tokens, last 30 days</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">Datum C</span>
+<span style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;font-size:132px">41.2M</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">Tokens, last 30 days</span>
 </div>
 <div style="padding:36px 0 0 32px;border-left:2px solid rgba(234,234,229,.28);display:flex;flex-direction:column;gap:18px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">Datum D</span>
-<span style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;font-size:132px">99.94</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">% uptime, 30 days</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">Datum D</span>
+<span style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;font-size:132px">99.94</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">% uptime, 30 days</span>
 </div>
 </div>
 </section>
 
-<section data-label="Machine hall" data-screen-label="04" style="background:#EAEAE5;color:#111;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Instrument Sans',sans-serif">
+<section data-label="Machine hall" data-screen-label="04" style="background:#FCFAF6;color:#111;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Inter',sans-serif">
 <div style="display:flex;justify-content:space-between;border-top:5px solid #111;padding-top:18px;margin-bottom:40px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Fig. 01 — machine hall F-WAW-002</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Photographed 2026-09-03</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Fig. 01 — machine hall F-WAW-002</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Photographed 2026-09-03</span>
 </div>
 <div style="flex:1;border:2px solid #111;position:relative;background:#D3D3CC;background-image:repeating-linear-gradient(45deg,rgba(17,17,17,.07) 0 2px,transparent 2px 22px);display:flex;align-items:center;justify-content:center">
-<span style="position:absolute;top:0;left:0;background:#E43D26;color:#EAEAE5;font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;padding:10px 18px">Fig. 01</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Hardware photograph — 3840 × 1440</span>
+<span style="position:absolute;top:0;left:0;background:#B33B00;color:#FCFAF6;font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;padding:10px 18px">Fig. 01</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Hardware photograph — 3840 × 1440</span>
 </div>
 <div style="display:flex;gap:48px;flex-wrap:wrap;margin-top:24px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">NVIDIA RTX 3090 × 8</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">192 GB VRAM</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Machine hall F-WAW-002</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">NVIDIA RTX 3090 × 8</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">192 GB VRAM</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Machine hall F-WAW-002</span>
 </div>
 </section>
 
-<section data-label="Divisions" data-screen-label="05" style="background:#EAEAE5;color:#111;background-image:linear-gradient(rgba(17,17,17,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.06) 1px,transparent 1px);background-size:48px 48px;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Instrument Sans',sans-serif">
+<section data-label="Divisions" data-screen-label="05" style="background:#FCFAF6;color:#111;background-image:linear-gradient(rgba(17,17,17,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.06) 1px,transparent 1px);background-size:48px 48px;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Inter',sans-serif">
 <div style="display:flex;justify-content:space-between;border-top:5px solid #111;padding-top:18px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">§00 Divisions — three plates, one factory</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Warsaw</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">§00 Divisions — three plates, one factory</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Warsaw</span>
 </div>
-<h2 style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;text-transform:uppercase;font-size:96px;margin:44px 0 48px">The plate rack</h2>
+<h2 style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;text-transform:uppercase;font-size:96px;margin:44px 0 48px">The plate rack</h2>
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px">
 <div style="border:2px solid #111;background:#F4F4F0">
-<div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 24px;border-bottom:2px solid rgba(17,17,17,.22);background:rgba(17,17,17,.04)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">§01 Production</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;color:#E43D26">F-00482</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">Lines</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px">04</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">Endpoint</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px">/v1</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">Served 30d</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;color:#E43D26">41.2M tok</span></div>
-<div style="padding:18px 24px"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Live</span></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 24px;border-bottom:2px solid rgba(17,17,17,.22);background:rgba(17,17,17,.04)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">§01 Production</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#B33B00">F-00482</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">Lines</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px">04</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">Endpoint</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px">/v1</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">Served 30d</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#B33B00">41.2M tok</span></div>
+<div style="padding:18px 24px"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Live</span></div>
 </div>
 <div style="border:2px solid #111;background:#F4F4F0">
-<div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 24px;border-bottom:2px solid rgba(17,17,17,.22);background:rgba(17,17,17,.04)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">§02 Laboratory</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;color:#E43D26">F-00521</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">Experiments</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px">21 / 2026</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">Checkpoints</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px">03 public</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">Best delta</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;color:#E43D26">+18.4% decode</span></div>
-<div style="padding:18px 24px"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#C88A05">● Running</span></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 24px;border-bottom:2px solid rgba(17,17,17,.22);background:rgba(17,17,17,.04)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">§02 Laboratory</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#B33B00">F-00521</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">Experiments</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px">21 / 2026</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">Checkpoints</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px">03 public</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">Best delta</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#B33B00">+18.4% decode</span></div>
+<div style="padding:18px 24px"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#C88A05">● Running</span></div>
 </div>
 <div style="border:2px solid #111;background:#F4F4F0">
-<div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 24px;border-bottom:2px solid rgba(17,17,17,.22);background:rgba(17,17,17,.04)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">§03 Measurement</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;color:#E43D26">F-00104</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">Project</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px">CodeSOTA</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">Suites</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px">06</span></div>
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">Models rated</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;color:#E43D26">48</span></div>
-<div style="padding:18px 24px"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Pass</span></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 24px;border-bottom:2px solid rgba(17,17,17,.22);background:rgba(17,17,17,.04)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">§03 Measurement</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#B33B00">F-00104</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">Project</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px">CodeSOTA</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">Suites</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px">06</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.12)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">Models rated</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#B33B00">48</span></div>
+<div style="padding:18px 24px"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Pass</span></div>
 </div>
 </div>
 </section>
 
-<section data-label="Price list" data-screen-label="06" style="background:#EAEAE5;color:#111;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Instrument Sans',sans-serif">
+<section data-label="Price list" data-screen-label="06" style="background:#FCFAF6;color:#111;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Inter',sans-serif">
 <div style="display:flex;justify-content:space-between;border-top:5px solid #111;padding-top:18px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Tab. 02 — price list, PLN per 1M tokens</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">September 2026</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Tab. 02 — price list, PLN per 1M tokens</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">September 2026</span>
 </div>
-<h2 style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;text-transform:uppercase;font-size:96px;margin:44px 0 40px">Published economics</h2>
-<table style="width:100%;border-collapse:collapse;font-family:'IBM Plex Mono',monospace;font-size:28px">
+<h2 style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;text-transform:uppercase;font-size:96px;margin:44px 0 40px">Published economics</h2>
+<table style="width:100%;border-collapse:collapse;font-family:'JetBrains Mono',monospace;font-size:28px">
 <thead><tr style="border-top:2px solid #111;border-bottom:2px solid #111">
-<th style="text-align:left;padding:18px 16px 18px 0;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67;font-weight:500">Model</th>
-<th style="text-align:left;padding:18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67;font-weight:500">Line</th>
-<th style="text-align:left;padding:18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67;font-weight:500">Quant</th>
-<th style="text-align:right;padding:18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67;font-weight:500">Input</th>
-<th style="text-align:right;padding:18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67;font-weight:500">Output</th>
-<th style="text-align:right;padding:18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67;font-weight:500">Tok/s</th>
-<th style="text-align:right;padding:18px 0 18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67;font-weight:500">State</th>
+<th style="text-align:left;padding:18px 16px 18px 0;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68;font-weight:500">Model</th>
+<th style="text-align:left;padding:18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68;font-weight:500">Line</th>
+<th style="text-align:left;padding:18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68;font-weight:500">Quant</th>
+<th style="text-align:right;padding:18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68;font-weight:500">Input</th>
+<th style="text-align:right;padding:18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68;font-weight:500">Output</th>
+<th style="text-align:right;padding:18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68;font-weight:500">Tok/s</th>
+<th style="text-align:right;padding:18px 0 18px 16px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68;font-weight:500">State</th>
 </tr></thead>
 <tbody>
-<tr style="border-bottom:1px solid rgba(17,17,17,.14)"><td style="padding:20px 16px 20px 0">Bielik 11B</td><td style="padding:20px 16px">chat</td><td style="padding:20px 16px">FP8</td><td style="padding:20px 16px;text-align:right">0.05</td><td style="padding:20px 16px;text-align:right">0.09</td><td style="padding:20px 16px;text-align:right;color:#E43D26">138.0</td><td style="padding:20px 0 20px 16px;text-align:right;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Live</td></tr>
-<tr style="border-bottom:1px solid rgba(17,17,17,.14)"><td style="padding:20px 16px 20px 0">Llama 4 17B</td><td style="padding:20px 16px">agents</td><td style="padding:20px 16px">AWQ</td><td style="padding:20px 16px;text-align:right">0.09</td><td style="padding:20px 16px;text-align:right">0.17</td><td style="padding:20px 16px;text-align:right;color:#E43D26">104.2</td><td style="padding:20px 0 20px 16px;text-align:right;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Live</td></tr>
-<tr style="border-bottom:1px solid rgba(17,17,17,.14)"><td style="padding:20px 16px 20px 0">Qwen3.8 27B</td><td style="padding:20px 16px">agents</td><td style="padding:20px 16px">AWQ</td><td style="padding:20px 16px;text-align:right">0.11</td><td style="padding:20px 16px;text-align:right">0.21</td><td style="padding:20px 16px;text-align:right;color:#E43D26">82.4</td><td style="padding:20px 0 20px 16px;text-align:right;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Live</td></tr>
-<tr style="border-bottom:1px solid rgba(17,17,17,.14)"><td style="padding:20px 16px 20px 0">Mistral 24B</td><td style="padding:20px 16px">batch</td><td style="padding:20px 16px">INT4</td><td style="padding:20px 16px;text-align:right">0.10</td><td style="padding:20px 16px;text-align:right">0.19</td><td style="padding:20px 16px;text-align:right;color:#E43D26">91.5</td><td style="padding:20px 0 20px 16px;text-align:right;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#C88A05">● Warn</td></tr>
-<tr style="border-bottom:2px solid #111"><td style="padding:20px 16px 20px 0">Slayer 1B</td><td style="padding:20px 16px">lab</td><td style="padding:20px 16px">FP16</td><td style="padding:20px 16px;text-align:right">—</td><td style="padding:20px 16px;text-align:right">—</td><td style="padding:20px 16px;text-align:right;color:#E43D26">412.0</td><td style="padding:20px 0 20px 16px;text-align:right;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#8C8C86">● Queued</td></tr>
+<tr style="border-bottom:1px solid rgba(17,17,17,.14)"><td style="padding:20px 16px 20px 0">Bielik 11B</td><td style="padding:20px 16px">chat</td><td style="padding:20px 16px">FP8</td><td style="padding:20px 16px;text-align:right">0.05</td><td style="padding:20px 16px;text-align:right">0.09</td><td style="padding:20px 16px;text-align:right;color:#B33B00">138.0</td><td style="padding:20px 0 20px 16px;text-align:right;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Live</td></tr>
+<tr style="border-bottom:1px solid rgba(17,17,17,.14)"><td style="padding:20px 16px 20px 0">Llama 4 17B</td><td style="padding:20px 16px">agents</td><td style="padding:20px 16px">AWQ</td><td style="padding:20px 16px;text-align:right">0.09</td><td style="padding:20px 16px;text-align:right">0.17</td><td style="padding:20px 16px;text-align:right;color:#B33B00">104.2</td><td style="padding:20px 0 20px 16px;text-align:right;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Live</td></tr>
+<tr style="border-bottom:1px solid rgba(17,17,17,.14)"><td style="padding:20px 16px 20px 0">Qwen3.8 27B</td><td style="padding:20px 16px">agents</td><td style="padding:20px 16px">AWQ</td><td style="padding:20px 16px;text-align:right">0.11</td><td style="padding:20px 16px;text-align:right">0.21</td><td style="padding:20px 16px;text-align:right;color:#B33B00">82.4</td><td style="padding:20px 0 20px 16px;text-align:right;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Live</td></tr>
+<tr style="border-bottom:1px solid rgba(17,17,17,.14)"><td style="padding:20px 16px 20px 0">Mistral 24B</td><td style="padding:20px 16px">batch</td><td style="padding:20px 16px">INT4</td><td style="padding:20px 16px;text-align:right">0.10</td><td style="padding:20px 16px;text-align:right">0.19</td><td style="padding:20px 16px;text-align:right;color:#B33B00">91.5</td><td style="padding:20px 0 20px 16px;text-align:right;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#C88A05">● Warn</td></tr>
+<tr style="border-bottom:2px solid #111"><td style="padding:20px 16px 20px 0">Slayer 1B</td><td style="padding:20px 16px">lab</td><td style="padding:20px 16px">FP16</td><td style="padding:20px 16px;text-align:right">—</td><td style="padding:20px 16px;text-align:right">—</td><td style="padding:20px 16px;text-align:right;color:#B33B00">412.0</td><td style="padding:20px 0 20px 16px;text-align:right;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#8C8C86">● Queued</td></tr>
 </tbody>
 </table>
 </section>
 
-<section data-label="Laboratory" data-screen-label="07" style="background:#EAEAE5;color:#111;background-image:linear-gradient(rgba(17,17,17,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.06) 1px,transparent 1px);background-size:48px 48px;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Instrument Sans',sans-serif">
+<section data-label="Laboratory" data-screen-label="07" style="background:#FCFAF6;color:#111;background-image:linear-gradient(rgba(17,17,17,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.06) 1px,transparent 1px);background-size:48px 48px;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Inter',sans-serif">
 <div style="display:flex;justify-content:space-between;border-top:5px solid #111;padding-top:18px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">§02 Laboratory — optimisation &amp; post-training</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">21 experiments / 2026</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">§02 Laboratory — optimisation &amp; post-training</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">21 experiments / 2026</span>
 </div>
-<h2 style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;text-transform:uppercase;font-size:96px;margin:44px 0 44px;max-width:22ch">Every change is an experiment</h2>
+<h2 style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;text-transform:uppercase;font-size:96px;margin:44px 0 44px;max-width:22ch">Every change is an experiment</h2>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
 <div style="border:2px solid #111;background:#F4F4F0">
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.22)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Experiment 021</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#C88A05">● Running</span></div>
-<div style="padding:24px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'IBM Plex Mono',monospace;font-size:28px">INT4 vs FP8 batching efficiency</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">F-WAW-3090-04 · batch 1–64 · 12 h</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.22)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Experiment 021</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#C88A05">● Running</span></div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:28px">INT4 vs FP8 batching efficiency</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">F-WAW-3090-04 · batch 1–64 · 12 h</span></div>
 </div>
 <div style="border:2px solid #111;background:#F4F4F0">
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.22)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Experiment 020</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Pass</span></div>
-<div style="padding:24px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'IBM Plex Mono',monospace;font-size:28px">Speculative decoding on 27B</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">Draft Slayer 1B · +18.4% decode · shipped</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.22)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Experiment 020</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Pass</span></div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:28px">Speculative decoding on 27B</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">Draft Slayer 1B · +18.4% decode · shipped</span></div>
 </div>
 <div style="border:2px solid #111;background:#F4F4F0">
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.22)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Experiment 019</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Pass</span></div>
-<div style="padding:24px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'IBM Plex Mono',monospace;font-size:28px">Polish tokenizer compaction</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">−7.2% tokens / doc · no quality delta · merged</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.22)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Experiment 019</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#1E9E4A">● Pass</span></div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:28px">Polish tokenizer compaction</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">−7.2% tokens / doc · no quality delta · merged</span></div>
 </div>
 <div style="border:2px solid #111;background:#F4F4F0">
-<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.22)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#6B6B67">Experiment 018</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#E43D26">● Fail</span></div>
-<div style="padding:24px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'IBM Plex Mono',monospace;font-size:28px">AWQ recalibration, 27B</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#6B6B67">−2.1 pts legal QA · reverted · notes public</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(17,17,17,.22)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#766E68">Experiment 018</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#B33B00">● Fail</span></div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'JetBrains Mono',monospace;font-size:28px">AWQ recalibration, 27B</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#766E68">−2.1 pts legal QA · reverted · notes public</span></div>
 </div>
 </div>
 </section>
 
-<section data-label="Measurement" data-screen-label="08" style="background:#111;color:#EAEAE5;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Instrument Sans',sans-serif">
-<div style="display:flex;justify-content:space-between;border-top:5px solid #EAEAE5;padding-top:18px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">§03 Measurement — CodeSOTA</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">A Fabryka project</span>
+<section data-label="Measurement" data-screen-label="08" style="background:#111;color:#FCFAF6;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Inter',sans-serif">
+<div style="display:flex;justify-content:space-between;border-top:5px solid #FCFAF6;padding-top:18px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">§03 Measurement — CodeSOTA</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">A Fabryka project</span>
 </div>
 <div style="display:grid;grid-template-columns:1fr 620px;gap:80px;margin-top:52px;align-items:start">
 <div style="display:flex;flex-direction:column;gap:32px">
-<h2 style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;text-transform:uppercase;font-size:96px;margin:0;max-width:19ch;color:#EAEAE5">We measure our own models too</h2>
-<p style="font-size:34px;line-height:1.4;max-width:32ch;margin:0;color:#EAEAE5;text-wrap:pretty">Six suites, 48 models, published methodology and raw results. No private evals.</p>
+<h2 style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;text-transform:uppercase;font-size:96px;margin:0;max-width:19ch;color:#FCFAF6">We measure our own models too</h2>
+<p style="font-size:34px;line-height:1.4;max-width:32ch;margin:0;color:#FCFAF6;text-wrap:pretty">Six suites, 48 models, published methodology and raw results. No private evals.</p>
 <div style="display:flex;gap:56px;border-top:2px solid rgba(234,234,229,.28);padding-top:28px">
-<div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;line-height:.86;font-size:104px">48</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">Models rated</span></div>
-<div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;line-height:.86;font-size:104px;color:#E43D26">06</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A5A5A1">Public suites</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;line-height:1.06;font-size:104px">48</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">Models rated</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;line-height:1.06;font-size:104px;color:#B33B00">06</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#A69C93">Public suites</span></div>
 </div>
 </div>
-<div style="border:2px solid #EAEAE5;background:#1A1A19">
-<div style="display:flex;justify-content:space-between;padding:18px 26px;border-bottom:2px solid rgba(234,234,229,.28);background:rgba(234,234,229,.04)"><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">Tab. 05 — leaderboard</span><span style="font-family:'IBM Plex Mono',monospace;font-size:24px;color:#E43D26;white-space:nowrap">S-0104</span></div>
-<div style="display:flex;justify-content:space-between;padding:18px 26px;border-bottom:1px solid rgba(234,234,229,.14)"><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">01 · Qwen3.8 27B</span><span style="font-family:'IBM Plex Mono',monospace;font-size:26px;color:#E43D26">71.4</span></div>
-<div style="display:flex;justify-content:space-between;padding:18px 26px;border-bottom:1px solid rgba(234,234,229,.14)"><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">02 · Llama 4 17B</span><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">68.2</span></div>
-<div style="display:flex;justify-content:space-between;padding:18px 26px;border-bottom:1px solid rgba(234,234,229,.14)"><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">03 · Mistral 24B</span><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">64.9</span></div>
-<div style="display:flex;justify-content:space-between;padding:18px 26px;border-bottom:1px solid rgba(234,234,229,.14)"><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">04 · Bielik 11B</span><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">58.1</span></div>
-<div style="display:flex;justify-content:space-between;padding:18px 26px"><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">05 · Slayer 1B</span><span style="font-family:'IBM Plex Mono',monospace;font-size:26px">31.7</span></div>
+<div style="border:2px solid #FCFAF6;background:#1A1A19">
+<div style="display:flex;justify-content:space-between;padding:18px 26px;border-bottom:2px solid rgba(234,234,229,.28);background:rgba(234,234,229,.04)"><span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">Tab. 05 — leaderboard</span><span style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#B33B00;white-space:nowrap">S-0104</span></div>
+<div style="display:flex;justify-content:space-between;padding:18px 26px;border-bottom:1px solid rgba(234,234,229,.14)"><span style="font-family:'JetBrains Mono',monospace;font-size:26px">01 · Qwen3.8 27B</span><span style="font-family:'JetBrains Mono',monospace;font-size:26px;color:#B33B00">71.4</span></div>
+<div style="display:flex;justify-content:space-between;padding:18px 26px;border-bottom:1px solid rgba(234,234,229,.14)"><span style="font-family:'JetBrains Mono',monospace;font-size:26px">02 · Llama 4 17B</span><span style="font-family:'JetBrains Mono',monospace;font-size:26px">68.2</span></div>
+<div style="display:flex;justify-content:space-between;padding:18px 26px;border-bottom:1px solid rgba(234,234,229,.14)"><span style="font-family:'JetBrains Mono',monospace;font-size:26px">03 · Mistral 24B</span><span style="font-family:'JetBrains Mono',monospace;font-size:26px">64.9</span></div>
+<div style="display:flex;justify-content:space-between;padding:18px 26px;border-bottom:1px solid rgba(234,234,229,.14)"><span style="font-family:'JetBrains Mono',monospace;font-size:26px">04 · Bielik 11B</span><span style="font-family:'JetBrains Mono',monospace;font-size:26px">58.1</span></div>
+<div style="display:flex;justify-content:space-between;padding:18px 26px"><span style="font-family:'JetBrains Mono',monospace;font-size:26px">05 · Slayer 1B</span><span style="font-family:'JetBrains Mono',monospace;font-size:26px">31.7</span></div>
 </div>
 </div>
 </section>
 
-<section data-label="Endpoint" data-screen-label="09" style="background:#E43D26;color:#EAEAE5;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Instrument Sans',sans-serif">
-<div style="display:flex;justify-content:space-between;border-top:5px solid #EAEAE5;padding-top:18px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">Fabryka — open model factory</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">Plate F-00482 · 03 SEP 2026</span>
+<section data-label="Endpoint" data-screen-label="09" style="background:#B33B00;color:#FCFAF6;display:flex;flex-direction:column;padding:72px 100px 80px;font-family:'Inter',sans-serif">
+<div style="display:flex;justify-content:space-between;border-top:5px solid #FCFAF6;padding-top:18px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">Fabryka — open model factory</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">Plate F-00482 · 03 SEP 2026</span>
 </div>
-<h2 style="font-family:Archivo,sans-serif;font-weight:800;font-stretch:68%;letter-spacing:-0.015em;line-height:.86;text-transform:uppercase;font-size:140px;margin:auto 0 0;max-width:20ch">Start on the line<br>that fits<span style="color:#111">.</span></h2>
+<h2 style="font-family:"EB Garamond",sans-serif;font-weight:500;font-stretch:normal;letter-spacing:-0.015em;line-height:1.06;text-transform:uppercase;font-size:140px;margin:auto 0 0;max-width:20ch">Start on the line<br>that fits<span style="color:#111">.</span></h2>
 <div style="margin-top:52px;display:flex;justify-content:space-between;align-items:flex-end;border-top:2px solid rgba(234,234,229,.6);padding-top:28px">
-<span style="font-family:'IBM Plex Mono',monospace;font-size:44px;letter-spacing:.02em">api.fabryka.ai/v1</span>
-<span style="font-family:'IBM Plex Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">OpenAI compatible · EU / Warsaw</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:44px;letter-spacing:.02em">api.fabryka.ai/v1</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase">OpenAI compatible · EU / Warsaw</span>
 </div>
 </section>
 

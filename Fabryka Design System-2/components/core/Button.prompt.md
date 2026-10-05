@@ -1,9 +1,5 @@
 # Button
-Square, mono-caps action control — use `primary` (red) for the single most important action on a view.
-
-```jsx
-<Button variant="primary">Read the docs</Button>
-<Button variant="secondary" size="sm" iconRight={<Icon name="arrow-right" size={13} />}>Production</Button>
-```
-
-Variants: `primary` (red), `solid` (carbon), `secondary` (hairline, inverts to carbon on hover), `ghost`. Sizes `sm|md|lg`. No radius, no gradients — never round the corners.
+Inter-labelled actions. Primary uses Ink; accent uses Furnace orange. Use a
+clear verb and the screen's language. Sentence case, readable size, no forced
+mono caps. Sizes sm/md/lg retain their APIs. Square by default; the 4px
+--radius-control token matches the production hero action variant.
