@@ -12,7 +12,7 @@ wiring is done in E1–E3.
 
 | Front | Default | Stable URL | Alternate | Alternate URL |
 |---|---|---|---|---|
-| `fabryka.ai` | pl | `/research` | en | `/en/research` |
+| `fabryka.ai` | pl | `/` | en | `/en` |
 | `slayer` | pl | `/zadania` | en | `/en/zadania` |
 | `track.fabryka.ai` | en | `/runs` | pl | `/pl/runs` |
 
