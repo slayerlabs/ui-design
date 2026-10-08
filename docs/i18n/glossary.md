@@ -10,7 +10,11 @@ Companion to `docs/i18n/url-contract.md` (task 821) and the design-system rule
 1. **One language per screen.** A Polish page uses Polish for navigation, labels
    and copy; an English page uses English. Do not mix within one screen.
 2. **Technical names keep their spelling.** Model names, repository names, code,
-   identifiers and licence names are never translated or inflected.
+   identifiers and licence names are never translated or inflected. The same
+   holds for the common technical terms marked *keep* in the table (run, dataset,
+   leaderboard, loss, benchmark, checkpoint, tokenizer, prompt, embedding,
+   pipeline, token): PL copy borrows them in English, declining only when Polish
+   grammar requires.
 
 ## 2. Tone
 
@@ -25,22 +29,23 @@ Both languages state a measured number only together with its source and scope.
 ## 3. Fixed term table
 
 Use these pairs consistently. Where a term is marked *keep*, it stays in the
-original spelling in both languages.
+original spelling in both languages; PL copy borrows it in English. Terms not
+marked *keep* have a standard Polish equivalent and are translated.
 
 | Concept | PL | EN | Notes |
 |---|---|---|---|
 | model | model | model | |
 | training | trening | training | |
-| training run | uruchomienie | run | one tracked execution; see *experiment* |
+| run | run | run | *keep*; one tracked execution; see *experiment* |
 | experiment | eksperyment | experiment | a question; a run is one execution of it |
 | data mix / recipe | miks danych | data mix | |
-| dataset | zbiór danych | dataset | *dataset* only for a named artifact |
+| dataset | dataset | dataset | *keep* |
 | checkpoint | checkpoint | checkpoint | *keep* |
 | evaluation | ewaluacja | evaluation | |
 | benchmark | benchmark | benchmark | *keep* |
-| leaderboard | ranking | leaderboard | |
+| leaderboard | leaderboard | leaderboard | *keep* |
 | metrics | metryki | metrics | |
-| loss | strata | loss | |
+| loss | loss | loss | *keep* |
 | tokenizer | tokenizer | tokenizer | *keep* |
 | token | token | token | |
 | corpus | korpus | corpus | |
@@ -89,7 +94,7 @@ track (react-i18next): src/locales/pl/<ns>.json   src/locales/en/<ns>.json
 Key rules:
 
 - Dot-nested keys, segments in `lowerCamelCase`: `nav.research`, `hero.title`,
-  `runs.empty`, `run.actions.saveCheckpoint`.
+  `experiments.empty`, `experiment.actions.saveCheckpoint`.
 - Keys are **stable identifiers**, never English sentences.
 - Never build a sentence by concatenating fragments; use one full string with
   placeholders.
@@ -108,10 +113,10 @@ Key rules:
 ```json
 {
   "nav": { "research": "Badania", "publications": "Publikacje" },
-  "hero": { "title": "Budujemy modele.", "subtitle": "Potem wprowadzamy je do pracy." },
-  "runs": {
-    "empty": "Brak uruchomień.",
-    "count": "{count, plural, one {# uruchomienie} few {# uruchomienia} many {# uruchomień} other {# uruchomienia}}"
+  "hero": { "title": "Budujemy modele.", "subtitle": "Potem wdrażamy je do pracy." },
+  "experiments": {
+    "empty": "Brak eksperymentów.",
+    "count": "{count, plural, one {# eksperyment} few {# eksperymenty} many {# eksperymentów} other {# eksperymentu}}"
   }
 }
 ```
@@ -122,18 +127,15 @@ Key rules:
 {
   "nav": { "research": "Research", "publications": "Publications" },
   "hero": { "title": "We build models.", "subtitle": "Then put them to work." },
-  "runs": {
-    "empty": "No runs yet.",
-    "count": "{count, plural, one {# run} other {# runs}}"
+  "experiments": {
+    "empty": "No experiments yet.",
+    "count": "{count, plural, one {# experiment} other {# experiments}}"
   }
 }
 ```
 
-## 6. Open decisions
+## 6. Kept terms policy
 
-These pairs are deliberately unresolved; pick one and record it here before the
-translation pass:
-
-- **run:** PL `uruchomienie` (proposed) vs keeping `run`.
-- **dataset:** PL `zbiór danych` (proposed) vs `dataset`.
-- **leaderboard:** PL `ranking` (proposed) vs keeping `leaderboard`.
+`run`, `dataset` and `leaderboard` are kept in English in both languages
+(2026-10-08, owner decision): generally-known technical terms are not translated.
+The same principle already applied to the other *keep* rows in the table.
