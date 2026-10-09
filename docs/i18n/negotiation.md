@@ -26,10 +26,18 @@ One mechanism for all fronts, documented once here:
 
 - **Name:** `fabryka_lang`
 - **Values:** `pl` | `en`
-- **Kind:** cookie, `path=/`, `max-age=31536000` (1 year), `SameSite=Lax`,
-  `Secure` in production. (`localStorage` is acceptable in the Vite front where
-  no server reads it; the cookie name is still `fabryka_lang`.)
+- **Kind:** cookie, `Domain=.fabryka.ai`, `path=/`, `max-age=31536000`
+  (1 year), `SameSite=Lax`, `Secure` in production. `Domain=.fabryka.ai`
+  makes the choice **shared across all fronts** (`fabryka.ai`,
+  `slayer.fabryka.ai`, `track.fabryka.ai`). (`localStorage` is host-scoped,
+  so the Vite front must read/write the shared **cookie**; keep
+  `localStorage` only as a fallback for blocked cookies, knowing it won't
+  carry across hosts on its own.)
 - **Precedence:** stored choice **beats** `Accept-Language` everywhere.
+- **Cross-front:** a choice made on any front carries to the others, because
+  the cookie is shared on the `.fabryka.ai` domain. `track.fabryka.ai`'s root
+  then honors it (`pl` → `/pl/`, `en` → `/`); deep, indexed URLs still serve
+  the language they address (no-guess rule, §3).
 - **Write side:** the switcher and the negotiation script; the server never
   clears it.
 
@@ -47,7 +55,7 @@ One mechanism for all fronts, documented once here:
   `fabryka_lang` cookie first, then `Accept-Language`; issues a `308`/
   `301` to `/` (pl) or `/en` (en). All other `handle` blocks serve the
   addressed path directly. The `en/` prefix tree serves EN; anything else
-  serves PL.
+  serves PL. When setting the cookie, write `Domain=.fabryka.ai`.
 - **`slayer` (Next.js middleware):** `[locale]` routing. Middleware on `/`
   reads the cookie, then `Accept-Language`; both map to the locale and it
   redirects to the existing route. Middleware must **not** rewrite explicit

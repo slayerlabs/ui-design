@@ -50,5 +50,7 @@ the counterpart of the current page in the other language (URL rule from task
 - **Vite (`track`):** wrap with React Router `Link` to the counterpart route
   (`/pl/runs` ⇄ `/runs`); the component computes the target from the current
   route name.
-- Persisting the choice (cookie `fabryka_lang`) is task 823's contract; the
-  switcher only navigates.
+- Persisting the choice: the switcher writes the `fabryka_lang` cookie
+  (`Domain=.fabryka.ai`, `Path=/`, 1 year) when the user switches, so the
+  choice carries across all fronts (task 823's contract); navigation itself is
+  the only job of the switcher.
