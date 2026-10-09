@@ -1,0 +1,5 @@
+{
+  "nav": { "research": "Badania", "publications": "Publikacje" },
+  "hero": { "title": "Budujemy modele." },
+  "experiments": { "count": "{count, plural, one {# eksperyment} few {# eksperymenty} many {# eksperymentów} other {# eksperymentu}}" }
+}
