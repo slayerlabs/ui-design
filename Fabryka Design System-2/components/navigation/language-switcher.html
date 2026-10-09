@@ -22,7 +22,8 @@
       border: 1px solid var(--ls-border);
       border-radius: var(--ls-radius);
     }
-    .language-switcher a {
+    .language-switcher a,
+    .language-switcher span {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -30,36 +31,33 @@
       min-height: 2.75rem;
       padding: var(--ls-pad);
       border-radius: var(--ls-radius);
-      text-decoration: none;
       font-size: 0.875rem;
       font-weight: 600;
       letter-spacing: 0.04em;
       color: var(--ls-fg);
     }
+    .language-switcher a {
+      text-decoration: none;
+    }
     .language-switcher a:hover {
       background: #f4f4f5;
     }
-    .language-switcher a[aria-current="true"] {
+    .language-switcher [aria-current] {
       background: var(--ls-active-bg);
       color: var(--ls-active-fg);
-      cursor: default;
     }
     .language-switcher a:focus-visible {
       outline: 2px solid var(--ls-focus);
       outline-offset: 2px;
     }
-    @media (max-width: 640px) {
-      .language-switcher a { min-width: 2.5rem; }
-    }
   </style>
 </head>
 <body>
   <!-- Example page on /research (pl default). Counterpart: /en/research. -->
-  <nav class="language-switcher" aria-label="Język / Language">
+  <nav class="language-switcher" aria-label="Język">
     <a href="/en/research" hreflang="en" lang="en"
        aria-label="Switch to English" title="English">EN</a>
-    <a href="/research" hreflang="pl" lang="pl"
-       aria-label="Polski" title="Polski" aria-current="true">PL</a>
+    <span lang="pl" aria-current="page" title="Polski">PL</span>
   </nav>
 </body>
 </html>

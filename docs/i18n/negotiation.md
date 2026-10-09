@@ -10,7 +10,7 @@ default to `pl`, `track.fabryka.ai` defaults to `en`.
 
 | Case | What happens |
 |---|---|
-| `/` with no stored choice | Redirect to the default-language URL (`/`, or the front's default page). `Accept-Language` is considered only if it is clearly `pl` or `en` and the default differs; otherwise the default wins. |
+| `/` with no stored choice | Redirect to the default-language URL (no redirect when the front is already at its default URL). `Accept-Language` is considered only if it is clearly `pl` or `en` and the default differs; otherwise the default wins. |
 | `/` with stored choice | Redirect to the stored choice language, no negotiation. |
 | Direct URL in either language (`/x`, `/en/x`, `/pl/x`) | Serve exactly as addressed. Never re-guess from headers. |
 | Unknown prefix (`/fr/...`) | 404 (or a 404 page in the default language); never a silent redirect into a guessed language. |
@@ -27,7 +27,8 @@ One mechanism for all fronts, documented once here:
 - **Name:** `fabryka_lang`
 - **Values:** `pl` | `en`
 - **Kind:** cookie, `Domain=.fabryka.ai`, `path=/`, `max-age=31536000`
-  (1 year), `SameSite=Lax`, `Secure` in production. `Domain=.fabryka.ai`
+  (1 year), `SameSite=Lax`, `Secure` in production, **not** `HttpOnly` (the
+  switcher writes it from JavaScript). `Domain=.fabryka.ai`
   makes the choice **shared across all fronts** (`fabryka.ai`,
   `slayer.fabryka.ai`, `track.fabryka.ai`). (`localStorage` is host-scoped,
   so the Vite front must read/write the shared **cookie**; keep

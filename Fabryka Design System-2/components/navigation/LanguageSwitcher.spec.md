@@ -13,44 +13,44 @@ the counterpart of the current page in the other language (URL rule from task
 
 - **Placement:** top navigation, far right, last item before any primary CTA.
 - **Labels:** the two-letter codes `PL` and `EN`; full names `Polski` /
-  `English` in `aria-label` and `title`. The current language is not a link.
+  `English` in `aria-label` and `title`. The current language is rendered as a
+  non-link element (never the self-link the URL contract forbids).
 - **Active state:** the current language is visually marked (filled
-  background / underline) and carries `aria-current="true"`.
+  background / underline) and carries `aria-current="page"`.
 - **Mobile:** both codes remain visible side by side; each hit target is at
   least 44×44 px. No dropdown.
 
 ## 2. Markup contract
 
 ```html
-<nav aria-label="Language">
+<nav aria-label="Język">
   <a href="/en/research" hreflang="en" lang="en"
-     aria-label="Switch to English (for example)" title="English">
-    EN
-  </a>
-  <a href="/research" aria-current="true" hreflang="pl" lang="pl">PL</a>
+     aria-label="Switch to English" title="English">EN</a>
+  <span lang="pl" aria-current="page" title="Polski">PL</span>
 </nav>
 ```
 
-- Plain `<a>` links to the language variants — the switcher works with
-  JavaScript disabled.
-- `aria-current="true"` marks the active language; `aria-label` gives the full
-  language name on each link.
+- The target language is a plain `<a>` link — the switcher works with
+  JavaScript disabled; the current language is a non-interactive `<span>`
+  (the URL contract forbids a same-language link).
+- `aria-current="page"` marks the active language; `aria-label` gives the full
+  language name on the link.
 - `href` is the counterpart of the current page in the other language,
   following the URL contract (add/remove the `/en` or `/pl` prefix; never link
   to the site root unless the current page is the root).
-- Focus: default visible focus ring on both links.
+- Focus: default visible focus ring on the link.
 
 ## 3. Adoption notes
 
 - **Static (`fabryka.ai`):** copy the reference block verbatim per page; the
   build generates the two `href`s from the page path.
 - **Next (`slayer`):** wrap with `next/link` (`<Link href="/en/zadania">`),
-  keep `hreflang`/`lang`/`aria-current`; the switcher receives the current
-  locale as a prop.
+  keep `hreflang`/`lang`; the switcher receives the current locale as a prop
+  and renders the active one as a `<span aria-current="page">`.
 - **Vite (`track`):** wrap with React Router `Link` to the counterpart route
   (`/pl/runs` ⇄ `/runs`); the component computes the target from the current
   route name.
-- Persisting the choice: the switcher writes the `fabryka_lang` cookie
-  (`Domain=.fabryka.ai`, `Path=/`, 1 year) when the user switches, so the
-  choice carries across all fronts (task 823's contract); navigation itself is
-  the only job of the switcher.
+- Persisting the choice: on switch the switcher writes the `fabryka_lang`
+  cookie (`Domain=.fabryka.ai`, `Path=/`, `SameSite=Lax`, `Secure`, 1 year, not
+  `HttpOnly` since it is client-written), so the choice carries across all
+  fronts (task 823's storage rule).

@@ -14,7 +14,7 @@ wiring is done in E1–E3.
 |---|---|---|---|---|
 | `fabryka.ai` | pl | `/` | en | `/en` |
 | `slayer` | pl | `/zadania` | en | `/en/zadania` |
-| `track.fabryka.ai` | en | `/runs` | pl | `/pl/runs` |
+| `track.fabryka.ai` | en | `/` | pl | `/pl/` |
 
 Rule: the **default language carries no prefix**; the other language lives under its
 two-letter prefix (`/pl` or `/en`). The prefix is the only place language is encoded
@@ -32,8 +32,11 @@ its existing `/mission` (pl) + `/mission/en` (en) page; `slayer` is Polish throu
   mapping table. Until such a table exists, do not invent translated slugs.
 - The historical `slayer` redirect `/tasks` → `/zadania` stays as is; the English
   variant of that page is `/en/zadania`.
+- Exception to the prefix rule: the existing `/mission/en` suffix form is
+  preserved unchanged (§6). Every new alternate uses the prefix form.
 
-Rationale: 29 `slayer` routes and 34 `fabryka.ai` URLs would otherwise need a
+Rationale: 31 `slayer` routes and 34 `fabryka.ai` URLs (32 content pages, plus the
+`/docs` application route and `/mission/en`) would otherwise need a
 hand-maintained translation map before anything ships. Language is carried by the
 prefix; slug translation is a later, per-page decision.
 
@@ -69,14 +72,15 @@ Every page emits:
 ### `track.fabryka.ai` (en default)
 
 ```html
-<link rel="canonical" href="https://track.fabryka.ai/runs">
-<link rel="alternate" hreflang="en" href="https://track.fabryka.ai/runs">
-<link rel="alternate" hreflang="pl" href="https://track.fabryka.ai/pl/runs">
-<link rel="alternate" hreflang="x-default" href="https://track.fabryka.ai/runs">
+<link rel="canonical" href="https://track.fabryka.ai/">
+<link rel="alternate" hreflang="en" href="https://track.fabryka.ai/">
+<link rel="alternate" hreflang="pl" href="https://track.fabryka.ai/pl/">
+<link rel="alternate" hreflang="x-default" href="https://track.fabryka.ai/">
 ```
 
-`<html lang>` follows the page language (`pl` or `en`). The live `/mission` page
-already does this correctly and is the reference implementation.
+`<html lang>` follows the page language (`pl` or `en`) — the live `/mission` and
+`/mission/en` pages already set it correctly; the full `x-default`/canonical block
+is added in E1.
 
 ## 4. Sitemap
 
@@ -84,10 +88,11 @@ Each front lists **both** variants of every public page as separate `<loc>` entr
 Add `<xhtml:link rel="alternate" hreflang>` blocks when the sitemap generator makes
 it cheap; they are not required for correctness if the page-level `hreflang` is present.
 
-Private/authenticated Track routes (`/account`, `/new`, `/runs`, `/checkpoints`,
-`/run/:id`, `/compare/:ids`, `/benchmarks`) are **not** listed; public routes
-(`/`, `/overview`, `/goals`, `/benchmark-results`, `/leaderboard`, `/models`,
-`/guide`, `/agents`, `/login`) are.
+Private/authenticated Track routes (`/account`, `/new`, `/runs`, `/status`,
+`/checkpoints`, `/run/:id`, `/compare/:ids`, `/benchmarks`) are **not** listed;
+public routes (`/`, `/overview`, `/goals`, `/goals/250m-english-base-model`,
+`/benchmark-results`, `/leaderboard`, `/models`, `/guide`, `/agents`, `/login`)
+are.
 
 ## 5. Switcher link rule
 
@@ -106,41 +111,31 @@ at the counterpart URL, not the site root.
   current language differs from the new default, the same URL starts serving the
   default language and the old language moves under the prefix. Same URL → **no
   redirect**; the change is signalled by updated `hreflang`, canonical and sitemap.
-- **`fabryka.ai/mission`.** Keeps `https://fabryka.ai/mission` (pl). Its English
-  counterpart moves from the suffix form `/mission/en` to the prefix form
-  `/en/mission`; add `301 /mission/en → /en/mission`. This is the only existing
-  bilingual URL on the site.
+- **`fabryka.ai/mission`.** Keeps both `https://fabryka.ai/mission` (pl) and
+  `/mission/en` (en) **exactly as they are today** — the documented exception to
+  the prefix rule (§ acceptance: the existing bilingual pattern is preserved).
+  No redirect is added; `/mission/en` is the one suffix-form URL on the site.
 - **`slayer` `/tasks`.** Existing `301 /tasks → /zadania` stays; the English page is
   `/en/zadania`.
 - No existing URL may be silently dropped without a `301` to its replacement.
 
-### Currently-EN `fabryka.ai` pages moving to `/en/…`
+### Currently-EN `fabryka.ai` pages keep their path, EN moves under `/en/…`
 
-These URLs currently serve English. After migration they serve Polish, and their
-English content lives under `/en/…`:
-
-| Current (en) | Becomes (pl) | English (new) |
-|---|---|---|
-| `/` | `/` | `/en` |
-| `/research` | `/research` | `/en/research` |
-| `/publications` | `/publications` | `/en/publications` |
-| `/story` | `/story` | `/en/story` |
-| `/platform` | `/platform` | `/en/platform` |
-| `/vision` | `/vision` | `/en/vision` |
-| `/dynaword` | `/dynaword` | `/en/dynaword` |
-| `/media` | `/media` | `/en/media` |
-| `/usage` | `/usage` | `/en/usage` |
-| `/arr` | `/arr` | `/en/arr` |
-
-Pages already Polish (`/basal`, `/gov`, `/robotyka`, `/mission`) keep their URL and
-gain an English counterpart under `/en/…`.
+Pages that currently serve English keep their stable path (now serving Polish) and
+their English content moves under the `/en/…` prefix. The authoritative
+classification is **Appendix A**: rows marked `Today: en` move EN to `/en/…`; rows
+marked `Today: pl` keep the URL and gain an EN counterpart. That column — not this
+section — is the single source of truth (it includes `/platform/terms`, `/chat`,
+`/hermes`, `/logprobs`, `/router`, `/status`, `/changelog`, `/trust.html`, the
+`/research/*` tree and the five articles).
 
 ## 7. Appendix A — full address table
 
 ### `fabryka.ai` (pl default; source: live `sitemap.xml`, 2026-10-08)
 
-`/docs` is an application route (FastAPI/generated API documentation, JSON, no
-`<html lang>`); it is out of the content set. All other rows are content pages.
+`/docs` is an application route (FastAPI-generated API documentation served as
+Swagger UI HTML with no `<html lang>`); it is out of the content set and keeps a
+single, non-localized sitemap entry. All other rows are content pages.
 
 | Path | Today | PL URL | EN URL |
 |---|---|---|---|
@@ -157,7 +152,7 @@ gain an English counterpart under `/en/…`.
 | `/logprobs` | en | `/logprobs` | `/en/logprobs` |
 | `/router` | en | `/router` | `/en/router` |
 | `/vision` | en | `/vision` | `/en/vision` |
-| `/mission` | pl | `/mission` | `/en/mission` (301 from `/mission/en`) |
+| `/mission` | pl | `/mission` | `/mission/en` (exception, preserved) |
 | `/media` | en | `/media` | `/en/media` |
 | `/usage` | en | `/usage` | `/en/usage` |
 | `/arr` | en | `/arr` | `/en/arr` |
