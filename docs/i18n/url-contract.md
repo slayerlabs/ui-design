@@ -31,9 +31,9 @@ one language everywhere, one choice logic, one URL scheme).
   variant of that page is `/pl/zadania`.
 
 Rationale: 31 `slayer` routes and 34 `fabryka.ai` URLs (32 content pages, plus the
-`/docs` application route) would otherwise need a hand-maintained translation map
-before anything ships. Language is carried by the prefix; slug translation is a
-later, per-page decision.
+`/docs` application route and `/mission/en`) would otherwise need a hand-maintained
+translation map before anything ships. Language is carried by the prefix; slug
+translation is a later, per-page decision.
 
 ## 3. `hreflang` and canonical
 

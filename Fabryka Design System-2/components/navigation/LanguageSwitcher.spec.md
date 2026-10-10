@@ -12,9 +12,10 @@ the counterpart of the current page in the other language (URL rule from task
 ## 1. Visual spec
 
 - **Placement:** top navigation, far right, last item before any primary CTA.
-- **Labels:** the two-letter codes `PL` and `EN`; full names `Polski` /
-  `English` in `aria-label` and `title`. The current language is rendered as a
-  non-link element (never the self-link the URL contract forbids).
+- **Labels:** the two-letter codes `PL` and `EN`; the full name (`Polski` /
+  `English`) in `title`, and an action phrase (`Przełącz na polski` / `Switch to
+  English`) in `aria-label`. The current language is rendered as a non-link
+  element (never the self-link the URL contract forbids).
 - **Active state:** the current language is visually marked (filled
   background / underline) and carries `aria-current="page"`.
 - **Mobile:** both codes remain visible side by side; each hit target is at

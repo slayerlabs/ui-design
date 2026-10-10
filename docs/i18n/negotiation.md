@@ -27,6 +27,12 @@ D-006 (proposed): redirect **only from `/`**. Deep links and indexed URLs are
 never redirected into another language, so a shared link always lands on the
 language its author addressed.
 
+> D-006 governs **negotiation** redirects (re-guessing a visitor's language from
+> headers/cookie). **Migration** redirects — one-time `301`/`302` moves of content
+> to a new path (e.g. the legal pages' `302` to `/pl/…`, `/mission/en` → `/mission`)
+> — are a separate category, documented in `url-contract.md` §6, and are not
+> subject to D-006.
+
 ## 2. Storage rule
 
 One mechanism for all fronts, documented once here:

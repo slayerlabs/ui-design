@@ -48,7 +48,6 @@ marked *keep* have a standard Polish equivalent and are translated.
 | metrics | metryki | metrics | |
 | loss | loss | loss | *keep* |
 | tokenizer | tokenizer | tokenizer | *keep* |
-| token | token | token | |
 | corpus | korpus | corpus | |
 | weights | wagi | weights | |
 | fine-tuning | dostrajanie | fine-tuning | |
@@ -143,4 +142,5 @@ Key rules:
 
 `run`, `dataset` and `leaderboard` are kept in English in both languages
 (2026-10-08, owner decision): generally-known technical terms are not translated.
-The same principle already applied to the other *keep* rows in the table.
+The same principle extends to the other *keep* rows in the table — `loss`,
+`benchmark`, `checkpoint`, `tokenizer`, `prompt`, `embedding`, `pipeline`, `token`.
