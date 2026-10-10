@@ -107,6 +107,12 @@ at the counterpart URL, not the site root.
 - **`fabryka.ai/mission`.** Today `/mission` serves PL and `/mission/en` serves EN.
   Under the unified rule `/mission` serves EN and `/pl/mission` serves PL; the old
   `/mission/en` gets a `301` to `/mission`. No suffix-form exception remains.
+- **`fabryka.ai` legal pages.** `/regulamin.html`, `/polityka-prywatnosci.html` and
+  `/ai-act.html` are single-language Polish for now: the no-prefix path
+  `302`-redirects to `/pl/…` and no English version exists yet. English is deferred;
+  when it arrives it takes the no-prefix URL (the `302` is removed) and the Polish
+  version stays under `/pl/…`. The `302` (not `301`) keeps the no-prefix URL alive
+  for that future English version.
 - **`slayer` `/tasks`.** Existing `301 /tasks → /zadania` stays; the Polish page is
   `/pl/zadania`.
 - No existing URL may be silently dropped without a `301` to its replacement.
@@ -149,9 +155,9 @@ single, non-localized sitemap entry. All other rows are content pages.
 | `/status` | en | `/status` | `/pl/status` |
 | `/changelog` | en | `/changelog` | `/pl/changelog` |
 | `/trust.html` | en | `/trust.html` | `/pl/trust.html` |
-| `/regulamin.html` | pl | `/regulamin.html` | `/pl/regulamin.html` |
-| `/polityka-prywatnosci.html` | pl | `/polityka-prywatnosci.html` | `/pl/polityka-prywatnosci.html` |
-| `/ai-act.html` | pl | `/ai-act.html` | `/pl/ai-act.html` |
+| `/regulamin.html` | pl | deferred | `/pl/regulamin.html` |
+| `/polityka-prywatnosci.html` | pl | deferred | `/pl/polityka-prywatnosci.html` |
+| `/ai-act.html` | pl | deferred | `/pl/ai-act.html` |
 | `/research/notes` | en | `/research/notes` | `/pl/research/notes` |
 | `/research/methodology` | en | `/research/methodology` | `/pl/research/methodology` |
 | `/research/articles/gollem-v5/` | en | same path | `/pl/research/articles/gollem-v5/` |
@@ -163,6 +169,11 @@ single, non-localized sitemap entry. All other rows are content pages.
 | `/robotyka` | pl | `/robotyka` | `/pl/robotyka` |
 
 `/mission/en` (today's EN page) → `301 /mission`.
+
+Legal pages (`/regulamin.html`, `/polityka-prywatnosci.html`, `/ai-act.html`) are
+single-language Polish for now: the no-prefix path `302`-redirects to `/pl/…`, no
+English version yet (`EN URL` = deferred). English is deferred and will later take
+the no-prefix URL.
 
 ### `slayer` (en default; source: `app/**/page.jsx`)
 
