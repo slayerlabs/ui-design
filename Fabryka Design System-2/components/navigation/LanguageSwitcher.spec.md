@@ -49,7 +49,8 @@ the counterpart of the current page in the other language (URL rule from task
   and renders the active one as a `<span aria-current="page">`.
 - **Vite (`track`):** wrap with React Router `Link` to the counterpart route
   (`/pl/runs` ⇄ `/runs`); the component computes the target from the current
-  route name.
+  route name. First-visit detection (`navigator.languages[0] === 'pl'`) is the
+  entry point's job (task 823), never the switcher's.
 - Persisting the choice: on switch the switcher writes the `fabryka_lang`
   cookie (`Domain=.fabryka.ai`, `Path=/`, `SameSite=Lax`, `Secure`, 1 year, not
   `HttpOnly` since it is client-written), so the choice carries across all

@@ -20,8 +20,14 @@ Rule: the **default language carries no prefix**; the other language lives under
 two-letter prefix (`/pl` or `/en`). The prefix is the only place language is encoded
 in the URL.
 
+> What "default" means here is the **canonical (no-prefix) language**, fixed by SEO
+> history. The negotiated default a first-time visitor actually *sees* is a separate
+> concern and is **EN on every front** (unless the browser clearly prefers PL) —
+> see `docs/i18n/negotiation.md` (decision 2026-10-10). `canonical`/`x-default`
+> keep pointing at the no-prefix URL below even for the Polish-canonical fronts.
+
 `track.fabryka.ai` keeps English at stable URLs because all its current, indexed URLs
-are English. `fabryka.ai` and `slayer` are Polish-default: `fabryka.ai` generalizes
+are English. `fabryka.ai` and `slayer` are Polish-canonical: `fabryka.ai` generalizes
 its existing `/mission` (pl) + `/mission/en` (en) page; `slayer` is Polish throughout.
 
 ## 2. Path segments
@@ -48,7 +54,7 @@ Every page emits:
 - one `hreflang` per language plus `x-default`,
 - `x-default` points at the **default-language** URL.
 
-### `fabryka.ai` (pl default)
+### `fabryka.ai` (pl canonical, EN served-default)
 
 ```html
 <link rel="canonical" href="https://fabryka.ai/research">
@@ -57,7 +63,7 @@ Every page emits:
 <link rel="alternate" hreflang="x-default" href="https://fabryka.ai/research">
 ```
 
-### `slayer` (pl default)
+### `slayer` (pl canonical, EN served-default)
 
 ```html
 <link rel="canonical" href="https://slayer.fabryka.ai/zadania">
@@ -131,7 +137,7 @@ section — is the single source of truth (it includes `/platform/terms`, `/chat
 
 ## 7. Appendix A — full address table
 
-### `fabryka.ai` (pl default; source: live `sitemap.xml`, 2026-10-08)
+### `fabryka.ai` (pl canonical; source: live `sitemap.xml`, 2026-10-08)
 
 `/docs` is an application route (FastAPI-generated API documentation served as
 Swagger UI HTML with no `<html lang>`); it is out of the content set and keeps a
@@ -172,7 +178,7 @@ single, non-localized sitemap entry. All other rows are content pages.
 | `/gov` | pl | `/gov` | `/en/gov` |
 | `/robotyka` | pl | `/robotyka` | `/en/robotyka` |
 
-### `slayer` (pl default; source: `app/**/page.jsx`)
+### `slayer` (pl canonical; source: `app/**/page.jsx`)
 
 All routes are Polish today; each gains an `/en` counterpart, same slug.
 
