@@ -9,10 +9,9 @@ Companion to `docs/i18n/url-contract.md` (task 821) and `docs/i18n/glossary.md`
 `stored cookie → clearly-PL browser → EN`. Exception-less and identical across
 fronts so a single visitor gets the same language on `fabryka.ai`,
 `slayer.fabryka.ai` and `track.fabryka.ai` (the shared `fabryka_lang` cookie
-carries the choice once made). Per-front *URL mapping* stays as accepted by
-task 821: the default-serving language for each front is EN; the PL lives
-under `/pl` (`fabryka-track`) or at no-prefix because those fronts are
-Polish-canonical (`fabryka.ai`, `slayer` — see the note in §3).
+carries the choice once made). The URL scheme is equally uniform: **EN is the
+default language at no-prefix URLs, PL lives under `/pl` on every front** (task
+821). No per-front exceptions.
 
 ## 1. Behavior matrix
 
@@ -20,7 +19,7 @@ Polish-canonical (`fabryka.ai`, `slayer` — see the note in §3).
 |---|---|
 | `/` with no stored choice | Default **EN**, except a clearly-PL browser (server: `Accept-Language`; Track SPA: `navigator.languages[0]` = `pl`) gets the PL variant. No redirect when the front is already at the EN URL. |
 | `/` with stored choice | Redirect to the stored choice language, no negotiation. |
-| Direct URL in either language (`/x`, `/en/x`, `/pl/x`) | Serve exactly as addressed. Never re-guess from headers or `navigator`. |
+| Direct URL in either language (`/x`, `/pl/x`) | Serve exactly as addressed. Never re-guess from headers or `navigator`. |
 | Unknown prefix (`/fr/...`) | 404 (or a 404 page in the default language); never a silent redirect into a guessed language. |
 | Bot without cookies / `Accept-Language` | Same as "no stored choice"; server-side decision (per D-006, only `/` redirects, protecting deep links and SEO). |
 
@@ -55,28 +54,24 @@ One mechanism for all fronts, documented once here:
 
 ## 3. No-guess rule
 
-- A request that addresses a language explicitly (`/en/...`, `/pl/...`) is
-  served in that language no matter what headers or storage say.
+- A request that addresses a language explicitly (`/pl/...`) is served in that
+  language no matter what headers or storage say.
 - Only `/` may redirect, and it honors: stored choice → clearly-PL browser →
   EN default.
 - Never set `hreflang` or `canonical` referencing a redirected/re-guessed URL.
-- The EN serving default must **not** be confused with canonical structure:
-  on the Polish-canonical fronts (`fabryka.ai`, `slayer`) `canonical` and
-  `x-default` keep pointing at the no-prefix (PL) URL per task 821; the
-  negotiation default only decides which variant a first-time visitor sees.
 
 ## 4. Per-stack notes
 
 - **`fabryka.ai` (Caddy/static):** `handle` on `/` evaluates the
   `fabryka_lang` cookie first, then `Accept-Language` (clearly `pl` wins);
-  issues a `301` to `/en` (EN default) or stays on `/` (PL). All other
-  `handle` blocks serve the addressed path directly. The `en/` prefix tree
-  serves EN; anything else serves PL. When setting the cookie, write
+  issues a `301` to `/pl` (PL) or stays on `/` (EN default). All other
+  `handle` blocks serve the addressed path directly. The `pl/` prefix tree
+  serves PL; anything else serves EN. When setting the cookie, write
   `Domain=.fabryka.ai`.
 - **`slayer` (Next.js middleware):** `[locale]` routing. Middleware on `/`
   reads the cookie, then `Accept-Language` (clearly `pl` wins); both map to
   the locale and it redirects to the existing route. Middleware must **not**
-  rewrite explicit `/en/...` requests. Set the cookie via the response when
+  rewrite explicit `/pl/...` requests. Set the cookie via the response when
   the switcher is used.
 - **`track.fabryka.ai` (Vite / React Router):** the entry point reads
   `fabryka_lang` (cookie or localStorage) **before first render**: if absent,
@@ -87,17 +82,17 @@ One mechanism for all fronts, documented once here:
 ## 5. curl examples (static front, EN default)
 
 ```sh
-# No choice, Accept-Language: en → English home
-curl -H 'Accept-Language: en' -I https://fabryka.ai/          # 301 → /en
+# No choice, Accept-Language: en → English home (already at the EN URL)
+curl -H 'Accept-Language: en' -I https://fabryka.ai/          # 200 /
 
 # No choice, Accept-Language clearly pl → Polish home
-curl -H 'Accept-Language: pl' -I https://fabryka.ai/          # 200 /
+curl -H 'Accept-Language: pl' -I https://fabryka.ai/          # 301 → /pl
 
 # Stored pl beats Accept-Language: en
-curl -H 'Accept-Language: en' -H 'Cookie: fabryka_lang=pl' -I https://fabryka.ai/   # 200 /
+curl -H 'Accept-Language: en' -H 'Cookie: fabryka_lang=pl' -I https://fabryka.ai/   # 301 → /pl
 
 # Deep link is never re-guessed
-curl -H 'Accept-Language: en' -I https://fabryka.ai/research  # 200, PL content
+curl -H 'Accept-Language: pl' -I https://fabryka.ai/research  # 200, EN content
 
 # Unknown prefix → 404
 curl -I https://fabryka.ai/fr/                                # 404

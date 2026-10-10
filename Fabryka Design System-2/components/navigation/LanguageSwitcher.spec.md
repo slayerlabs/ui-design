@@ -24,9 +24,9 @@ the counterpart of the current page in the other language (URL rule from task
 
 ```html
 <nav aria-label="Język">
-  <a href="/en/research" hreflang="en" lang="en"
-     aria-label="Switch to English" title="English">EN</a>
-  <span lang="pl" aria-current="page" title="Polski">PL</span>
+  <a href="/pl/research" hreflang="pl" lang="pl"
+     aria-label="Przełącz na polski" title="Polski">PL</a>
+  <span lang="en" aria-current="page" title="English">EN</span>
 </nav>
 ```
 
@@ -36,7 +36,7 @@ the counterpart of the current page in the other language (URL rule from task
 - `aria-current="page"` marks the active language; `aria-label` gives the full
   language name on the link.
 - `href` is the counterpart of the current page in the other language,
-  following the URL contract (add/remove the `/en` or `/pl` prefix; never link
+  following the URL contract (add/remove the `/pl` prefix; never link
   to the site root unless the current page is the root).
 - Focus: default visible focus ring on the link.
 
@@ -44,7 +44,7 @@ the counterpart of the current page in the other language (URL rule from task
 
 - **Static (`fabryka.ai`):** copy the reference block verbatim per page; the
   build generates the two `href`s from the page path.
-- **Next (`slayer`):** wrap with `next/link` (`<Link href="/en/zadania">`),
+- **Next (`slayer`):** wrap with `next/link` (`<Link href="/pl/zadania">`),
   keep `hreflang`/`lang`; the switcher receives the current locale as a prop
   and renders the active one as a `<span aria-current="page">`.
 - **Vite (`track`):** wrap with React Router `Link` to the counterpart route
