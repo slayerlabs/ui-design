@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LanguageSwitcher — reference</title>
+  <style>
+    :root {
+      --ls-gap: 0.25rem;
+      --ls-pad: 0.5rem 0.9rem;
+      --ls-radius: 999px;
+      --ls-border: #d4d4d8;
+      --ls-active-bg: #18181b;
+      --ls-active-fg: #fafafa;
+      --ls-fg: #3f3f46;
+      --ls-focus: #2563eb;
+    }
+    .language-switcher {
+      display: inline-flex;
+      gap: var(--ls-gap);
+      padding: var(--ls-gap);
+      border: 1px solid var(--ls-border);
+      border-radius: var(--ls-radius);
+    }
+    .language-switcher a,
+    .language-switcher span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.75rem;
+      min-height: 2.75rem;
+      padding: var(--ls-pad);
+      border-radius: var(--ls-radius);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ls-fg);
+    }
+    .language-switcher a {
+      text-decoration: none;
+    }
+    .language-switcher a:hover {
+      background: #f4f4f5;
+    }
+    .language-switcher [aria-current] {
+      background: var(--ls-active-bg);
+      color: var(--ls-active-fg);
+    }
+    .language-switcher a:focus-visible {
+      outline: 2px solid var(--ls-focus);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+<!-- Example page on /research (en default). Counterpart: /pl/research. -->
+  <nav class="language-switcher" aria-label="Język">
+    <a href="/pl/research" hreflang="pl" lang="pl"
+       aria-label="Przełącz na polski" title="Polski">PL</a>
+    <span lang="en" aria-current="page" title="English">EN</span>
+  </nav>
+</body>
+</html>

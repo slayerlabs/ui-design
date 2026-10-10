@@ -1,0 +1,6 @@
+{
+  "dictionaries": {
+    "pl": ["i18n/pl.json"],
+    "en": ["i18n/en.json"]
+  }
+}
