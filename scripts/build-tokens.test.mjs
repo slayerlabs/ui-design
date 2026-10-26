@@ -4,6 +4,28 @@ import { SCOPE, buildTokens, scopeTokens } from "./build-tokens.mjs";
 
 test("scopes every :root block", () => {
   assert.equal(scopeTokens(":root{--a:1}\n:root {--b:2}", "[x]"), "[x]{--a:1}\n[x]{--b:2}");
+  assert.equal(
+    scopeTokens('[data-theme="carbon"] {--a:1}', "[x]"),
+    '[x][data-theme="carbon"],[x] [data-theme="carbon"]{--a:1}',
+  );
+});
+
+test("every top-level selector of the scoped output starts with the scope", () => {
+  const css = buildTokens().scoped.replace(/\/\*[\s\S]*?\*\//g, "");
+  const selectors = [];
+  let depth = 0;
+  let start = 0;
+  for (let i = 0; i < css.length; i++) {
+    if (css[i] === "{") {
+      if (depth === 0) selectors.push(...css.slice(start, i).split(",").map((s) => s.trim()));
+      depth++;
+    } else if (css[i] === "}") {
+      depth--;
+      if (depth === 0) start = i + 1;
+    }
+  }
+  assert.ok(selectors.length > 0);
+  for (const selector of selectors) assert.ok(selector.startsWith(SCOPE), `unscoped selector: ${selector}`);
 });
 
 test("tokens carry the production palette and no resets or font imports", () => {

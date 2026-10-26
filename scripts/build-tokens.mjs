@@ -11,7 +11,9 @@ const SOURCES = ["colors", "spacing", "borders", "motion"].map((name) =>
 export const SCOPE = "[data-fabryka-ds]";
 
 export function scopeTokens(css, scope) {
-  return css.replace(/:root\s*\{/g, `${scope}{`);
+  return css
+    .replace(/:root\s*\{/g, `${scope}{`)
+    .replace(/\[data-theme="carbon"\]\s*\{/g, `${scope}[data-theme="carbon"],${scope} [data-theme="carbon"]{`);
 }
 
 export function buildTokens() {
