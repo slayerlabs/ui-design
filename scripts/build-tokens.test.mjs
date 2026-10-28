@@ -398,14 +398,12 @@ for (const [name, value, { media, carbon } = {}] of NEW_TOKENS) {
       const all = declarations(built[output]).filter((d) => d.name === name);
       const atBase = all.filter((d) => d.media === null && d.selector === base);
       assert.deepEqual(atBase.map((d) => d.value), [value], `${output} ${base}`);
-      if (media) {
-        const text = mediaBlocks(built[output], media[0]).map((block) => block.text).join("");
-        assert.ok(text.includes(`${base}{`) && text.includes(`${name}:${media[1]};`), `${output} @media (${media[0]})`);
-      }
-      if (carbon) {
-        const atCarbon = all.filter((d) => d.media === null && d.selector === carbonSelector);
-        assert.deepEqual(atCarbon.map((d) => d.value), [carbon], `${output} ${carbonSelector}`);
-      }
+      const inMedia = all.filter((d) => d.media !== null).map((d) => [d.media, d.selector, d.value]);
+      assert.deepEqual(inMedia, media ? [[`@media (${media[0]})`, base, media[1]]] : [], `${output} @media`);
+      const atCarbon = all.filter((d) => d.media === null && d.selector === carbonSelector);
+      assert.deepEqual(atCarbon.map((d) => d.value), carbon ? [carbon] : [], `${output} ${carbonSelector}`);
+      const elsewhere = all.filter((d) => d.media === null && d.selector !== base && d.selector !== carbonSelector);
+      assert.deepEqual(elsewhere.map((d) => d.selector), [], `${output} other selectors`);
     }
   });
 }
@@ -438,22 +436,24 @@ test("unused legacy tokens are removed", () => {
   for (const css of [root, scoped]) assert.ok(!css.includes("--leading-tight:"));
 });
 
+const SYNC = "out of sync with the token files; run node scripts/sync-manifest.mjs";
+
 test("the manifest and the adherence config list every token with its value", () => {
   const tokens = sourceTokens(":root");
   const carbon = sourceTokens('[data-theme="carbon"]');
   const manifest = JSON.parse(readFileSync(path.join(DS, "_ds_manifest.json"), "utf8"));
   const adherence = JSON.parse(readFileSync(path.join(DS, "_adherence.oxlintrc.json"), "utf8"))["x-omelette"];
   const names = [...tokens.keys()].sort();
-  assert.deepEqual(manifest.tokens.filter((t) => !t.scope).map((t) => t.name).sort(), names);
-  assert.deepEqual([...adherence.tokens].sort(), names);
-  assert.deepEqual(Object.keys(adherence.tokenKinds).sort(), names);
+  assert.deepEqual(manifest.tokens.filter((t) => !t.scope).map((t) => t.name).sort(), names, `_ds_manifest.json ${SYNC}`);
+  assert.deepEqual([...adherence.tokens].sort(), names, `_adherence.oxlintrc.json ${SYNC}`);
+  assert.deepEqual(Object.keys(adherence.tokenKinds).sort(), names, `_adherence.oxlintrc.json ${SYNC}`);
   const listed = manifest.tokens.filter((t) => !t.scope);
   const carbonListed = manifest.tokens.filter((t) => t.scope === '[data-theme="carbon"]');
-  assert.equal(listed.length, tokens.size);
-  assert.deepEqual(carbonListed.map((t) => t.name).sort(), [...carbon.keys()].sort());
+  assert.equal(listed.length, tokens.size, `_ds_manifest.json ${SYNC}`);
+  assert.deepEqual(carbonListed.map((t) => t.name).sort(), [...carbon.keys()].sort(), `_ds_manifest.json carbon entries ${SYNC}`);
   for (const { name, value, kind } of listed) {
-    assert.equal(value, tokens.get(name), name);
-    assert.equal(adherence.tokenKinds[name], kind, name);
+    assert.equal(value, tokens.get(name), `${name}: _ds_manifest.json ${SYNC}`);
+    assert.equal(adherence.tokenKinds[name], kind, `${name}: _adherence.oxlintrc.json ${SYNC}`);
   }
-  for (const { name, value } of carbonListed) assert.equal(value, carbon.get(name), `carbon ${name}`);
+  for (const { name, value } of carbonListed) assert.equal(value, carbon.get(name), `carbon ${name}: _ds_manifest.json ${SYNC}`);
 });

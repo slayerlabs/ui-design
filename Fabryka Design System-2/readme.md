@@ -149,12 +149,14 @@ literally (`max-width`, in this order) and the tokens change inside the same
 ## Packaged tokens
 
 `npm pack` ships `dist/tokens.css` (`:root`) and `dist/tokens.scoped.css`
-(`[data-fabryka-ds]`). The build drops `--font-*`, `--serif`, `--sans` and `--mono`:
-the app loads its fonts through next/font as `--font-sans`, `--font-serif` and
+(`[data-fabryka-ds]`). The build drops the specimen font variables `--font-display`,
+`--font-text`, `--font-mono`, `--font-ui`, `--font-research`, `--serif`, `--sans` and
+`--mono`: the app loads its fonts through next/font as `--font-sans`, `--font-serif` and
 `--font-mono`, and `--family-sans`, `--family-serif` and `--family-mono` put them
 first with system fallbacks. `--family-*-asset` stacks name the fonts literally for
 standalone SVG and PNG files. `npm run test:tokens` checks every token in both
-outputs and that `_ds_manifest.json` and `_adherence.oxlintrc.json` list them all.
+outputs and that `_ds_manifest.json` and `_adherence.oxlintrc.json` list them all;
+after changing a token file, run `node scripts/sync-manifest.mjs` to regenerate both lists.
 
 ## Components and consumption
 
