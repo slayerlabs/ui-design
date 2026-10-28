@@ -125,8 +125,8 @@ literally (`max-width`, in this order) and the tokens change inside the same
 | Breakpoint | Token changes |
 | --- | --- |
 | 1000px | hero size and height, hero scrims |
-| 900px | `--header-bar-h` 74px, `--col-programme-number` 40px |
-| 760px | hero layout and caption, `--section-pad-y` 48px, `--hero-crop-x` 64% |
+| 900px | `--header-bar-h` 73px, `--col-programme-number` 40px |
+| 760px | hero layout and caption, `--section-pad-y` 48px, `--hero-crop-x` 64%, `--step-title-gap` 18px |
 | 450px | narrow phone (production consent panel): `--consent-offset` 56px |
 | 380px | `--hero-pad-top` 50px |
 
@@ -156,7 +156,7 @@ literally (`max-width`, in this order) and the tokens change inside the same
 first with system fallbacks. `--family-*-asset` stacks name the fonts literally for
 standalone SVG and PNG files. `npm run test:tokens` checks every token in both
 outputs and that `_ds_manifest.json` and `_adherence.oxlintrc.json` list them all;
-after changing a token file, run `node scripts/sync-manifest.mjs` to regenerate both lists.
+after changing a token file, run `npm run sync:manifest` to regenerate both lists.
 
 ## Components and consumption
 

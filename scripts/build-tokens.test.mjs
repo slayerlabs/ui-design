@@ -113,7 +113,7 @@ test("template typography, layout, effect and stacking tokens are built", () => 
     "--hero-eyebrow-measure:530px",
     "--hero-lead-measure:460px",
     "--hero-caption-inset:30px",
-    "--header-bar-h:86px",
+    "--header-bar-h:85px",
     "--section-bar-h:47px",
     "--scrim-strong:color-mix(in srgb,var(--carbon-2) 91%,transparent)",
     "--scrim-medium:color-mix(in srgb,var(--carbon-2) 72%,transparent)",
@@ -149,7 +149,7 @@ test("breakpoint tokens change inside the app's media queries, in cascade order"
       "--scrim-medium:color-mix(in srgb,var(--carbon-2) 70%,transparent)",
       "--scrim-soft:color-mix(in srgb,var(--carbon-2) 55%,transparent)",
     ],
-    "max-width: 900px": ["--header-bar-h:74px"],
+    "max-width: 900px": ["--header-bar-h:73px"],
     "max-width: 760px": [
       "--size-hero:clamp(43px,8.5vw,62px)",
       "--size-hero-lead:17px",
@@ -335,6 +335,7 @@ const NEW_TOKENS = [
   ["--skip-offset", "100px"],
   ["--sr-only-size", "1px"],
   ["--stage-h", "180px"],
+  ["--step-title-gap", "28px", { media: ["max-width: 760px", "18px"] }],
   ["--stroke-bold", "4"],
   ["--stroke-halo", "8px"],
   ["--stroke-regular", "var(--border-rule)"],
@@ -436,7 +437,7 @@ test("unused legacy tokens are removed", () => {
   for (const css of [root, scoped]) assert.ok(!css.includes("--leading-tight:"));
 });
 
-const SYNC = "out of sync with the token files; run node scripts/sync-manifest.mjs";
+const SYNC = "out of sync with the token files; run npm run sync:manifest";
 
 test("the manifest and the adherence config list every token with its value", () => {
   const tokens = sourceTokens(":root");

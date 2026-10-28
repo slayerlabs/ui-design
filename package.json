@@ -16,6 +16,7 @@
     "check": "node \"Fabryka Design System-2/scripts/check.cjs\"",
     "build:tokens": "node scripts/build-tokens.mjs",
     "test:tokens": "node --test scripts/build-tokens.test.mjs",
+    "sync:manifest": "node scripts/sync-manifest.mjs",
     "prepack": "node scripts/build-tokens.mjs"
   },
   "repository": {
