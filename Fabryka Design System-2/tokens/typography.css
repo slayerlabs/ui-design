@@ -6,8 +6,8 @@
 /* Editorial headlines use natural width and sentence case. */
 --display-stretch:normal;
 --display-weight:500;
---display-tracking:-0.035em;
---display-leading:0.96;
+--display-tracking:-0.055em;
+--display-leading:1.04;
 
 /* Type scale (px) — display sizes are deliberately extreme */
 --size-display-1:108px;
@@ -22,8 +22,18 @@
 --size-mono-sm:11.5px;
 --size-label:11px;
 
+/* Production home page values (fabryka.ai), the template for every page. */
+--size-hero:clamp(48px,5.1vw,78px);
+--size-hero-lead:18px;
+--leading-hero-lead:1.75;
+--size-section:clamp(34px,3.6vw,52px);
+--leading-section:1.13;
+--track-section:-0.045em;
+--size-caption:12px;
+--track-caption:0.06em;
+
 --leading-tight:1.08;
---leading-body:1.5;
+--leading-body:1.65;
 --leading-mono:1.55;
 
 --track-label:0.14em;   /* mono/eyebrow labels: wide, all caps */
@@ -38,3 +48,10 @@
 }
 
 :root{--font-ui:var(--font-text);--font-research:Geist,system-ui,sans-serif;--serif:var(--font-display);--sans:var(--font-text);--mono:var(--font-mono);--size-nav:16px;--size-nav-mobile:15px;}
+
+@media (max-width: 1000px){
+:root{--size-hero:60px;}
+}
+@media (max-width: 760px){
+:root{--size-hero:clamp(43px,8.5vw,62px);--size-hero-lead:17px;--size-caption:11px;}
+}

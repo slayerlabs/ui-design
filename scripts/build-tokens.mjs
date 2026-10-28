@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 // base.css is a global reset and fonts.css a Google Fonts @import; neither may leak into consuming pages.
-const SOURCES = ["colors", "spacing", "borders", "motion", "typography"].map((name) =>
+const SOURCES = ["colors", "spacing", "borders", "motion", "typography", "effects", "stacking"].map((name) =>
   path.join(root, "Fabryka Design System-2", "tokens", `${name}.css`),
 );
 

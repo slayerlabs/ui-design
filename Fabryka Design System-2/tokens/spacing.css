@@ -29,4 +29,29 @@
 --control-h-sm:28px;
 --control-h:36px;
 --control-h-lg:46px;
+
+--hero-min-h:720px;
+--hero-pad-top:85px;
+--hero-pad-bottom:100px;
+--hero-measure:680px;
+--hero-eyebrow-measure:530px;
+--hero-lead-measure:460px;
+--hero-caption-inset:30px;
+
+/* Sticky banner: defined bar heights, each including its bottom rule. */
+--header-bar-h:86px;
+--section-bar-h:47px;
+}
+
+@media (max-width: 1000px){
+:root{--hero-min-h:700px;}
+}
+@media (max-width: 900px){
+:root{--header-bar-h:74px;}
+}
+@media (max-width: 760px){
+:root{--hero-min-h:750px;--hero-pad-top:70px;--hero-pad-bottom:90px;--hero-eyebrow-measure:320px;--hero-lead-measure:420px;}
+}
+@media (max-width: 380px){
+:root{--hero-pad-top:50px;}
 }

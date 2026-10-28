@@ -62,6 +62,16 @@
 /* Grid / plate texture */
 --grid-line:rgba(26,21,18,.08);
 --plate-tint:rgba(26,21,18,.04);
+
+/* Scrims shade imagery under text; alphas follow the production home page. */
+--scrim-strong:color-mix(in srgb,var(--carbon-2) 91%,transparent);
+--scrim-medium:color-mix(in srgb,var(--carbon-2) 72%,transparent);
+--scrim-soft:color-mix(in srgb,var(--carbon-2) 40%,transparent);
+--scrim-faint:color-mix(in srgb,var(--carbon-2) 3%,transparent);
+--scrim-edge:color-mix(in srgb,var(--carbon-2) 62%,transparent);
+--surface-translucent:color-mix(in srgb,var(--surface) 97%,transparent);
+--surface-on-image:color-mix(in srgb,var(--carbon-2) 38%,transparent);
+--rule-on-image:color-mix(in srgb,var(--rule) 67%,transparent);
 }
 
 /* Inverse scope: carbon sections, machine panels, terminal blocks */
@@ -87,4 +97,8 @@
 --plate-tint:rgba(252,250,246,.04);
 --link:#FF6A52;
 --link-hover:#FF8B77;
+}
+
+@media (max-width: 1000px){
+:root{--scrim-strong:color-mix(in srgb,var(--carbon-2) 85%,transparent);--scrim-medium:color-mix(in srgb,var(--carbon-2) 70%,transparent);--scrim-soft:color-mix(in srgb,var(--carbon-2) 55%,transparent);}
 }

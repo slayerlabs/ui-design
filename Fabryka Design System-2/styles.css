@@ -4,4 +4,6 @@
 @import url("tokens/spacing.css");
 @import url("tokens/borders.css");
 @import url("tokens/motion.css");
+@import url("tokens/effects.css");
+@import url("tokens/stacking.css");
 @import url("tokens/base.css");
