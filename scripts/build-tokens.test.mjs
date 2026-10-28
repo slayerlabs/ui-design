@@ -1,4 +1,7 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 import { SCOPE, buildTokens, scopeTokens } from "./build-tokens.mjs";
 
@@ -173,4 +176,284 @@ test("breakpoint tokens change inside the app's media queries, in cascade order"
       assert.deepEqual(positions, [...positions].sort((a, b) => a - b), name);
     }
   }
+});
+
+const NEW_TOKENS = [
+  ["--bar-thickness", "6px"],
+  ["--border", "var(--border-hair) solid var(--rule)", { carbon: "var(--border-hair) solid var(--rule)" }],
+  ["--border-accent", "var(--border-hair) solid var(--rule-accent)", { carbon: "var(--border-hair) solid var(--rule-accent)" }],
+  ["--border-accent-heavy", "var(--border-heavy) solid var(--rule-accent)", { carbon: "var(--border-heavy) solid var(--rule-accent)" }],
+  ["--border-button", "var(--border-hair) solid"],
+  ["--border-chip", "var(--border-rule) solid var(--rule-strong)", { carbon: "var(--border-rule) solid var(--rule-strong)" }],
+  ["--border-control", "var(--border-hair) solid var(--rule-control)", { carbon: "var(--border-hair) solid var(--rule-control)" }],
+  ["--border-faint", "var(--border-hair) solid var(--rule-faint)", { carbon: "var(--border-hair) solid var(--rule-faint)" }],
+  ["--border-figure", "var(--border-hair) solid var(--figure-faint)", { carbon: "var(--border-hair) solid var(--figure-faint)" }],
+  ["--border-heavy-solid", "var(--border-heavy) solid var(--rule)", { carbon: "var(--border-heavy) solid var(--rule)" }],
+  ["--border-indicator", "var(--border-mid) solid transparent"],
+  ["--border-mid", "2px"],
+  ["--border-on-inverse", "var(--border-hair) solid var(--rule-on-inverse)", { carbon: "var(--border-hair) solid var(--rule-on-inverse)" }],
+  ["--border-planned", "var(--border-hair) dashed var(--figure-line-muted)", { carbon: "var(--border-hair) dashed var(--figure-line-muted)" }],
+  ["--border-ring", "var(--border-rule) solid var(--figure-ink-muted)", { carbon: "var(--border-rule) solid var(--figure-ink-muted)" }],
+  ["--border-soft", "var(--border-hair) solid var(--rule-soft)", { carbon: "var(--border-hair) solid var(--rule-soft)" }],
+  ["--border-step", "var(--border-mid) solid var(--rule-strong)", { carbon: "var(--border-mid) solid var(--rule-strong)" }],
+  ["--border-strong", "var(--border-hair) solid var(--rule-strong)", { carbon: "var(--border-hair) solid var(--rule-strong)" }],
+  ["--border-warn", "var(--border-rule) solid var(--status-warn)"],
+  ["--box-code-baseline", "22px"],
+  ["--box-name-baseline", "45px"],
+  ["--brand-mark-accent", "#E85A28"],
+  ["--brand-mark-ground", "#132126"],
+  ["--brand-mark-paper", "#FBF8F2"],
+  ["--canvas-min-graph", "760px"],
+  ["--cell-h", "22px"],
+  ["--col-dossier-index", "32px"],
+  ["--col-min-artifact", "180px"],
+  ["--col-min-card", "240px"],
+  ["--col-min-detail", "420px"],
+  ["--col-min-field", "260px"],
+  ["--col-min-footer-intro", "240px"],
+  ["--col-min-label", "160px"],
+  ["--col-min-note", "220px"],
+  ["--col-min-output-kind", "120px"],
+  ["--col-min-output-link", "150px"],
+  ["--col-min-paper", "300px"],
+  ["--col-min-person", "220px"],
+  ["--col-min-step", "110px"],
+  ["--col-min-swatch", "160px"],
+  ["--col-programme-number", "64px", { media: ["max-width: 900px", "40px"] }],
+  ["--col-publication-kind", "9rem"],
+  ["--col-publication-link", "14rem"],
+  ["--col-row-head", "120px"],
+  ["--consent-gap", "10px"],
+  ["--consent-inset", "20px"],
+  ["--consent-offset", "58px", { media: ["max-width: 450px", "56px"] }],
+  ["--control-pad-x", "18px"],
+  ["--control-pad-x-compact", "13px"],
+  ["--control-pad-x-sm", "10px"],
+  ["--control-pad-y", "11px"],
+  ["--control-pad-y-compact", "9px"],
+  ["--control-pad-y-sm", "7px"],
+  ["--dash-concept", "6 5"],
+  ["--dash-dotted", "2 6"],
+  ["--dash-feedback", "5 4"],
+  ["--dash-fine", "3 3"],
+  ["--dash-grid", "4 5"],
+  ["--dash-roadmap", "3 4"],
+  ["--dash-run", "7 5"],
+  ["--dash-threshold", "4 4"],
+  ["--data-blue", "#3D5D91"],
+  ["--data-green", "#385440"],
+  ["--data-sage", "#B7C2B0"],
+  ["--data-sage-wash", "#E7EBDF"],
+  ["--family-mono", "var(--font-mono), ui-monospace, monospace"],
+  ["--family-mono-asset", "'JetBrains Mono', ui-monospace, monospace"],
+  ["--family-sans", "var(--font-sans), system-ui, sans-serif"],
+  ["--family-sans-asset", "Inter, system-ui, sans-serif"],
+  ["--family-serif", "var(--font-serif), Georgia, serif"],
+  ["--family-serif-asset", "'EB Garamond', Georgia, serif"],
+  ["--figure-accent", "var(--red)", { carbon: "var(--red)" }],
+  ["--figure-accent-strong", "var(--red-dark)", { carbon: "var(--red)" }],
+  ["--figure-faint", "var(--grey)", { carbon: "var(--grey-dark)" }],
+  ["--figure-fill", "var(--paper-3)", { carbon: "var(--carbon-3)" }],
+  ["--figure-ink", "var(--carbon)", { carbon: "var(--paper)" }],
+  ["--figure-ink-muted", "var(--carbon-4)", { carbon: "var(--grey)" }],
+  ["--figure-ink-soft", "var(--carbon-3)", { carbon: "var(--paper-3)" }],
+  ["--figure-line-muted", "var(--grey-dark)", { carbon: "var(--grey)" }],
+  ["--figure-paper", "var(--paper)", { carbon: "var(--carbon)" }],
+  ["--figure-tint", "var(--paper-2)", { carbon: "var(--carbon-2)" }],
+  ["--focus-offset", "2px"],
+  ["--focus-ring-inverse", "var(--paper)", { carbon: "var(--carbon)" }],
+  ["--focus-width", "2px"],
+  ["--hero-crop-x", "60%", { media: ["max-width: 760px", "64%"] }],
+  ["--hero-scrim-factor-1", "0.85"],
+  ["--hero-scrim-factor-2", "1.2"],
+  ["--hero-scrim-factor-3", "1.6"],
+  ["--hero-scrim-stop-1", "29%"],
+  ["--hero-scrim-stop-2", "48%"],
+  ["--hero-scrim-stop-3", "75%"],
+  ["--hero-scrim-stop-edge", "40%"],
+  ["--hero-title-gap", "28px"],
+  ["--icon-asset-preview", "320px"],
+  ["--icon-avatar-preview", "56px"],
+  ["--icon-lockup", "28px"],
+  ["--icon-lockup-sm", "24px"],
+  ["--icon-mark-preview", "96px"],
+  ["--icon-poster", "240px"],
+  ["--icon-signature", "72px"],
+  ["--icon-step", "28px"],
+  ["--icon-swatch", "10px"],
+  ["--leading-label", "1.6"],
+  ["--leading-none", "1"],
+  ["--leading-snug", "1.4"],
+  ["--legend-line", "16px"],
+  ["--marker-size", "7px"],
+  ["--measure-article", "56rem"],
+  ["--measure-figure", "520px"],
+  ["--measure-narrow", "40rem"],
+  ["--measure-panel", "640px"],
+  ["--measure-prose", "42rem"],
+  ["--measure-statement", "20ch"],
+  ["--measure-tagline", "30ch"],
+  ["--measure-wide", "48rem"],
+  ["--node-kicker-baseline", "28px"],
+  ["--node-status-baseline", "131px"],
+  ["--node-subtitle-baseline", "92px"],
+  ["--node-title-baseline", "66px"],
+  ["--opacity-band", "0.07"],
+  ["--point-radius", "4.5px"],
+  ["--portrait-crop", "26%"],
+  ["--radius-figure", "2px"],
+  ["--radius-header-control", "6px"],
+  ["--radius-node", "3px"],
+  ["--radius-panel", "8px"],
+  ["--rule-accent", "var(--red)", { carbon: "var(--red)" }],
+  ["--rule-accent-hover", "var(--red-dark)", { carbon: "var(--red-dark)" }],
+  ["--rule-control", "var(--grey-dark)", { carbon: "var(--grey)" }],
+  ["--rule-on-inverse", "color-mix(in srgb, var(--paper) 16%, transparent)", { carbon: "color-mix(in srgb, var(--carbon) 16%, transparent)" }],
+  ["--rule-strong", "var(--carbon)", { carbon: "var(--paper)" }],
+  ["--section-pad-y", "80px", { media: ["max-width: 760px", "48px"] }],
+  ["--shadow-outline-soft", "inset 0 0 0 var(--border-hair) var(--rule-soft)", { carbon: "inset 0 0 0 var(--border-hair) var(--rule-soft)" }],
+  ["--shadow-outline-strong", "inset 0 0 0 var(--border-hair) var(--rule-strong)", { carbon: "inset 0 0 0 var(--border-hair) var(--rule-strong)" }],
+  ["--shadow-popover", "0 8px 35px color-mix(in srgb, var(--carbon) 13%, transparent)"],
+  ["--size-body-compact", "15px"],
+  ["--size-body-lg", "18px"],
+  ["--size-card-title", "18px"],
+  ["--size-closing", "clamp(1.4rem, 2.6vw, 1.9rem)"],
+  ["--size-code", "0.9em"],
+  ["--size-control-sm", "12px"],
+  ["--size-figure", "10.5px"],
+  ["--size-figure-lg", "26px"],
+  ["--size-figure-md", "20px"],
+  ["--size-figure-sm", "10px"],
+  ["--size-fine", "0.85rem"],
+  ["--size-lockup", "28px"],
+  ["--size-lockup-sm", "24px"],
+  ["--size-meta", "13px"],
+  ["--size-page-title", "clamp(2.6rem, 6vw, 4.75rem)"],
+  ["--size-stat", "clamp(2.2rem, 4vw, 3rem)"],
+  ["--size-stat-lg", "clamp(3rem, 7vw, 5rem)"],
+  ["--size-statement", "clamp(1.1rem, 2vw, 1.35rem)"],
+  ["--skip-offset", "100px"],
+  ["--sr-only-size", "1px"],
+  ["--stage-h", "180px"],
+  ["--stroke-bold", "4"],
+  ["--stroke-halo", "8px"],
+  ["--stroke-regular", "var(--border-rule)"],
+  ["--stroke-strong", "var(--border-mid)"],
+  ["--surface-accent-hover", "var(--red-dark)", { carbon: "var(--red-dark)" }],
+  ["--surface-footer", "var(--carbon-2)", { carbon: "var(--carbon-2)" }],
+  ["--surface-hero", "var(--carbon-3)", { carbon: "var(--carbon-3)" }],
+  ["--surface-inverse-hover", "var(--carbon-3)", { carbon: "var(--paper-3)" }],
+  ["--swatch-h", "160px"],
+  ["--swatch-steel", "var(--grey-dark)", { carbon: "var(--grey-dark)" }],
+  ["--table-min-ablation", "440px"],
+  ["--table-min-register", "560px"],
+  ["--table-min-steps", "770px"],
+  ["--text-accent-on-inverse", "var(--red-wash)", { carbon: "var(--red)" }],
+  ["--text-footer", "var(--paper-4)", { carbon: "var(--paper-4)" }],
+  ["--tile-h", "92px"],
+  ["--track-accent", "-0.01em"],
+  ["--track-heading", "-0.02em"],
+  ["--track-lockup", "var(--track-heading)"],
+  ["--underline-offset", "3px"],
+  ["--viewport-h", "100dvh"],
+  ["--z-above", "1"],
+  ["--z-below", "-1"],
+  ["--z-consent", "30"],
+  ["--z-consent-toggle", "29"],
+];
+
+function declarations(css) {
+  const found = [];
+  const context = [];
+  let start = 0;
+  const text = css.replace(/\/\*[\s\S]*?\*\//g, "");
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] === "{") {
+      context.push(text.slice(start, i).trim());
+      start = i + 1;
+    } else if (text[i] === "}") {
+      const selector = context.pop();
+      if (!selector.startsWith("@")) {
+        const media = context.find((prelude) => prelude.startsWith("@media")) ?? null;
+        for (const declaration of text.slice(start, i).split(";")) {
+          const colon = declaration.indexOf(":");
+          if (colon > 0) found.push({ media, selector, name: declaration.slice(0, colon).trim(), value: declaration.slice(colon + 1).trim() });
+        }
+      }
+      start = i + 1;
+    }
+  }
+  return found;
+}
+
+const SCOPES = [
+  ["root", ":root", '[data-theme="carbon"]'],
+  ["scoped", SCOPE, `${SCOPE}[data-theme="carbon"],${SCOPE} [data-theme="carbon"]`],
+];
+
+for (const [name, value, { media, carbon } = {}] of NEW_TOKENS) {
+  test(`${name} is built with its value in every scope`, () => {
+    const built = buildTokens();
+    for (const [output, base, carbonSelector] of SCOPES) {
+      const all = declarations(built[output]).filter((d) => d.name === name);
+      const atBase = all.filter((d) => d.media === null && d.selector === base);
+      assert.deepEqual(atBase.map((d) => d.value), [value], `${output} ${base}`);
+      if (media) {
+        const text = mediaBlocks(built[output], media[0]).map((block) => block.text).join("");
+        assert.ok(text.includes(`${base}{`) && text.includes(`${name}:${media[1]};`), `${output} @media (${media[0]})`);
+      }
+      if (carbon) {
+        const atCarbon = all.filter((d) => d.media === null && d.selector === carbonSelector);
+        assert.deepEqual(atCarbon.map((d) => d.value), [carbon], `${output} ${carbonSelector}`);
+      }
+    }
+  });
+}
+
+test("font stacks survive the font-family filter", () => {
+  const { root, scoped } = buildTokens();
+  for (const css of [root, scoped]) {
+    for (const name of ["sans", "serif", "mono"]) {
+      assert.match(css, new RegExp(`--family-${name}:var\\(--font-${name}\\),`), name);
+      assert.match(css, new RegExp(`--family-${name}-asset:`), `${name}-asset`);
+    }
+  }
+});
+
+const DS = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "Fabryka Design System-2");
+const TOKEN_FILES = ["colors", "spacing", "borders", "motion", "typography", "effects", "stacking"];
+
+function sourceTokens(scope) {
+  const tokens = new Map();
+  for (const file of TOKEN_FILES) {
+    for (const { media, selector, name, value } of declarations(readFileSync(path.join(DS, "tokens", `${file}.css`), "utf8"))) {
+      if (media === null && selector === scope && !tokens.has(name)) tokens.set(name, value);
+    }
+  }
+  return tokens;
+}
+
+test("unused legacy tokens are removed", () => {
+  const { root, scoped } = buildTokens();
+  for (const css of [root, scoped]) assert.ok(!css.includes("--leading-tight:"));
+});
+
+test("the manifest and the adherence config list every token with its value", () => {
+  const tokens = sourceTokens(":root");
+  const carbon = sourceTokens('[data-theme="carbon"]');
+  const manifest = JSON.parse(readFileSync(path.join(DS, "_ds_manifest.json"), "utf8"));
+  const adherence = JSON.parse(readFileSync(path.join(DS, "_adherence.oxlintrc.json"), "utf8"))["x-omelette"];
+  const names = [...tokens.keys()].sort();
+  assert.deepEqual(manifest.tokens.filter((t) => !t.scope).map((t) => t.name).sort(), names);
+  assert.deepEqual([...adherence.tokens].sort(), names);
+  assert.deepEqual(Object.keys(adherence.tokenKinds).sort(), names);
+  const listed = manifest.tokens.filter((t) => !t.scope);
+  const carbonListed = manifest.tokens.filter((t) => t.scope === '[data-theme="carbon"]');
+  assert.equal(listed.length, tokens.size);
+  assert.deepEqual(carbonListed.map((t) => t.name).sort(), [...carbon.keys()].sort());
+  for (const { name, value, kind } of listed) {
+    assert.equal(value, tokens.get(name), name);
+    assert.equal(adherence.tokenKinds[name], kind, name);
+  }
+  for (const { name, value } of carbonListed) assert.equal(value, carbon.get(name), `carbon ${name}`);
 });

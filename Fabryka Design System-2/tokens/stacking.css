@@ -1,4 +1,8 @@
 :root{
+--z-below:-1;
+--z-above:1;
 --z-header:20;
+--z-consent-toggle:29;
+--z-consent:30;
 --z-skip:30;
 }

@@ -3,6 +3,14 @@
 --font-text:Inter,Arial,sans-serif;
 --font-mono:"JetBrains Mono",Menlo,monospace;
 
+/* The app's next/font variables lead; the asset stacks serve standalone SVG and PNG files. */
+--family-sans:var(--font-sans), system-ui, sans-serif;
+--family-serif:var(--font-serif), Georgia, serif;
+--family-mono:var(--font-mono), ui-monospace, monospace;
+--family-sans-asset:Inter, system-ui, sans-serif;
+--family-serif-asset:'EB Garamond', Georgia, serif;
+--family-mono-asset:'JetBrains Mono', ui-monospace, monospace;
+
 /* Editorial headlines use natural width and sentence case. */
 --display-stretch:normal;
 --display-weight:500;
@@ -15,12 +23,30 @@
 --size-display-3:66px;
 --size-display-4:42px;
 --size-heading:22px;
---size-body-lg:19px;
+--size-body-lg:18px;
 --size-body:16px;
 --size-body-sm:14px;
 --size-mono:13px;
 --size-mono-sm:11.5px;
 --size-label:11px;
+
+--size-page-title:clamp(2.6rem, 6vw, 4.75rem);
+--size-closing:clamp(1.4rem, 2.6vw, 1.9rem);
+--size-statement:clamp(1.1rem, 2vw, 1.35rem);
+--size-card-title:18px;
+--size-body-compact:15px;
+--size-meta:13px;
+--size-control-sm:12px;
+--size-fine:0.85rem;
+--size-code:0.9em;
+--size-stat:clamp(2.2rem, 4vw, 3rem);
+--size-stat-lg:clamp(3rem, 7vw, 5rem);
+--size-lockup:28px;
+--size-lockup-sm:24px;
+--size-figure-lg:26px;
+--size-figure-md:20px;
+--size-figure:10.5px;
+--size-figure-sm:10px;
 
 /* Production home page values (fabryka.ai), the template for every page. */
 --size-hero:clamp(48px,5.1vw,78px);
@@ -32,13 +58,19 @@
 --size-caption:12px;
 --track-caption:0.06em;
 
---leading-tight:1.08;
 --leading-body:1.65;
 --leading-mono:1.55;
+--leading-none:1;
+--leading-snug:1.4;
+--leading-label:1.6;
 
 --track-label:0.14em;   /* mono/eyebrow labels: wide, all caps */
 --track-mono:0.02em;
 --track-body:0; /* @kind other */
+--track-heading:-0.02em;
+--track-accent:-0.01em;
+--track-lockup:var(--track-heading);
+--underline-offset:3px;
 
 --weight-regular:400;
 --weight-medium:500;

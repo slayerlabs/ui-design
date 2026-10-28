@@ -23,8 +23,12 @@
 --section-pad-y:80px;
 --plate-pad:16px;
 --card-pad:20px;
---control-pad-x:16px;
---control-pad-y:10px;
+--control-pad-x:18px;
+--control-pad-y:11px;
+--control-pad-x-compact:13px;
+--control-pad-y-compact:9px;
+--control-pad-x-sm:10px;
+--control-pad-y-sm:7px;
 
 --control-h-sm:28px;
 --control-h:36px;
@@ -37,20 +41,92 @@
 --hero-eyebrow-measure:530px;
 --hero-lead-measure:460px;
 --hero-caption-inset:30px;
+--hero-title-gap:28px;
 
 /* Sticky banner: defined bar heights, each including its bottom rule. */
 --header-bar-h:86px;
 --section-bar-h:47px;
+
+--measure-prose:42rem;
+--measure-narrow:40rem;
+--measure-wide:48rem;
+--measure-article:56rem;
+--measure-statement:20ch;
+--measure-tagline:30ch;
+--measure-figure:520px;
+--measure-panel:640px;
+--viewport-h:100dvh;
+
+--col-min-label:160px;
+--col-min-card:240px;
+--col-min-person:220px;
+--col-min-note:220px;
+--col-min-field:260px;
+--col-min-paper:300px;
+--col-min-detail:420px;
+--col-min-artifact:180px;
+--col-min-swatch:160px;
+--col-min-step:110px;
+--col-min-footer-intro:240px;
+--col-min-output-kind:120px;
+--col-min-output-link:150px;
+--col-dossier-index:32px;
+--col-programme-number:64px;
+--col-publication-kind:9rem;
+--col-publication-link:14rem;
+--col-row-head:120px;
+
+--table-min-ablation:440px;
+--table-min-register:560px;
+--table-min-steps:770px;
+--canvas-min-graph:760px;
+
+--icon-swatch:10px;
+--icon-lockup-sm:24px;
+--icon-lockup:28px;
+--icon-step:28px;
+--icon-avatar-preview:56px;
+--icon-signature:72px;
+--icon-mark-preview:96px;
+--icon-poster:240px;
+--icon-asset-preview:320px;
+--stage-h:180px;
+--swatch-h:160px;
+--tile-h:92px;
+--cell-h:22px;
+--bar-thickness:6px;
+--legend-line:16px;
+--marker-size:7px;
+--point-radius:4.5px;
+
+/* SVG user units: research-loop box and atlas node text baselines. */
+--box-code-baseline:22px;
+--box-name-baseline:45px;
+--node-kicker-baseline:28px;
+--node-title-baseline:66px;
+--node-subtitle-baseline:92px;
+--node-status-baseline:131px;
+
+/* Consent panel offsets equal the production panel. */
+--consent-inset:20px;
+--consent-offset:58px;
+--consent-gap:10px;
+
+--skip-offset:100px;
+--sr-only-size:1px;
 }
 
 @media (max-width: 1000px){
 :root{--hero-min-h:700px;}
 }
 @media (max-width: 900px){
-:root{--header-bar-h:74px;}
+:root{--header-bar-h:74px;--col-programme-number:40px;}
 }
 @media (max-width: 760px){
-:root{--hero-min-h:750px;--hero-pad-top:70px;--hero-pad-bottom:90px;--hero-eyebrow-measure:320px;--hero-lead-measure:420px;}
+:root{--hero-min-h:750px;--hero-pad-top:70px;--hero-pad-bottom:90px;--hero-eyebrow-measure:320px;--hero-lead-measure:420px;--section-pad-y:48px;}
+}
+@media (max-width: 450px){
+:root{--consent-offset:56px;}
 }
 @media (max-width: 380px){
 :root{--hero-pad-top:50px;}

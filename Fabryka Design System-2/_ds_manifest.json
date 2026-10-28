@@ -202,8 +202,8 @@
     {
       "path": "guidelines/brand-rules.card.html",
       "group": "Brand",
-      "viewport": "700x170",
-      "subtitle": "Square corners, carbon hairlines, three weights only",
+      "viewport": "700x200",
+      "subtitle": "Square panels, carbon hairlines, four rule weights",
       "name": "Rules & Borders"
     },
     {
@@ -336,7 +336,7 @@
       "path": "guidelines/type-scale.card.html",
       "group": "Type",
       "viewport": "700x210",
-      "subtitle": "132 / 88 / 56 / 38 px \u2014 headlines are meant to be enormous",
+      "subtitle": "108 / 86 / 66 / 42 px \u2014 specimen display sizes; product pages use the live scale",
       "name": "Display Scale"
     },
     {
@@ -370,91 +370,93 @@
     "tokens/spacing.css",
     "tokens/borders.css",
     "tokens/motion.css",
+    "tokens/effects.css",
+    "tokens/stacking.css",
     "tokens/base.css",
     "styles.css"
   ],
   "tokens": [
     {
       "name": "--paper",
-      "value": "#EAEAE5",
+      "value": "#FCFAF6",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--paper-2",
-      "value": "#E1E1DB",
+      "value": "#F3EFE9",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--paper-3",
-      "value": "#D3D3CC",
+      "value": "#E9E2DA",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--paper-4",
-      "value": "#C1C1B9",
+      "value": "#D7D1CA",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--carbon",
-      "value": "#111111",
+      "value": "#1A1512",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--carbon-2",
-      "value": "#1A1A19",
+      "value": "#1D1916",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--carbon-3",
-      "value": "#252524",
+      "value": "#49423D",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--carbon-4",
-      "value": "#383837",
+      "value": "#655D56",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--grey",
-      "value": "#A5A5A1",
+      "value": "#A69C93",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--grey-dark",
-      "value": "#6B6B67",
+      "value": "#766E68",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--grey-light",
-      "value": "#C6C6C1",
+      "value": "#D7D1CA",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--red",
-      "value": "#E43D26",
+      "value": "#B33B00",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--red-dark",
-      "value": "#B92E1B",
+      "value": "#963200",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--red-wash",
-      "value": "#F2DAD4",
+      "value": "#F3E3D8",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -484,7 +486,7 @@
     },
     {
       "name": "--surface-raised",
-      "value": "#F4F4F0",
+      "value": "#FCFAF6",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -496,7 +498,7 @@
     },
     {
       "name": "--surface-card",
-      "value": "#F4F4F0",
+      "value": "#FCFAF6",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -516,6 +518,12 @@
       "name": "--text-body",
       "value": "var(--carbon)",
       "kind": "font",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--text-secondary",
+      "value": "var(--carbon-3)",
+      "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
@@ -556,19 +564,19 @@
     },
     {
       "name": "--rule",
-      "value": "#111111",
+      "value": "#D7D1CA",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--rule-soft",
-      "value": "rgba(17,17,17,.22)",
+      "value": "rgba(26,21,18,.22)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--rule-faint",
-      "value": "rgba(17,17,17,.11)",
+      "value": "rgba(26,21,18,.11)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -621,14 +629,266 @@
       "definedIn": "tokens/colors.css"
     },
     {
+      "name": "--ink",
+      "value": "var(--carbon)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--ink-2",
+      "value": "#49423D",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--mute",
+      "value": "var(--grey-dark)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--sota",
+      "value": "var(--red)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
       "name": "--grid-line",
-      "value": "rgba(17,17,17,.08)",
+      "value": "rgba(26,21,18,.08)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--plate-tint",
-      "value": "rgba(17,17,17,.04)",
+      "value": "rgba(26,21,18,.04)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--scrim-strong",
+      "value": "color-mix(in srgb,var(--carbon-2) 91%,transparent)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--scrim-medium",
+      "value": "color-mix(in srgb,var(--carbon-2) 72%,transparent)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--scrim-soft",
+      "value": "color-mix(in srgb,var(--carbon-2) 40%,transparent)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--scrim-faint",
+      "value": "color-mix(in srgb,var(--carbon-2) 3%,transparent)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--scrim-edge",
+      "value": "color-mix(in srgb,var(--carbon-2) 62%,transparent)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--surface-translucent",
+      "value": "color-mix(in srgb,var(--surface) 97%,transparent)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--surface-on-image",
+      "value": "color-mix(in srgb,var(--carbon-2) 38%,transparent)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--rule-on-image",
+      "value": "color-mix(in srgb,var(--rule) 67%,transparent)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--surface-hero",
+      "value": "var(--carbon-3)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--surface-footer",
+      "value": "var(--carbon-2)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--surface-inverse-hover",
+      "value": "var(--carbon-3)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--surface-accent-hover",
+      "value": "var(--red-dark)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--text-accent-on-inverse",
+      "value": "var(--red-wash)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--text-footer",
+      "value": "var(--paper-4)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--rule-strong",
+      "value": "var(--carbon)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--rule-control",
+      "value": "var(--grey-dark)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--rule-accent",
+      "value": "var(--red)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--rule-accent-hover",
+      "value": "var(--red-dark)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--rule-on-inverse",
+      "value": "color-mix(in srgb, var(--paper) 16%, transparent)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--focus-ring-inverse",
+      "value": "var(--paper)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--swatch-steel",
+      "value": "var(--grey-dark)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--figure-ink",
+      "value": "var(--carbon)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--figure-ink-soft",
+      "value": "var(--carbon-3)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--figure-ink-muted",
+      "value": "var(--carbon-4)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--figure-line-muted",
+      "value": "var(--grey-dark)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--figure-faint",
+      "value": "var(--grey)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--figure-paper",
+      "value": "var(--paper)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--figure-tint",
+      "value": "var(--paper-2)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--figure-fill",
+      "value": "var(--paper-3)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--figure-accent",
+      "value": "var(--red)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--figure-accent-strong",
+      "value": "var(--red-dark)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--data-blue",
+      "value": "#3D5D91",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--data-green",
+      "value": "#385440",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--data-sage",
+      "value": "#B7C2B0",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--data-sage-wash",
+      "value": "#E7EBDF",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--brand-mark-ground",
+      "value": "#132126",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--brand-mark-accent",
+      "value": "#E85A28",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--brand-mark-paper",
+      "value": "#FBF8F2",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -675,6 +935,13 @@
       "scope": "[data-theme=\"carbon\"]"
     },
     {
+      "name": "--text-secondary",
+      "value": "var(--paper-3)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
       "name": "--text-heading",
       "value": "var(--paper)",
       "kind": "font",
@@ -704,35 +971,35 @@
     },
     {
       "name": "--rule",
-      "value": "rgba(234,234,229,.9)",
+      "value": "rgba(252,250,246,.9)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
     },
     {
       "name": "--rule-soft",
-      "value": "rgba(234,234,229,.28)",
+      "value": "rgba(252,250,246,.28)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
     },
     {
       "name": "--rule-faint",
-      "value": "rgba(234,234,229,.14)",
+      "value": "rgba(252,250,246,.14)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
     },
     {
       "name": "--grid-line",
-      "value": "rgba(234,234,229,.09)",
+      "value": "rgba(252,250,246,.09)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
     },
     {
       "name": "--plate-tint",
-      "value": "rgba(234,234,229,.04)",
+      "value": "rgba(252,250,246,.04)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
@@ -752,68 +1019,265 @@
       "scope": "[data-theme=\"carbon\"]"
     },
     {
+      "name": "--surface-hero",
+      "value": "var(--carbon-3)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--surface-footer",
+      "value": "var(--carbon-2)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--surface-inverse-hover",
+      "value": "var(--paper-3)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--surface-accent-hover",
+      "value": "var(--red-dark)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--text-accent-on-inverse",
+      "value": "var(--red)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--text-footer",
+      "value": "var(--paper-4)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--rule-strong",
+      "value": "var(--paper)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--rule-control",
+      "value": "var(--grey)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--rule-accent",
+      "value": "var(--red)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--rule-accent-hover",
+      "value": "var(--red-dark)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--rule-on-inverse",
+      "value": "color-mix(in srgb, var(--carbon) 16%, transparent)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--focus-ring-inverse",
+      "value": "var(--carbon)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--swatch-steel",
+      "value": "var(--grey-dark)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--figure-ink",
+      "value": "var(--paper)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--figure-ink-soft",
+      "value": "var(--paper-3)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--figure-ink-muted",
+      "value": "var(--grey)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--figure-line-muted",
+      "value": "var(--grey)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--figure-faint",
+      "value": "var(--grey-dark)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--figure-paper",
+      "value": "var(--carbon)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--figure-tint",
+      "value": "var(--carbon-2)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--figure-fill",
+      "value": "var(--carbon-3)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--figure-accent",
+      "value": "var(--red)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--figure-accent-strong",
+      "value": "var(--red)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
       "name": "--font-display",
-      "value": "\"Archivo\",\"Archivo Narrow\",\"DIN Condensed\",\"Helvetica Neue\",Helvetica,sans-serif",
+      "value": "\"EB Garamond\",Georgia,serif",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--font-text",
-      "value": "\"Instrument Sans\",\"Suisse Int'l\",\"Helvetica Neue\",Helvetica,sans-serif",
+      "value": "Inter,Arial,sans-serif",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--font-mono",
-      "value": "\"IBM Plex Mono\",\"Berkeley Mono\",ui-monospace,SFMono-Regular,Menlo,monospace",
+      "value": "\"JetBrains Mono\",Menlo,monospace",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--family-sans",
+      "value": "var(--font-sans), system-ui, sans-serif",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--family-serif",
+      "value": "var(--font-serif), Georgia, serif",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--family-mono",
+      "value": "var(--font-mono), ui-monospace, monospace",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--family-sans-asset",
+      "value": "Inter, system-ui, sans-serif",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--family-serif-asset",
+      "value": "'EB Garamond', Georgia, serif",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--family-mono-asset",
+      "value": "'JetBrains Mono', ui-monospace, monospace",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--display-stretch",
-      "value": "68%",
+      "value": "normal",
       "kind": "spacing",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--display-weight",
-      "value": "800",
+      "value": "500",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--display-tracking",
-      "value": "-0.015em",
+      "value": "-0.055em",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--display-leading",
-      "value": "0.86",
+      "value": "1.04",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--size-display-1",
-      "value": "132px",
+      "value": "108px",
       "kind": "spacing",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--size-display-2",
-      "value": "88px",
+      "value": "86px",
       "kind": "spacing",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--size-display-3",
-      "value": "56px",
+      "value": "66px",
       "kind": "spacing",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--size-display-4",
-      "value": "38px",
+      "value": "42px",
       "kind": "spacing",
       "definedIn": "tokens/typography.css"
     },
@@ -825,7 +1289,7 @@
     },
     {
       "name": "--size-body-lg",
-      "value": "19px",
+      "value": "18px",
       "kind": "spacing",
       "definedIn": "tokens/typography.css"
     },
@@ -860,20 +1324,182 @@
       "definedIn": "tokens/typography.css"
     },
     {
-      "name": "--leading-tight",
-      "value": "1.08",
+      "name": "--size-page-title",
+      "value": "clamp(2.6rem, 6vw, 4.75rem)",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-closing",
+      "value": "clamp(1.4rem, 2.6vw, 1.9rem)",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-statement",
+      "value": "clamp(1.1rem, 2vw, 1.35rem)",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-card-title",
+      "value": "18px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-body-compact",
+      "value": "15px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-meta",
+      "value": "13px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-control-sm",
+      "value": "12px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-fine",
+      "value": "0.85rem",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-code",
+      "value": "0.9em",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-stat",
+      "value": "clamp(2.2rem, 4vw, 3rem)",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-stat-lg",
+      "value": "clamp(3rem, 7vw, 5rem)",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-lockup",
+      "value": "28px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-lockup-sm",
+      "value": "24px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-figure-lg",
+      "value": "26px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-figure-md",
+      "value": "20px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-figure",
+      "value": "10.5px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-figure-sm",
+      "value": "10px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-hero",
+      "value": "clamp(48px,5.1vw,78px)",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-hero-lead",
+      "value": "18px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-hero-lead",
+      "value": "1.75",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-section",
+      "value": "clamp(34px,3.6vw,52px)",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-section",
+      "value": "1.13",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-section",
+      "value": "-0.045em",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-caption",
+      "value": "12px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-caption",
+      "value": "0.06em",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--leading-body",
-      "value": "1.5",
+      "value": "1.65",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
       "name": "--leading-mono",
       "value": "1.55",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-none",
+      "value": "1",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-snug",
+      "value": "1.4",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-label",
+      "value": "1.6",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
@@ -895,6 +1521,30 @@
       "kind": "other",
       "definedIn": "tokens/typography.css",
       "annotation": "other"
+    },
+    {
+      "name": "--track-heading",
+      "value": "-0.02em",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-accent",
+      "value": "-0.01em",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-lockup",
+      "value": "var(--track-heading)",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--underline-offset",
+      "value": "3px",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
     },
     {
       "name": "--weight-regular",
@@ -924,6 +1574,48 @@
       "name": "--weight-black",
       "value": "900",
       "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--font-ui",
+      "value": "var(--font-text)",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--font-research",
+      "value": "Geist,system-ui,sans-serif",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--serif",
+      "value": "var(--font-display)",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--sans",
+      "value": "var(--font-text)",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--mono",
+      "value": "var(--font-mono)",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-nav",
+      "value": "16px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-nav-mobile",
+      "value": "15px",
+      "kind": "spacing",
       "definedIn": "tokens/typography.css"
     },
     {
@@ -1006,7 +1698,7 @@
     },
     {
       "name": "--gutter-lg",
-      "value": "40px",
+      "value": "56px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
@@ -1037,7 +1729,7 @@
     },
     {
       "name": "--section-pad-y",
-      "value": "96px",
+      "value": "80px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
@@ -1055,13 +1747,37 @@
     },
     {
       "name": "--control-pad-x",
-      "value": "16px",
+      "value": "18px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
     {
       "name": "--control-pad-y",
+      "value": "11px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--control-pad-x-compact",
+      "value": "13px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--control-pad-y-compact",
+      "value": "9px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--control-pad-x-sm",
       "value": "10px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--control-pad-y-sm",
+      "value": "7px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
@@ -1084,6 +1800,420 @@
       "definedIn": "tokens/spacing.css"
     },
     {
+      "name": "--hero-min-h",
+      "value": "720px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--hero-pad-top",
+      "value": "85px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--hero-pad-bottom",
+      "value": "100px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--hero-measure",
+      "value": "680px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--hero-eyebrow-measure",
+      "value": "530px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--hero-lead-measure",
+      "value": "460px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--hero-caption-inset",
+      "value": "30px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--hero-title-gap",
+      "value": "28px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--header-bar-h",
+      "value": "86px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--section-bar-h",
+      "value": "47px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--measure-prose",
+      "value": "42rem",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--measure-narrow",
+      "value": "40rem",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--measure-wide",
+      "value": "48rem",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--measure-article",
+      "value": "56rem",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--measure-statement",
+      "value": "20ch",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--measure-tagline",
+      "value": "30ch",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--measure-figure",
+      "value": "520px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--measure-panel",
+      "value": "640px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--viewport-h",
+      "value": "100dvh",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-label",
+      "value": "160px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-card",
+      "value": "240px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-person",
+      "value": "220px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-note",
+      "value": "220px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-field",
+      "value": "260px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-paper",
+      "value": "300px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-detail",
+      "value": "420px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-artifact",
+      "value": "180px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-swatch",
+      "value": "160px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-step",
+      "value": "110px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-footer-intro",
+      "value": "240px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-output-kind",
+      "value": "120px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-min-output-link",
+      "value": "150px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-dossier-index",
+      "value": "32px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-programme-number",
+      "value": "64px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-publication-kind",
+      "value": "9rem",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-publication-link",
+      "value": "14rem",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-row-head",
+      "value": "120px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--table-min-ablation",
+      "value": "440px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--table-min-register",
+      "value": "560px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--table-min-steps",
+      "value": "770px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--canvas-min-graph",
+      "value": "760px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--icon-swatch",
+      "value": "10px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--icon-lockup-sm",
+      "value": "24px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--icon-lockup",
+      "value": "28px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--icon-step",
+      "value": "28px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--icon-avatar-preview",
+      "value": "56px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--icon-signature",
+      "value": "72px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--icon-mark-preview",
+      "value": "96px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--icon-poster",
+      "value": "240px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--icon-asset-preview",
+      "value": "320px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--stage-h",
+      "value": "180px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--swatch-h",
+      "value": "160px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--tile-h",
+      "value": "92px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--cell-h",
+      "value": "22px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--bar-thickness",
+      "value": "6px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--legend-line",
+      "value": "16px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--marker-size",
+      "value": "7px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--point-radius",
+      "value": "4.5px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--box-code-baseline",
+      "value": "22px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--box-name-baseline",
+      "value": "45px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--node-kicker-baseline",
+      "value": "28px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--node-title-baseline",
+      "value": "66px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--node-subtitle-baseline",
+      "value": "92px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--node-status-baseline",
+      "value": "131px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--consent-inset",
+      "value": "20px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--consent-offset",
+      "value": "58px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--consent-gap",
+      "value": "10px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--skip-offset",
+      "value": "100px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--sr-only-size",
+      "value": "1px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
       "name": "--radius-0",
       "value": "0px",
       "kind": "radius",
@@ -1102,6 +2232,30 @@
       "definedIn": "tokens/borders.css"
     },
     {
+      "name": "--radius-figure",
+      "value": "2px",
+      "kind": "radius",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--radius-node",
+      "value": "3px",
+      "kind": "radius",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--radius-header-control",
+      "value": "6px",
+      "kind": "radius",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--radius-panel",
+      "value": "8px",
+      "kind": "radius",
+      "definedIn": "tokens/borders.css"
+    },
+    {
       "name": "--border-hair",
       "value": "1px",
       "kind": "spacing",
@@ -1110,6 +2264,12 @@
     {
       "name": "--border-rule",
       "value": "1.5px",
+      "kind": "spacing",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-mid",
+      "value": "2px",
       "kind": "spacing",
       "definedIn": "tokens/borders.css"
     },
@@ -1144,6 +2304,168 @@
       "definedIn": "tokens/borders.css"
     },
     {
+      "name": "--border-strong",
+      "value": "var(--border-hair) solid var(--rule-strong)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-control",
+      "value": "var(--border-hair) solid var(--rule-control)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-accent",
+      "value": "var(--border-hair) solid var(--rule-accent)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-accent-heavy",
+      "value": "var(--border-heavy) solid var(--rule-accent)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-on-inverse",
+      "value": "var(--border-hair) solid var(--rule-on-inverse)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-step",
+      "value": "var(--border-mid) solid var(--rule-strong)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-chip",
+      "value": "var(--border-rule) solid var(--rule-strong)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-figure",
+      "value": "var(--border-hair) solid var(--figure-faint)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-planned",
+      "value": "var(--border-hair) dashed var(--figure-line-muted)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-ring",
+      "value": "var(--border-rule) solid var(--figure-ink-muted)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-warn",
+      "value": "var(--border-rule) solid var(--status-warn)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-button",
+      "value": "var(--border-hair) solid",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border-indicator",
+      "value": "var(--border-mid) solid transparent",
+      "kind": "color",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--focus-width",
+      "value": "2px",
+      "kind": "spacing",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--focus-offset",
+      "value": "2px",
+      "kind": "spacing",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--stroke-regular",
+      "value": "var(--border-rule)",
+      "kind": "spacing",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--stroke-strong",
+      "value": "var(--border-mid)",
+      "kind": "spacing",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--stroke-bold",
+      "value": "4",
+      "kind": "spacing",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--stroke-halo",
+      "value": "8px",
+      "kind": "spacing",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--dash-fine",
+      "value": "3 3",
+      "kind": "other",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--dash-roadmap",
+      "value": "3 4",
+      "kind": "other",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--dash-threshold",
+      "value": "4 4",
+      "kind": "other",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--dash-grid",
+      "value": "4 5",
+      "kind": "other",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--dash-feedback",
+      "value": "5 4",
+      "kind": "other",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--dash-concept",
+      "value": "6 5",
+      "kind": "other",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--dash-run",
+      "value": "7 5",
+      "kind": "other",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--dash-dotted",
+      "value": "2 6",
+      "kind": "other",
+      "definedIn": "tokens/borders.css"
+    },
+    {
       "name": "--shadow-none",
       "value": "none",
       "kind": "shadow",
@@ -1168,6 +2490,30 @@
       "definedIn": "tokens/borders.css"
     },
     {
+      "name": "--shadow-caption",
+      "value": "0 1px 8px var(--carbon-2)",
+      "kind": "shadow",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--shadow-popover",
+      "value": "0 8px 35px color-mix(in srgb, var(--carbon) 13%, transparent)",
+      "kind": "shadow",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--shadow-outline-soft",
+      "value": "inset 0 0 0 var(--border-hair) var(--rule-soft)",
+      "kind": "shadow",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--shadow-outline-strong",
+      "value": "inset 0 0 0 var(--border-hair) var(--rule-strong)",
+      "kind": "shadow",
+      "definedIn": "tokens/borders.css"
+    },
+    {
       "name": "--dot-size",
       "value": "8px",
       "kind": "spacing",
@@ -1178,6 +2524,130 @@
       "value": "5px",
       "kind": "spacing",
       "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--radius-control",
+      "value": "4px",
+      "kind": "radius",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--radius-card",
+      "value": "0px",
+      "kind": "radius",
+      "definedIn": "tokens/borders.css"
+    },
+    {
+      "name": "--border",
+      "value": "var(--border-hair) solid var(--rule)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-soft",
+      "value": "var(--border-hair) solid var(--rule-soft)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-faint",
+      "value": "var(--border-hair) solid var(--rule-faint)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-heavy-solid",
+      "value": "var(--border-heavy) solid var(--rule)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-strong",
+      "value": "var(--border-hair) solid var(--rule-strong)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-control",
+      "value": "var(--border-hair) solid var(--rule-control)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-accent",
+      "value": "var(--border-hair) solid var(--rule-accent)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-accent-heavy",
+      "value": "var(--border-heavy) solid var(--rule-accent)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-on-inverse",
+      "value": "var(--border-hair) solid var(--rule-on-inverse)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-step",
+      "value": "var(--border-mid) solid var(--rule-strong)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-chip",
+      "value": "var(--border-rule) solid var(--rule-strong)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-figure",
+      "value": "var(--border-hair) solid var(--figure-faint)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-planned",
+      "value": "var(--border-hair) dashed var(--figure-line-muted)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--border-ring",
+      "value": "var(--border-rule) solid var(--figure-ink-muted)",
+      "kind": "color",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--shadow-outline-soft",
+      "value": "inset 0 0 0 var(--border-hair) var(--rule-soft)",
+      "kind": "shadow",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--shadow-outline-strong",
+      "value": "inset 0 0 0 var(--border-hair) var(--rule-strong)",
+      "kind": "shadow",
+      "definedIn": "tokens/borders.css",
+      "scope": "[data-theme=\"carbon\"]"
     },
     {
       "name": "--dur-instant",
@@ -1240,6 +2710,114 @@
       "kind": "other",
       "definedIn": "tokens/motion.css",
       "annotation": "other"
+    },
+    {
+      "name": "--blur-translucent",
+      "value": "10px",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--blur-on-image",
+      "value": "5px",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--opacity-band",
+      "value": "0.07",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--hero-crop-x",
+      "value": "60%",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--portrait-crop",
+      "value": "26%",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--hero-scrim-stop-1",
+      "value": "29%",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--hero-scrim-stop-2",
+      "value": "48%",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--hero-scrim-stop-3",
+      "value": "75%",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--hero-scrim-stop-edge",
+      "value": "40%",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--hero-scrim-factor-1",
+      "value": "0.85",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--hero-scrim-factor-2",
+      "value": "1.2",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--hero-scrim-factor-3",
+      "value": "1.6",
+      "kind": "other",
+      "definedIn": "tokens/effects.css"
+    },
+    {
+      "name": "--z-below",
+      "value": "-1",
+      "kind": "other",
+      "definedIn": "tokens/stacking.css"
+    },
+    {
+      "name": "--z-above",
+      "value": "1",
+      "kind": "other",
+      "definedIn": "tokens/stacking.css"
+    },
+    {
+      "name": "--z-header",
+      "value": "20",
+      "kind": "other",
+      "definedIn": "tokens/stacking.css"
+    },
+    {
+      "name": "--z-consent-toggle",
+      "value": "29",
+      "kind": "other",
+      "definedIn": "tokens/stacking.css"
+    },
+    {
+      "name": "--z-consent",
+      "value": "30",
+      "kind": "other",
+      "definedIn": "tokens/stacking.css"
+    },
+    {
+      "name": "--z-skip",
+      "value": "30",
+      "kind": "other",
+      "definedIn": "tokens/stacking.css"
     }
   ],
   "themes": [
@@ -1251,7 +2829,7 @@
   "fonts": [],
   "brandFonts": [
     {
-      "family": "Archivo",
+      "family": "EB Garamond",
       "status": "ok",
       "tokens": [
         "--font-display"
@@ -1259,7 +2837,7 @@
       "path": "tokens/typography.css"
     },
     {
-      "family": "Instrument Sans",
+      "family": "Inter",
       "status": "ok",
       "tokens": [
         "--font-text"
@@ -1267,7 +2845,7 @@
       "path": "tokens/typography.css"
     },
     {
-      "family": "IBM Plex Mono",
+      "family": "JetBrains Mono",
       "status": "ok",
       "tokens": [
         "--font-mono"

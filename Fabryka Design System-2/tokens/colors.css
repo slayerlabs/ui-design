@@ -72,6 +72,42 @@
 --surface-translucent:color-mix(in srgb,var(--surface) 97%,transparent);
 --surface-on-image:color-mix(in srgb,var(--carbon-2) 38%,transparent);
 --rule-on-image:color-mix(in srgb,var(--rule) 67%,transparent);
+
+--surface-hero:var(--carbon-3);
+--surface-footer:var(--carbon-2);
+--surface-inverse-hover:var(--carbon-3);
+--surface-accent-hover:var(--red-dark);
+--text-accent-on-inverse:var(--red-wash);
+--text-footer:var(--paper-4);
+--rule-strong:var(--carbon);
+--rule-control:var(--grey-dark);
+--rule-accent:var(--red);
+--rule-accent-hover:var(--red-dark);
+--rule-on-inverse:color-mix(in srgb, var(--paper) 16%, transparent);
+--focus-ring-inverse:var(--paper);
+--swatch-steel:var(--grey-dark);
+
+--figure-ink:var(--carbon);
+--figure-ink-soft:var(--carbon-3);
+--figure-ink-muted:var(--carbon-4);
+--figure-line-muted:var(--grey-dark);
+--figure-faint:var(--grey);
+--figure-paper:var(--paper);
+--figure-tint:var(--paper-2);
+--figure-fill:var(--paper-3);
+--figure-accent:var(--red);
+--figure-accent-strong:var(--red-dark);
+
+/* Categorical series in research figures; no palette colour carries these roles. */
+--data-blue:#3D5D91;
+--data-green:#385440;
+--data-sage:#B7C2B0;
+--data-sage-wash:#E7EBDF;
+
+/* Official mark colours, assets/fabryka-mark.svg. */
+--brand-mark-ground:#132126;
+--brand-mark-accent:#E85A28;
+--brand-mark-paper:#FBF8F2;
 }
 
 /* Inverse scope: carbon sections, machine panels, terminal blocks */
@@ -97,6 +133,31 @@
 --plate-tint:rgba(252,250,246,.04);
 --link:#FF6A52;
 --link-hover:#FF8B77;
+
+--surface-hero:var(--carbon-3);
+--surface-footer:var(--carbon-2);
+--surface-inverse-hover:var(--paper-3);
+--surface-accent-hover:var(--red-dark);
+--text-accent-on-inverse:var(--red);
+--text-footer:var(--paper-4);
+--rule-strong:var(--paper);
+--rule-control:var(--grey);
+--rule-accent:var(--red);
+--rule-accent-hover:var(--red-dark);
+--rule-on-inverse:color-mix(in srgb, var(--carbon) 16%, transparent);
+--focus-ring-inverse:var(--carbon);
+--swatch-steel:var(--grey-dark);
+
+--figure-ink:var(--paper);
+--figure-ink-soft:var(--paper-3);
+--figure-ink-muted:var(--grey);
+--figure-line-muted:var(--grey);
+--figure-faint:var(--grey-dark);
+--figure-paper:var(--carbon);
+--figure-tint:var(--carbon-2);
+--figure-fill:var(--carbon-3);
+--figure-accent:var(--red);
+--figure-accent-strong:var(--red);
 }
 
 @media (max-width: 1000px){

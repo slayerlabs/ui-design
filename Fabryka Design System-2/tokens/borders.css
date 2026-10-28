@@ -3,15 +3,50 @@
 --radius-0:0px;
 --radius-pill:999px;
 --radius-dot:50%;
+--radius-figure:2px;
+--radius-node:3px;
+--radius-header-control:6px;
+--radius-panel:8px;
 
 --border-hair:1px;
 --border-rule:1.5px;
+--border-mid:2px;
 --border-heavy:3px;
 
 --border:var(--border-hair) solid var(--rule);
 --border-soft:var(--border-hair) solid var(--rule-soft);
 --border-faint:var(--border-hair) solid var(--rule-faint);
 --border-heavy-solid:var(--border-heavy) solid var(--rule);
+--border-strong:var(--border-hair) solid var(--rule-strong);
+--border-control:var(--border-hair) solid var(--rule-control);
+--border-accent:var(--border-hair) solid var(--rule-accent);
+--border-accent-heavy:var(--border-heavy) solid var(--rule-accent);
+--border-on-inverse:var(--border-hair) solid var(--rule-on-inverse);
+--border-step:var(--border-mid) solid var(--rule-strong);
+--border-chip:var(--border-rule) solid var(--rule-strong);
+--border-figure:var(--border-hair) solid var(--figure-faint);
+--border-planned:var(--border-hair) dashed var(--figure-line-muted);
+--border-ring:var(--border-rule) solid var(--figure-ink-muted);
+--border-warn:var(--border-rule) solid var(--status-warn);
+--border-button:var(--border-hair) solid;
+--border-indicator:var(--border-mid) solid transparent;
+
+--focus-width:2px;
+--focus-offset:2px;
+
+--stroke-regular:var(--border-rule);
+--stroke-strong:var(--border-mid);
+--stroke-bold:4;
+--stroke-halo:8px;
+
+--dash-fine:3 3;
+--dash-roadmap:3 4;
+--dash-threshold:4 4;
+--dash-grid:4 5;
+--dash-feedback:5 4;
+--dash-concept:6 5;
+--dash-run:7 5;
+--dash-dotted:2 6;
 
 /* No soft startup shadows. Only hard offset "printed" shadows, sparingly. */
 --shadow-none:none;
@@ -19,9 +54,32 @@
 --shadow-stamp-red:3px 3px 0 var(--red);
 --shadow-overlay:0 24px 60px rgba(17,17,17,.28);
 --shadow-caption:0 1px 8px var(--carbon-2);
+--shadow-popover:0 8px 35px color-mix(in srgb, var(--carbon) 13%, transparent);
+--shadow-outline-soft:inset 0 0 0 var(--border-hair) var(--rule-soft);
+--shadow-outline-strong:inset 0 0 0 var(--border-hair) var(--rule-strong);
 
 --dot-size:8px;
 --rivet-size:5px;
 }
 
 :root{--radius-control:4px;--radius-card:0px;}
+
+/* var() resolves where a custom property is declared, so role-based values are re-declared for the carbon roles. */
+[data-theme="carbon"]{
+--border:var(--border-hair) solid var(--rule);
+--border-soft:var(--border-hair) solid var(--rule-soft);
+--border-faint:var(--border-hair) solid var(--rule-faint);
+--border-heavy-solid:var(--border-heavy) solid var(--rule);
+--border-strong:var(--border-hair) solid var(--rule-strong);
+--border-control:var(--border-hair) solid var(--rule-control);
+--border-accent:var(--border-hair) solid var(--rule-accent);
+--border-accent-heavy:var(--border-heavy) solid var(--rule-accent);
+--border-on-inverse:var(--border-hair) solid var(--rule-on-inverse);
+--border-step:var(--border-mid) solid var(--rule-strong);
+--border-chip:var(--border-rule) solid var(--rule-strong);
+--border-figure:var(--border-hair) solid var(--figure-faint);
+--border-planned:var(--border-hair) dashed var(--figure-line-muted);
+--border-ring:var(--border-rule) solid var(--figure-ink-muted);
+--shadow-outline-soft:inset 0 0 0 var(--border-hair) var(--rule-soft);
+--shadow-outline-strong:inset 0 0 0 var(--border-hair) var(--rule-strong);
+}
