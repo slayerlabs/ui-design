@@ -40,3 +40,17 @@ test("tokens carry the production palette and no resets or font imports", () => 
   assert.doesNotMatch(scoped, /:root/);
   assert.ok(scoped.includes(`${SCOPE}{`));
 });
+
+test("typography tokens are built without font-family variables", () => {
+  const { root, scoped } = buildTokens();
+  const excluded = ["font-display", "font-text", "font-mono", "font-ui", "font-research", "serif", "sans", "mono"];
+  for (const css of [root, scoped]) {
+    assert.match(css, /--size-body:16px/);
+    assert.match(css, /--display-weight:500/);
+    assert.match(css, /--leading-body:1\.5/);
+    assert.match(css, /--size-nav:16px/);
+    for (const name of excluded) assert.doesNotMatch(css, new RegExp(`(?<![\\w-])--${name}\\s*:`), name);
+  }
+  assert.match(scoped, /\[data-fabryka-ds\]\{[^}]*--size-body:16px/);
+  assert.doesNotMatch(scoped, /:root/);
+});

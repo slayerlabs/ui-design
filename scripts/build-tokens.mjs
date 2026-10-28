@@ -4,9 +4,13 @@ import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 // base.css is a global reset and fonts.css a Google Fonts @import; neither may leak into consuming pages.
-const SOURCES = ["colors", "spacing", "borders", "motion"].map((name) =>
+const SOURCES = ["colors", "spacing", "borders", "motion", "typography"].map((name) =>
   path.join(root, "Fabryka Design System-2", "tokens", `${name}.css`),
 );
+
+// The app supplies fonts through next/font; a :root font-family declaration would collide with its variables.
+const FONT_FAMILY_DECLARATION =
+  /(?<![\w-])--(?:font-display|font-text|font-mono|font-ui|font-research|serif|sans|mono)\s*:[^;}]*;?/g;
 
 export const SCOPE = "[data-fabryka-ds]";
 
@@ -17,7 +21,7 @@ export function scopeTokens(css, scope) {
 }
 
 export function buildTokens() {
-  const css = SOURCES.map((file) => readFileSync(file, "utf8")).join("\n");
+  const css = SOURCES.map((file) => readFileSync(file, "utf8").replace(FONT_FAMILY_DECLARATION, "")).join("\n");
   return { root: css, scoped: scopeTokens(css, SCOPE) };
 }
 
