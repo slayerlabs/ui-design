@@ -54,3 +54,17 @@ test("typography tokens are built without font-family variables", () => {
   assert.match(scoped, /\[data-fabryka-ds\]\{[^}]*--size-body:16px/);
   assert.doesNotMatch(scoped, /:root/);
 });
+
+test("secondary text role and mono typography tokens are built", () => {
+  const { root, scoped } = buildTokens();
+  for (const css of [root, scoped]) {
+    assert.match(css, /--text-secondary:var\(--carbon-3\)/);
+    assert.match(css, /--text-secondary:var\(--paper-3\)/);
+    assert.match(css, /--size-mono:13px/);
+    assert.match(css, /--leading-mono:1\.55/);
+    assert.match(css, /--track-mono:0\.02em/);
+  }
+  assert.match(root, /\[data-theme="carbon"\]\s*\{[^}]*--text-secondary:var\(--paper-3\)/);
+  assert.match(scoped, /\[data-fabryka-ds\]\{[^}]*--text-secondary:var\(--carbon-3\)/);
+  assert.match(scoped, /\[data-fabryka-ds\]\[data-theme="carbon"\][^{]*\{[^}]*--text-secondary:var\(--paper-3\)/);
+});

@@ -32,6 +32,7 @@
 --surface-accent:var(--red);
 
 --text-body:var(--carbon);
+--text-secondary:var(--carbon-3);
 --text-heading:var(--carbon);
 --text-muted:var(--grey-dark);
 --text-faint:var(--grey);
@@ -72,6 +73,7 @@
 --surface-inverse:var(--paper);
 
 --text-body:var(--paper);
+--text-secondary:var(--paper-3);
 --text-heading:var(--paper);
 --text-muted:var(--grey);
 --text-faint:var(--grey-dark);
