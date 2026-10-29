@@ -159,7 +159,6 @@ test("breakpoint tokens change inside the app's media queries, in cascade order"
       "--hero-pad-top:55px",
       "--hero-pad-bottom:65px",
       "--hero-eyebrow-measure:345px",
-      "--hero-lead-measure:420px",
     ],
     "max-width: 480px": ["--size-count:42px", "--size-person-title:25px", "--role-min-h:0"],
     "max-width: 450px": ["--consent-offset:56px"],
@@ -178,6 +177,10 @@ test("breakpoint tokens change inside the app's media queries, in cascade order"
       assert.deepEqual(positions, [...positions].sort((a, b) => a - b), name);
     }
   }
+});
+
+test("the hero lead keeps production's 505px measure at every width", () => {
+  for (const css of Object.values(buildTokens())) assert.deepEqual(css.match(/--hero-lead-measure:[^;]+/g), ["--hero-lead-measure:505px"]);
 });
 
 const NEW_TOKENS = [
