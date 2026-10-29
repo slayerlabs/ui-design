@@ -48,7 +48,11 @@ these sizes.
 | `--size-page-title` | `clamp(2.6rem, 6vw, 4.75rem)` | h1 of every other page |
 | `--size-section` | `clamp(34px,3.6vw,52px)` | section h2 |
 | `--size-stat-lg` | `clamp(3rem, 7vw, 5rem)` | oversized spec value |
-| `--size-stat` | `clamp(2.2rem, 4vw, 3rem)` | big numbers, initials, swatch labels, prices |
+| `--size-stat` | `clamp(2.2rem, 4vw, 3rem)` | big numbers, swatch labels, prices |
+| `--size-count` | 52px; 44px ≤760px; 42px ≤450px | the home team counts |
+| `--size-initials` | 64px | portrait initials when a person has no photo |
+| `--size-feature-title` | `clamp(30px,3.5vw,51px)`; 34px ≤760px | h2 of the home feature band (Basal Omni) |
+| `--size-stat-label` | 14px; 13px ≤760px | the label next to a big number |
 | `--size-closing` | `clamp(1.4rem, 2.6vw, 1.9rem)` | closing lines, headings inside long prose |
 | `--size-statement` | `clamp(1.1rem, 2vw, 1.35rem)` | statement / standfirst paragraph |
 | `--size-heading` | 22px | sub-section heading |
@@ -109,7 +113,9 @@ legacy templates are examples, not current Fabryka telemetry or legal facts.
 
 ## Spacing, controls and breakpoints
 
-Section blocks use `--section-pad-y` (80px, 48px at ≤760px). Page gutters are
+Section blocks use `--section-pad-y` (80px, 55px at ≤760px) and `--section-title-gap` (28px) between a
+section h2 and its lead. The home feature band uses `--feature-pad-y` (72px, 42px at ≤760px), `--feature-gap`
+(50px, 28px at ≤760px), `--feature-kicker-inset` (11px) and `--feature-title-gap` (22px). Page gutters are
 `--gutter` 24px and `--gutter-lg` 56px.
 
 | Tokens | Value | Use |
@@ -126,8 +132,8 @@ literally (`max-width`, in this order) and the tokens change inside the same
 | --- | --- |
 | 1000px | hero size and height, hero scrims |
 | 900px | `--header-bar-h` 73px, `--col-programme-number` 40px |
-| 760px | hero layout and caption, `--section-pad-y` 48px, `--hero-crop-x` 64%, `--step-title-gap` 18px |
-| 450px | narrow phone (production consent panel): `--consent-offset` 56px |
+| 760px | hero layout and caption, `--section-pad-y` 55px, `--hero-crop-x` 64%, `--step-title-gap` 18px, feature band (`--feature-pad-y` 42px, `--feature-gap` 28px, `--size-feature-title` 34px), `--size-count` 44px, `--size-stat-label` 13px |
+| 450px | narrow phone (production consent panel): `--consent-offset` 56px, `--size-count` 42px |
 | 380px | `--hero-pad-top` 50px |
 
 ## Token families

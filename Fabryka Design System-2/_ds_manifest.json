@@ -1384,6 +1384,24 @@
       "definedIn": "tokens/typography.css"
     },
     {
+      "name": "--size-count",
+      "value": "52px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-stat-label",
+      "value": "14px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-initials",
+      "value": "64px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
       "name": "--size-stat-lg",
       "value": "clamp(3rem, 7vw, 5rem)",
       "kind": "spacing",
@@ -1456,6 +1474,18 @@
       "definedIn": "tokens/typography.css"
     },
     {
+      "name": "--size-feature-title",
+      "value": "clamp(30px,3.5vw,51px)",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-feature-title",
+      "value": "1.12",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
       "name": "--track-section",
       "value": "-0.045em",
       "kind": "font",
@@ -1504,6 +1534,24 @@
       "definedIn": "tokens/typography.css"
     },
     {
+      "name": "--leading-compact",
+      "value": "1.5",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-relaxed",
+      "value": "1.7",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-meta",
+      "value": "1.8",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
       "name": "--track-label",
       "value": "0.14em",
       "kind": "spacing",
@@ -1537,6 +1585,12 @@
     {
       "name": "--track-lockup",
       "value": "var(--track-heading)",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-stat",
+      "value": "-2px",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
@@ -1734,6 +1788,42 @@
       "definedIn": "tokens/spacing.css"
     },
     {
+      "name": "--section-title-gap",
+      "value": "28px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--feature-pad-y",
+      "value": "72px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--feature-gap",
+      "value": "50px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--feature-kicker-inset",
+      "value": "11px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--feature-title-gap",
+      "value": "22px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--person-link-gap",
+      "value": "14px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
       "name": "--plate-pad",
       "value": "16px",
       "kind": "spacing",
@@ -1904,6 +1994,18 @@
     {
       "name": "--measure-figure",
       "value": "520px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--measure-feature",
+      "value": "620px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--measure-stat-label",
+      "value": "155px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
