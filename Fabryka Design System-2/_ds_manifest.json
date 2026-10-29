@@ -2311,6 +2311,30 @@
       "definedIn": "tokens/spacing.css"
     },
     {
+      "name": "--title-block-pad-top",
+      "value": "24px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--title-block-pad-bottom",
+      "value": "64px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--running-head-gap",
+      "value": "24px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--heading-text-gap",
+      "value": "22px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
       "name": "--header-bar-h",
       "value": "85px",
       "kind": "spacing",

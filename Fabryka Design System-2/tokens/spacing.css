@@ -84,6 +84,12 @@
 --hero-caption-inset:30px;
 --hero-title-gap:28px;
 --step-title-gap:28px;
+/* Paper title blocks: every page but the home, whose title block is the image band. */
+--title-block-pad-top:24px;
+--title-block-pad-bottom:64px;
+--running-head-gap:24px;
+/* A section heading over its running text: the home's feature title → text distance. */
+--heading-text-gap:22px;
 
 /* Sticky banner: defined bar heights, each including its bottom rule. */
 --header-bar-h:85px;
@@ -165,7 +171,7 @@
 :root{--header-bar-h:73px;--col-programme-number:40px;}
 }
 @media (max-width: 760px){
-:root{--hero-pad-top:55px;--hero-pad-bottom:65px;--hero-eyebrow-measure:345px;--section-pad-y:55px;--step-title-gap:18px;--feature-pad-y:42px;--feature-gap:28px;--card-pad-top:28px;--output-kind-inset:0;--actions-gap:14px;--section-heading-gap:36px;--split-gap:28px;--split-pad-y:60px;--output-gap:14px;--stats-row-gap:24px;--stats-col-gap:24px;--roster-row-gap:32px;--roster-col-gap:18px;--ribbon-gap:14px;--ribbon-step-gap:10px;}
+:root{--title-block-pad-bottom:48px;--hero-pad-top:55px;--hero-pad-bottom:65px;--hero-eyebrow-measure:345px;--section-pad-y:55px;--step-title-gap:18px;--feature-pad-y:42px;--feature-gap:28px;--card-pad-top:28px;--output-kind-inset:0;--actions-gap:14px;--section-heading-gap:36px;--split-gap:28px;--split-pad-y:60px;--output-gap:14px;--stats-row-gap:24px;--stats-col-gap:24px;--roster-row-gap:32px;--roster-col-gap:18px;--ribbon-gap:14px;--ribbon-step-gap:10px;}
 }
 @media (max-width: 480px){
 :root{--role-min-h:0;}
