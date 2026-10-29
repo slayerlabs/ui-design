@@ -755,6 +755,12 @@
       "definedIn": "tokens/colors.css"
     },
     {
+      "name": "--surface-feature",
+      "value": "#F3EEE4",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
       "name": "--text-status",
       "value": "#69675D",
       "kind": "color",
@@ -1727,8 +1733,20 @@
       "definedIn": "tokens/typography.css"
     },
     {
+      "name": "--weight-section",
+      "value": "450",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
       "name": "--weight-medium",
       "value": "500",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--weight-feature",
+      "value": "550",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
@@ -2042,6 +2060,114 @@
     {
       "name": "--subsection-pad-top",
       "value": "36px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--subsection-offset",
+      "value": "28px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--feature-max",
+      "value": "1400px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--split-gap",
+      "value": "70px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--split-pad-y",
+      "value": "95px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--card-pad-x",
+      "value": "30px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-output-kind",
+      "value": "180px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--col-output-link",
+      "value": "205px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--output-gap",
+      "value": "30px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--stats-row-gap",
+      "value": "28px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--stats-col-gap",
+      "value": "65px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--stats-offset",
+      "value": "44px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--roster-row-gap",
+      "value": "42px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--roster-col-gap",
+      "value": "24px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--role-min-h",
+      "value": "34px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--ribbon-pad-y",
+      "value": "25px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--ribbon-gap",
+      "value": "25px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--ribbon-step-gap",
+      "value": "24px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--links-row-gap",
+      "value": "18px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },

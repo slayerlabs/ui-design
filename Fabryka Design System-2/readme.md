@@ -84,7 +84,8 @@ Line heights: `--leading-none` 1, `--display-leading` 1.04, `--leading-section`
 −0.02em (also `--track-lockup`), `--track-accent` −0.01em, `--track-card-title` −0.7px,
 `--track-list-title` −0.6px, `--track-subsection-title` −1px, `--track-mono` and `--track-eyebrow` 0.02em
 (eyebrows, step labels, tags), `--track-ribbon` 0.045em, `--track-caption` 0.06em, `--track-kicker` 0.07em,
-`--track-label` 0.14em. Weights: 400, 500, 600, 700, 900.
+`--track-label` 0.14em. Weights: 400, 500, 600, 700, 900, plus `--weight-section` 450 (home section h2) and
+`--weight-feature` 550 (home feature title); the app loads Inter and EB Garamond with their variable weight axis.
 
 `--size-display-1…4` (108/86/66/42px) are the specimen display sizes: `tokens/base.css`
 sets them on the specimen h1–h3 (h4 uses `--size-heading`), and the print kit and
@@ -130,7 +131,15 @@ section paragraph, `--actions-offset` 30px above a row of actions and `--actions
 them, `--more-link-gap` 28px above a section's "more" link, `--card-pad-top` (29px, 28px at ≤760px) under a card rule,
 `--card-title-gap` 15px and `--list-title-gap` 10px under titles, `--output-row-gap` 14px and `--output-row-pad-y` 30px, `--output-kind-inset`
 (5px, 0 at ≤760px), `--detail-pad-top` 21px under a detail rule, `--portrait-gap` 22px, `--subsection-gap` 58px and
-`--subsection-pad-top` 36px around a sub-section rule. Page gutters are `--gutter` 24px and `--gutter-lg` 56px.
+`--subsection-pad-top` 36px around a sub-section rule, `--subsection-offset` 28px under a sub-section heading. Home
+structure: `--split-gap` (70px, 40px at ≤1000px, 28px at ≤760px) between the two heading columns and in the split
+bands, `--split-pad-y` (95px, 60px at ≤760px) for the split bands, `--feature-max` 1400px for the feature band,
+`--card-pad-x` (30px, 20px at ≤1000px) beside the card dividers, `--col-output-kind` (180px, 140px at ≤1000px),
+`--col-output-link` 205px and `--output-gap` (30px, 14px at ≤760px) for output rows, `--stats-row-gap` /
+`--stats-col-gap` (28px / 65px, 24px at ≤760px) and `--stats-offset` 44px for the counts row, `--roster-row-gap` /
+`--roster-col-gap` (42px / 24px, 32px / 18px at ≤760px) and `--role-min-h` (34px, 0 at ≤450px) for the roster,
+`--ribbon-pad-y` 25px, `--ribbon-gap` (25px, 14px at ≤760px) and `--ribbon-step-gap` (24px, 10px at ≤760px) for the
+ribbon, `--links-row-gap` 18px for a row of links. Page gutters are `--gutter` 24px and `--gutter-lg` 56px.
 
 | Tokens | Value | Use |
 | --- | --- | --- |
@@ -144,15 +153,15 @@ literally (`max-width`, in this order) and the tokens change inside the same
 
 | Breakpoint | Token changes |
 | --- | --- |
-| 1000px | hero size, hero scrims |
+| 1000px | hero size, hero scrims, `--split-gap` 40px, `--card-pad-x` 20px, `--col-output-kind` 140px |
 | 900px | `--header-bar-h` 73px, `--col-programme-number` 40px |
-| 760px | hero layout and caption, `--section-pad-y` 55px, `--hero-crop-x` 64%, `--step-title-gap` 18px, feature band (`--feature-pad-y` 42px, `--feature-gap` 28px, `--size-feature-title` 34px), `--size-count` 44px, `--size-stat-label` 13px, `--size-step-title` 25px, `--size-person-title` 21px, `--size-ribbon` 12px, `--card-pad-top` 28px, `--output-kind-inset` 0, `--actions-gap` 14px, `--section-heading-gap` 36px, `--text-accent-on-image` paper |
-| 450px | narrow phone (production consent panel): `--consent-offset` 56px, `--size-count` 42px, `--size-person-title` 25px |
+| 760px | hero layout and caption, `--section-pad-y` 55px, `--hero-crop-x` 64%, `--step-title-gap` 18px, feature band (`--feature-pad-y` 42px, `--feature-gap` 28px, `--size-feature-title` 34px), `--size-count` 44px, `--size-stat-label` 13px, `--size-step-title` 25px, `--size-person-title` 21px, `--size-ribbon` 12px, `--card-pad-top` 28px, `--output-kind-inset` 0, `--actions-gap` 14px, `--section-heading-gap` 36px, `--split-gap` 28px, `--split-pad-y` 60px, `--output-gap` 14px, `--stats-row-gap` / `--stats-col-gap` 24px, `--roster-row-gap` 32px, `--roster-col-gap` 18px, `--ribbon-gap` 14px, `--ribbon-step-gap` 10px, `--text-accent-on-image` paper |
+| 450px | narrow phone (production consent panel): `--consent-offset` 56px, `--size-count` 42px, `--size-person-title` 25px, `--role-min-h` 0 |
 
 ## Token families
 
 - Roles: `--surface-*`, `--text-*`, `--rule-*`, `--focus-ring*` (home template roles: `--surface-hero` #514437
-  behind the hero image, `--surface-placeholder` #E3DED3 for portraits without a photo, `--text-accent-on-image`
+  behind the hero image, `--surface-placeholder` #E3DED3 for portraits without a photo, `--surface-feature` #F3EEE4 for the home feature band, `--text-accent-on-image`
   #F0D4C0 for the hero eyebrow (paper at ≤760px, where the tint falls below 4.5:1), `--text-status` #69675D for the feature band's status line); `--figure-*` for
   research figures; `--data-*` for categorical series no palette colour carries;
   `--brand-mark-*` for the official mark (assets/fabryka-mark.svg).
