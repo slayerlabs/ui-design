@@ -71,7 +71,7 @@
 --scrim-faint:color-mix(in srgb,var(--overlay-ink) 3%,transparent);
 --scrim-edge:color-mix(in srgb,var(--overlay-ink) 62%,transparent);
 --surface-translucent:color-mix(in srgb,var(--surface) 97%,transparent);
---surface-on-image:color-mix(in srgb,var(--overlay-ink) 38%,transparent);
+--surface-on-image:color-mix(in srgb,var(--overlay-ink) 37.6%,transparent);
 --rule-on-image:color-mix(in srgb,var(--rule) 67%,transparent);
 
 --surface-hero:#514437;

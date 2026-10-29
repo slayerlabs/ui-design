@@ -708,7 +708,7 @@
     },
     {
       "name": "--surface-on-image",
-      "value": "color-mix(in srgb,var(--overlay-ink) 38%,transparent)",
+      "value": "color-mix(in srgb,var(--overlay-ink) 37.6%,transparent)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
