@@ -1546,12 +1546,6 @@
       "definedIn": "tokens/typography.css"
     },
     {
-      "name": "--size-hero-caption",
-      "value": "14px",
-      "kind": "spacing",
-      "definedIn": "tokens/typography.css"
-    },
-    {
       "name": "--size-ribbon",
       "value": "15px",
       "kind": "spacing",

@@ -166,3 +166,7 @@
 @media (max-width: 1000px){
 :root{--scrim-strong:color-mix(in srgb,var(--carbon-2) 85%,transparent);--scrim-medium:color-mix(in srgb,var(--carbon-2) 70%,transparent);--scrim-soft:color-mix(in srgb,var(--carbon-2) 55%,transparent);}
 }
+/* AA over the template: production's eyebrow tint falls below 4.5:1 on the narrow hero image. */
+@media (max-width: 760px){
+:root{--text-accent-on-image:var(--paper);}
+}

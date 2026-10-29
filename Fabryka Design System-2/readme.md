@@ -68,7 +68,6 @@ these sizes.
 | `--size-body-sm` | 14px | small body text |
 | `--size-meta` / `--size-mono` | 13px | small sans text / mono text and labels |
 | `--size-ribbon` | 15px; 12px ≤760px | the home ribbon of research steps |
-| `--size-hero-caption` | 14px | the home hero image caption |
 | `--size-caption` | 12px; 11px ≤760px | captions, figure legends and notes, stamps, small mono labels |
 | `--size-status` | 12px | the status line under the home feature band's actions |
 | `--size-control-sm` | 12px | small control label |
@@ -147,14 +146,14 @@ literally (`max-width`, in this order) and the tokens change inside the same
 | --- | --- |
 | 1000px | hero size, hero scrims |
 | 900px | `--header-bar-h` 73px, `--col-programme-number` 40px |
-| 760px | hero layout and caption, `--section-pad-y` 55px, `--hero-crop-x` 64%, `--step-title-gap` 18px, feature band (`--feature-pad-y` 42px, `--feature-gap` 28px, `--size-feature-title` 34px), `--size-count` 44px, `--size-stat-label` 13px, `--size-step-title` 25px, `--size-person-title` 21px, `--size-ribbon` 12px, `--card-pad-top` 28px, `--output-kind-inset` 0, `--actions-gap` 14px |
+| 760px | hero layout and caption, `--section-pad-y` 55px, `--hero-crop-x` 64%, `--step-title-gap` 18px, feature band (`--feature-pad-y` 42px, `--feature-gap` 28px, `--size-feature-title` 34px), `--size-count` 44px, `--size-stat-label` 13px, `--size-step-title` 25px, `--size-person-title` 21px, `--size-ribbon` 12px, `--card-pad-top` 28px, `--output-kind-inset` 0, `--actions-gap` 14px, `--text-accent-on-image` paper |
 | 450px | narrow phone (production consent panel): `--consent-offset` 56px, `--size-count` 42px, `--size-person-title` 25px |
 
 ## Token families
 
 - Roles: `--surface-*`, `--text-*`, `--rule-*`, `--focus-ring*` (home template roles: `--surface-hero` #514437
   behind the hero image, `--surface-placeholder` #E3DED3 for portraits without a photo, `--text-accent-on-image`
-  #F0D4C0 for the hero eyebrow, `--text-status` #69675D for the feature band's status line); `--figure-*` for
+  #F0D4C0 for the hero eyebrow (paper at ≤760px, where the tint falls below 4.5:1), `--text-status` #69675D for the feature band's status line); `--figure-*` for
   research figures; `--data-*` for categorical series no palette colour carries;
   `--brand-mark-*` for the official mark (assets/fabryka-mark.svg).
 - Borders: widths `--border-hair` 1px, `--border-rule` 1.5px, `--border-mid` 2px,
