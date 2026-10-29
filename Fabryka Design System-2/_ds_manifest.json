@@ -2335,6 +2335,12 @@
       "definedIn": "tokens/spacing.css"
     },
     {
+      "name": "--heading-lead-gap",
+      "value": "28px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
       "name": "--header-bar-h",
       "value": "85px",
       "kind": "spacing",

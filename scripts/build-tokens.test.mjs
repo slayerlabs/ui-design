@@ -445,6 +445,7 @@ const NEW_TOKENS = [
   ["--title-block-pad-top", "24px"],
   ["--title-block-pad-bottom", "64px", { media: ["max-width: 760px", "48px"] }],
   ["--running-head-gap", "24px"],
+  ["--heading-lead-gap", "28px"],
 ];
 
 function declarations(css) {

@@ -90,6 +90,8 @@
 --running-head-gap:24px;
 /* A section heading over its running text: the home's feature title → text distance. */
 --heading-text-gap:22px;
+/* A section heading stacked over its lead: the home's stacked .heading gap (it stacks only at 760px and below). */
+--heading-lead-gap:28px;
 
 /* Sticky banner: defined bar heights, each including its bottom rule. */
 --header-bar-h:85px;
