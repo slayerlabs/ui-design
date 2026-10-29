@@ -80,6 +80,7 @@
 --surface-accent-hover:var(--red-dark);
 --text-accent-on-inverse:var(--red-wash);
 --text-accent-on-image:#F0D4C0;
+--text-accent-on-carbon:#F08A68;
 --surface-placeholder:#E3DED3;
 --surface-feature:#F3EEE4;
 --text-status:#69675D;
@@ -128,7 +129,7 @@
 --text-heading:var(--paper);
 --text-muted:var(--grey);
 --text-faint:var(--grey-dark);
---text-accent:var(--red-wash);
+--text-accent:var(--text-accent-on-carbon);
 --text-on-inverse:var(--carbon);
 
 --rule:rgba(252,250,246,.9);

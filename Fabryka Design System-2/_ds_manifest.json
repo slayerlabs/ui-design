@@ -755,6 +755,12 @@
       "definedIn": "tokens/colors.css"
     },
     {
+      "name": "--text-accent-on-carbon",
+      "value": "#F08A68",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
       "name": "--surface-placeholder",
       "value": "#E3DED3",
       "kind": "color",
@@ -994,7 +1000,7 @@
     },
     {
       "name": "--text-accent",
-      "value": "var(--red-wash)",
+      "value": "var(--text-accent-on-carbon)",
       "kind": "font",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"

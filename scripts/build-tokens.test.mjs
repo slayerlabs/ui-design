@@ -443,6 +443,7 @@ const NEW_TOKENS = [
   ["--ribbon-step-gap", "24px", { media: ["max-width: 760px", "10px"] }],
   ["--links-row-gap", "18px"],
   ["--feature-art-max", "480px"],
+  ["--text-accent-on-carbon", "#F08A68"],
 ];
 
 function declarations(css) {
@@ -533,14 +534,21 @@ const contrast = (a, b) => {
   return (hi + 0.05) / (lo + 0.05);
 };
 
-test("accent text in the carbon scope passes AA on every carbon surface", () => {
+const resolveCarbon = (name) => {
   const root = sourceTokens(":root");
   const carbon = sourceTokens('[data-theme="carbon"]');
-  const resolve = (name) => {
-    let value = carbon.get(name) ?? root.get(name);
-    for (let ref; (ref = value.match(/^var\((--[\w-]+)\)$/)); ) value = carbon.get(ref[1]) ?? root.get(ref[1]);
-    return value;
-  };
+  let value = carbon.get(name) ?? root.get(name);
+  for (let ref; (ref = value.match(/^var\((--[\w-]+)\)$/)); ) value = carbon.get(ref[1]) ?? root.get(ref[1]);
+  return value;
+};
+
+test("accent text in the carbon scope is production's dark-band accent", () => {
+  assert.equal(sourceTokens('[data-theme="carbon"]').get("--text-accent"), "var(--text-accent-on-carbon)");
+  assert.equal(resolveCarbon("--text-accent"), "#F08A68");
+});
+
+test("accent text in the carbon scope passes AA on every carbon surface", () => {
+  const resolve = resolveCarbon;
   for (const surface of ["--surface", "--surface-raised", "--surface-sunken", "--surface-card"]) {
     const ratio = contrast(resolve("--text-accent"), resolve(surface));
     assert.ok(ratio >= 4.5, `--text-accent on ${surface}: ${ratio.toFixed(2)}:1`);

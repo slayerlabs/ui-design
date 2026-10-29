@@ -168,7 +168,7 @@ neither:
 
 - Roles: `--surface-*`, `--text-*`, `--rule-*`, `--focus-ring*` (home template roles: `--surface-hero` #514437
   behind the hero image, `--surface-placeholder` #E3DED3 for portraits without a photo, `--surface-feature` #F3EEE4 for the home feature band, `--overlay-ink` #211C18 for the hero scrims, the button on the image and the caption shadow, `--text-accent-on-image`
-  #F0D4C0 for the hero eyebrow (paper at ≤760px, where the tint falls below 4.5:1), `--text-status` #69675D for muted meta text on the tinted bands: the feature band's status line and the ribbon label, where `--text-muted` falls to 4.36:1); `--figure-*` for
+  #F0D4C0 for the hero eyebrow (paper at ≤760px, where the tint falls below 4.5:1), `--text-accent-on-carbon` #F08A68 for accent text in the carbon scope, `--text-status` #69675D for muted meta text on the tinted bands: the feature band's status line and the ribbon label, where `--text-muted` falls to 4.36:1); `--figure-*` for
   research figures; `--data-*` for categorical series no palette colour carries;
   `--brand-mark-*` for the official mark (assets/fabryka-mark.svg).
 - Borders: widths `--border-hair` 1px, `--border-rule` 1.5px, `--border-mid` 2px,
@@ -181,8 +181,8 @@ neither:
 - Layout: `--measure-*`, `--col-min-*` grid minimums, `--col-*` fixed columns,
   `--table-min-*`, `--icon-*`, `--z-*` layers, hero scrim stops and factors.
 - `[data-theme="carbon"]` re-declares the roles and every border or outline built on
-  them: a custom property resolves `var()` where it is declared. Its `--text-accent` is `--red-wash`, because
-  Furnace gives 3.0:1 on carbon.
+  them: a custom property resolves `var()` where it is declared. Its `--text-accent` is `--text-accent-on-carbon`
+  #F08A68, production's accent on its dark bands (7.36:1 on carbon; Furnace gives 3.0:1).
 
 ## Packaged tokens
 
