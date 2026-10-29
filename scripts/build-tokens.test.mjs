@@ -442,6 +442,7 @@ const NEW_TOKENS = [
   ["--ribbon-gap", "25px", { media: ["max-width: 760px", "14px"] }],
   ["--ribbon-step-gap", "24px", { media: ["max-width: 760px", "10px"] }],
   ["--links-row-gap", "18px"],
+  ["--feature-art-max", "480px"],
 ];
 
 function declarations(css) {
@@ -520,6 +521,29 @@ test("unused legacy tokens are removed", () => {
     for (const name of ["--leading-tight", "--col-min-output-kind", "--col-min-output-link", "--col-min-person", "--output-row-gap", "--section-title-gap"]) {
       assert.ok(!css.includes(`${name}:`), name);
     }
+  }
+});
+
+const luminance = (hex) => {
+  const channels = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255).map((c) => (c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+  return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2];
+};
+const contrast = (a, b) => {
+  const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x);
+  return (hi + 0.05) / (lo + 0.05);
+};
+
+test("accent text in the carbon scope passes AA on every carbon surface", () => {
+  const root = sourceTokens(":root");
+  const carbon = sourceTokens('[data-theme="carbon"]');
+  const resolve = (name) => {
+    let value = carbon.get(name) ?? root.get(name);
+    for (let ref; (ref = value.match(/^var\((--[\w-]+)\)$/)); ) value = carbon.get(ref[1]) ?? root.get(ref[1]);
+    return value;
+  };
+  for (const surface of ["--surface", "--surface-raised", "--surface-sunken", "--surface-card"]) {
+    const ratio = contrast(resolve("--text-accent"), resolve(surface));
+    assert.ok(ratio >= 4.5, `--text-accent on ${surface}: ${ratio.toFixed(2)}:1`);
   }
 });
 

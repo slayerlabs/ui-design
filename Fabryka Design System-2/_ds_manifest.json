@@ -993,6 +993,13 @@
       "scope": "[data-theme=\"carbon\"]"
     },
     {
+      "name": "--text-accent",
+      "value": "var(--red-wash)",
+      "kind": "font",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
       "name": "--text-on-inverse",
       "value": "var(--carbon)",
       "kind": "font",
@@ -2078,6 +2085,12 @@
     {
       "name": "--feature-inset",
       "value": "20px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--feature-art-max",
+      "value": "480px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },

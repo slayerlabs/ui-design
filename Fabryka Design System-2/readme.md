@@ -134,7 +134,7 @@ them, `--more-link-gap` 28px above a section's "more" link, `--card-pad-top` (29
 (5px, 0 at ≤760px), `--detail-pad-top` 21px under a detail rule, `--portrait-gap` 22px, `--subsection-gap` 58px and
 `--subsection-pad-top` 36px around a sub-section rule, `--subsection-offset` 28px under a sub-section heading. Home
 structure: `--split-gap` (70px, 40px at ≤1000px, 28px at ≤760px) between the two heading columns and in the split
-bands, `--split-pad-y` (95px, 60px at ≤760px) for the split bands, `--feature-max` 1400px for the feature band and `--feature-inset` 20px for its sides at ≤760px,
+bands, `--split-pad-y` (95px, 60px at ≤760px) for the split bands, `--feature-max` 1400px for the feature band and `--feature-inset` 20px for its sides and `--feature-art-max` 480px for its image at ≤760px,
 `--card-pad-x` (30px, 20px at ≤1000px) beside the card dividers, `--col-output-kind` (180px, 140px at ≤1100px),
 `--col-output-link` 205px and `--output-gap` (30px, 14px at ≤760px) for output rows, `--stats-row-gap` /
 `--stats-col-gap` (28px / 65px, 24px at ≤760px) and `--stats-offset` 44px for the counts row, `--roster-row-gap` /
@@ -181,7 +181,8 @@ neither:
 - Layout: `--measure-*`, `--col-min-*` grid minimums, `--col-*` fixed columns,
   `--table-min-*`, `--icon-*`, `--z-*` layers, hero scrim stops and factors.
 - `[data-theme="carbon"]` re-declares the roles and every border or outline built on
-  them: a custom property resolves `var()` where it is declared.
+  them: a custom property resolves `var()` where it is declared. Its `--text-accent` is `--red-wash`, because
+  Furnace gives 3.0:1 on carbon.
 
 ## Packaged tokens
 
