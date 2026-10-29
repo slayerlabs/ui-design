@@ -162,7 +162,7 @@ literally (`max-width`, in this order) and the tokens change inside the same
 
 - Roles: `--surface-*`, `--text-*`, `--rule-*`, `--focus-ring*` (home template roles: `--surface-hero` #514437
   behind the hero image, `--surface-placeholder` #E3DED3 for portraits without a photo, `--surface-feature` #F3EEE4 for the home feature band, `--text-accent-on-image`
-  #F0D4C0 for the hero eyebrow (paper at ≤760px, where the tint falls below 4.5:1), `--text-status` #69675D for the feature band's status line); `--figure-*` for
+  #F0D4C0 for the hero eyebrow (paper at ≤760px, where the tint falls below 4.5:1), `--text-status` #69675D for muted meta text on the tinted bands: the feature band's status line and the ribbon label, where `--text-muted` falls to 4.36:1); `--figure-*` for
   research figures; `--data-*` for categorical series no palette colour carries;
   `--brand-mark-*` for the official mark (assets/fabryka-mark.svg).
 - Borders: widths `--border-hair` 1px, `--border-rule` 1.5px, `--border-mid` 2px,
