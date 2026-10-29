@@ -714,7 +714,7 @@
     },
     {
       "name": "--surface-hero",
-      "value": "var(--carbon-3)",
+      "value": "#514437",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -739,6 +739,24 @@
     {
       "name": "--text-accent-on-inverse",
       "value": "var(--red-wash)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--text-accent-on-image",
+      "value": "#F0D4C0",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--surface-placeholder",
+      "value": "#E3DED3",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
+      "name": "--text-status",
+      "value": "#69675D",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -1020,7 +1038,7 @@
     },
     {
       "name": "--surface-hero",
-      "value": "var(--carbon-3)",
+      "value": "#514437",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
@@ -1348,6 +1366,30 @@
       "definedIn": "tokens/typography.css"
     },
     {
+      "name": "--size-step-title",
+      "value": "26px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-subsection-title",
+      "value": "34px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-list-title",
+      "value": "24px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-person-title",
+      "value": "23px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
       "name": "--size-body-compact",
       "value": "15px",
       "kind": "spacing",
@@ -1500,6 +1542,90 @@
     {
       "name": "--track-caption",
       "value": "0.06em",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-hero-caption",
+      "value": "14px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-ribbon",
+      "value": "15px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--size-status",
+      "value": "12px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-lead",
+      "value": "1.75",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-card-title",
+      "value": "1.25",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-list-title",
+      "value": "1.3",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--leading-subsection-title",
+      "value": "1.2",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-eyebrow",
+      "value": "0.02em",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-kicker",
+      "value": "0.07em",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-ribbon",
+      "value": "0.045em",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-feature-title",
+      "value": "-0.04em",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-card-title",
+      "value": "-0.7px",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-list-title",
+      "value": "-0.6px",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--track-subsection-title",
+      "value": "-1px",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
@@ -1824,6 +1950,96 @@
       "definedIn": "tokens/spacing.css"
     },
     {
+      "name": "--portrait-gap",
+      "value": "22px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--eyebrow-gap",
+      "value": "26px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--paragraph-gap",
+      "value": "18px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--actions-gap",
+      "value": "12px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--actions-offset",
+      "value": "30px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--feature-actions-offset",
+      "value": "25px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--card-pad-top",
+      "value": "29px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--card-title-gap",
+      "value": "15px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--list-title-gap",
+      "value": "10px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--output-kind-inset",
+      "value": "5px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--output-row-gap",
+      "value": "14px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--detail-pad-top",
+      "value": "21px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--more-link-gap",
+      "value": "28px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--subsection-gap",
+      "value": "58px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--subsection-pad-top",
+      "value": "36px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
       "name": "--plate-pad",
       "value": "16px",
       "kind": "spacing",
@@ -1837,13 +2053,13 @@
     },
     {
       "name": "--control-pad-x",
-      "value": "18px",
+      "value": "20px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
     {
       "name": "--control-pad-y",
-      "value": "11px",
+      "value": "15px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
@@ -1891,7 +2107,7 @@
     },
     {
       "name": "--hero-min-h",
-      "value": "720px",
+      "value": "740px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
@@ -1915,13 +2131,13 @@
     },
     {
       "name": "--hero-eyebrow-measure",
-      "value": "530px",
+      "value": "560px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
     {
       "name": "--hero-lead-measure",
-      "value": "460px",
+      "value": "505px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
@@ -2515,7 +2731,7 @@
     },
     {
       "name": "--stroke-bold",
-      "value": "4",
+      "value": "4px",
       "kind": "spacing",
       "definedIn": "tokens/borders.css"
     },

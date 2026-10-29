@@ -55,15 +55,22 @@ these sizes.
 | `--size-stat-label` | 14px; 13px ≤760px | the label next to a big number |
 | `--size-closing` | `clamp(1.4rem, 2.6vw, 1.9rem)` | closing lines, headings inside long prose |
 | `--size-statement` | `clamp(1.1rem, 2vw, 1.35rem)` | statement / standfirst paragraph |
-| `--size-heading` | 22px | sub-section heading |
-| `--size-card-title` | 18px | card and list-item titles, small h3/h4 |
+| `--size-subsection-title` | 34px | the home sub-section heading (advisers) |
+| `--size-step-title` | 26px; 25px ≤760px | titles of the home step cards (use cases, programmes, infrastructure) |
+| `--size-list-title` | 24px | titles of the home output rows |
+| `--size-person-title` | 23px; 21px ≤760px; 25px ≤450px | names in the home team roster |
+| `--size-heading` | 22px | sub-section heading on other pages |
+| `--size-card-title` | 18px | card and list-item titles, small h3/h4 on other pages |
 | `--size-body-lg` | 18px | lead paragraph on every page except the home hero (no narrow value) |
 | `--size-hero-lead` | 18px; 17px ≤760px | the home hero's own lead only |
 | `--size-body` / `--size-nav` | 16px | body text, navigation (`--size-nav-mobile` 15px) |
 | `--size-body-compact` | 15px | card, notice and list body text |
 | `--size-body-sm` | 14px | small body text |
 | `--size-meta` / `--size-mono` | 13px | small sans text / mono text and labels |
+| `--size-ribbon` | 15px; 12px ≤760px | the home ribbon of research steps |
+| `--size-hero-caption` | 14px | the home hero image caption |
 | `--size-caption` | 12px; 11px ≤760px | captions, figure legends and notes, stamps, small mono labels |
+| `--size-status` | 12px | the status line under the home feature band's actions |
 | `--size-control-sm` | 12px | small control label |
 | `--size-mono-sm` / `--size-label` | 11.5px / 11px | small mono, uppercase eyebrow labels |
 | `--size-code` / `--size-fine` | 0.9em / 0.85rem | inline code / small print inside a price |
@@ -72,10 +79,13 @@ these sizes.
 
 Line heights: `--leading-none` 1, `--display-leading` 1.04, `--leading-section`
 1.13, `--leading-snug` 1.4, `--leading-mono` 1.55, `--leading-label` 1.6,
-`--leading-body` 1.65, `--leading-hero-lead` 1.75. Tracking: `--display-tracking`
-−0.055em (home hero h1), `--track-section` −0.045em, `--track-heading` −0.02em
-(also `--track-lockup`), `--track-accent` −0.01em, `--track-mono` 0.02em,
-`--track-caption` 0.06em, `--track-label` 0.14em. Weights: 400, 500, 600, 700, 900.
+`--leading-body` 1.65, `--leading-hero-lead` and `--leading-lead` 1.75 (section leads), `--leading-card-title`
+1.25, `--leading-list-title` 1.3, `--leading-subsection-title` 1.2. Tracking: `--display-tracking`
+−0.055em (home hero h1), `--track-section` −0.045em, `--track-feature-title` −0.04em, `--track-heading`
+−0.02em (also `--track-lockup`), `--track-accent` −0.01em, `--track-card-title` −0.7px,
+`--track-list-title` −0.6px, `--track-subsection-title` −1px, `--track-mono` and `--track-eyebrow` 0.02em
+(eyebrows, step labels, tags), `--track-ribbon` 0.045em, `--track-caption` 0.06em, `--track-kicker` 0.07em,
+`--track-label` 0.14em. Weights: 400, 500, 600, 700, 900.
 
 `--size-display-1…4` (108/86/66/42px) are the specimen display sizes: `tokens/base.css`
 sets them on the specimen h1–h3 (h4 uses `--size-heading`), and the print kit and
@@ -115,12 +125,17 @@ legacy templates are examples, not current Fabryka telemetry or legal facts.
 
 Section blocks use `--section-pad-y` (80px, 55px at ≤760px) and `--section-title-gap` (28px) between a
 section h2 and its lead. The home feature band uses `--feature-pad-y` (72px, 42px at ≤760px), `--feature-gap`
-(50px, 28px at ≤760px), `--feature-kicker-inset` (11px) and `--feature-title-gap` (22px). Page gutters are
-`--gutter` 24px and `--gutter-lg` 56px.
+(50px, 28px at ≤760px), `--feature-kicker-inset` (11px), `--feature-title-gap` (22px) and
+`--feature-actions-offset` (25px). Home rhythm: `--eyebrow-gap` 26px under an eyebrow, `--paragraph-gap` 18px under a
+section paragraph, `--actions-offset` 30px above a row of actions and `--actions-gap` (12px, 14px at ≤760px) between
+them, `--more-link-gap` 28px above a section's "more" link, `--card-pad-top` (29px, 28px at ≤760px) under a card rule,
+`--card-title-gap` 15px and `--list-title-gap` 10px under titles, `--output-row-gap` 14px, `--output-kind-inset`
+(5px, 0 at ≤760px), `--detail-pad-top` 21px under a detail rule, `--portrait-gap` 22px, `--subsection-gap` 58px and
+`--subsection-pad-top` 36px around a sub-section rule. Page gutters are `--gutter` 24px and `--gutter-lg` 56px.
 
 | Tokens | Value | Use |
 | --- | --- | --- |
-| `--control-pad-y` / `--control-pad-x` | 11px / 18px | buttons (home primary and secondary actions = production), outline buttons, stamps, select fields, capability chips, the PDF link, result badges, picker links |
+| `--control-pad-y` / `--control-pad-x` | 15px / 20px | buttons (home primary and secondary actions = production), outline buttons, stamps, select fields, capability chips, the PDF link, result badges, picker links |
 | `--control-pad-y-compact` / `--control-pad-x-compact` | 9px / 13px | compact controls: consent buttons (= production), the header call to action, language-switch options |
 | `--control-pad-y-sm` / `--control-pad-x-sm` | 7px / 10px | small controls: the consent settings toggle (= production), the header call to action at ≤900px |
 
@@ -130,15 +145,16 @@ literally (`max-width`, in this order) and the tokens change inside the same
 
 | Breakpoint | Token changes |
 | --- | --- |
-| 1000px | hero size and height, hero scrims |
+| 1000px | hero size, hero scrims |
 | 900px | `--header-bar-h` 73px, `--col-programme-number` 40px |
-| 760px | hero layout and caption, `--section-pad-y` 55px, `--hero-crop-x` 64%, `--step-title-gap` 18px, feature band (`--feature-pad-y` 42px, `--feature-gap` 28px, `--size-feature-title` 34px), `--size-count` 44px, `--size-stat-label` 13px |
-| 450px | narrow phone (production consent panel): `--consent-offset` 56px, `--size-count` 42px |
-| 380px | `--hero-pad-top` 50px |
+| 760px | hero layout and caption, `--section-pad-y` 55px, `--hero-crop-x` 64%, `--step-title-gap` 18px, feature band (`--feature-pad-y` 42px, `--feature-gap` 28px, `--size-feature-title` 34px), `--size-count` 44px, `--size-stat-label` 13px, `--size-step-title` 25px, `--size-person-title` 21px, `--size-ribbon` 12px, `--card-pad-top` 28px, `--output-kind-inset` 0, `--actions-gap` 14px |
+| 450px | narrow phone (production consent panel): `--consent-offset` 56px, `--size-count` 42px, `--size-person-title` 25px |
 
 ## Token families
 
-- Roles: `--surface-*`, `--text-*`, `--rule-*`, `--focus-ring*`; `--figure-*` for
+- Roles: `--surface-*`, `--text-*`, `--rule-*`, `--focus-ring*` (home template roles: `--surface-hero` #514437
+  behind the hero image, `--surface-placeholder` #E3DED3 for portraits without a photo, `--text-accent-on-image`
+  #F0D4C0 for the hero eyebrow, `--text-status` #69675D for the feature band's status line); `--figure-*` for
   research figures; `--data-*` for categorical series no palette colour carries;
   `--brand-mark-*` for the official mark (assets/fabryka-mark.svg).
 - Borders: widths `--border-hair` 1px, `--border-rule` 1.5px, `--border-mid` 2px,
@@ -146,7 +162,8 @@ literally (`max-width`, in this order) and the tokens change inside the same
   `-control`, `-accent`, `-accent-heavy`, `-on-inverse`, `-step`, `-chip`, `-figure`,
   `-planned`, `-ring`, `-warn`; `--border-button` and `--border-indicator` leave the
   colour to the element or state. `--shadow-outline-soft`/`-strong` draw inset outlines.
-- Figures: `--stroke-*` widths, `--dash-*` patterns, `--radius-figure`, `--opacity-band`.
+- Figures: `--stroke-*` widths in px (`--stroke-regular` 1.5px, `--stroke-strong` 2px, `--stroke-bold` 4px,
+  `--stroke-halo` 8px), `--dash-*` patterns, `--radius-figure`, `--opacity-band`.
 - Layout: `--measure-*`, `--col-min-*` grid minimums, `--col-*` fixed columns,
   `--table-min-*`, `--icon-*`, `--z-*` layers, hero scrim stops and factors.
 - `[data-theme="carbon"]` re-declares the roles and every border or outline built on

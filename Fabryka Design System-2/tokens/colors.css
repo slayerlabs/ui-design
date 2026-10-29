@@ -73,11 +73,14 @@
 --surface-on-image:color-mix(in srgb,var(--carbon-2) 38%,transparent);
 --rule-on-image:color-mix(in srgb,var(--rule) 67%,transparent);
 
---surface-hero:var(--carbon-3);
+--surface-hero:#514437;
 --surface-footer:var(--carbon-2);
 --surface-inverse-hover:var(--carbon-3);
 --surface-accent-hover:var(--red-dark);
 --text-accent-on-inverse:var(--red-wash);
+--text-accent-on-image:#F0D4C0;
+--surface-placeholder:#E3DED3;
+--text-status:#69675D;
 --text-footer:var(--paper-4);
 --rule-strong:var(--carbon);
 --rule-control:var(--grey-dark);
@@ -134,7 +137,7 @@
 --link:#FF6A52;
 --link-hover:#FF8B77;
 
---surface-hero:var(--carbon-3);
+--surface-hero:#514437;
 --surface-footer:var(--carbon-2);
 --surface-inverse-hover:var(--paper-3);
 --surface-accent-hover:var(--red-dark);

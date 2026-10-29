@@ -27,10 +27,25 @@
 --feature-kicker-inset:11px;
 --feature-title-gap:22px;
 --person-link-gap:14px;
+--portrait-gap:22px;
+--eyebrow-gap:26px;
+--paragraph-gap:18px;
+--actions-gap:12px;
+--actions-offset:30px;
+--feature-actions-offset:25px;
+--card-pad-top:29px;
+--card-title-gap:15px;
+--list-title-gap:10px;
+--output-kind-inset:5px;
+--output-row-gap:14px;
+--detail-pad-top:21px;
+--more-link-gap:28px;
+--subsection-gap:58px;
+--subsection-pad-top:36px;
 --plate-pad:16px;
 --card-pad:20px;
---control-pad-x:18px;
---control-pad-y:11px;
+--control-pad-x:20px;
+--control-pad-y:15px;
 --control-pad-x-compact:13px;
 --control-pad-y-compact:9px;
 --control-pad-x-sm:10px;
@@ -40,12 +55,12 @@
 --control-h:36px;
 --control-h-lg:46px;
 
---hero-min-h:720px;
+--hero-min-h:740px;
 --hero-pad-top:85px;
 --hero-pad-bottom:100px;
 --hero-measure:680px;
---hero-eyebrow-measure:530px;
---hero-lead-measure:460px;
+--hero-eyebrow-measure:560px;
+--hero-lead-measure:505px;
 --hero-caption-inset:30px;
 --hero-title-gap:28px;
 --step-title-gap:28px;
@@ -125,18 +140,12 @@
 --sr-only-size:1px;
 }
 
-@media (max-width: 1000px){
-:root{--hero-min-h:700px;}
-}
 @media (max-width: 900px){
 :root{--header-bar-h:73px;--col-programme-number:40px;}
 }
 @media (max-width: 760px){
-:root{--hero-min-h:750px;--hero-pad-top:70px;--hero-pad-bottom:90px;--hero-eyebrow-measure:320px;--hero-lead-measure:420px;--section-pad-y:55px;--step-title-gap:18px;--feature-pad-y:42px;--feature-gap:28px;}
+:root{--hero-pad-top:55px;--hero-pad-bottom:65px;--hero-eyebrow-measure:345px;--hero-lead-measure:420px;--section-pad-y:55px;--step-title-gap:18px;--feature-pad-y:42px;--feature-gap:28px;--card-pad-top:28px;--output-kind-inset:0;--actions-gap:14px;}
 }
 @media (max-width: 450px){
 :root{--consent-offset:56px;}
-}
-@media (max-width: 380px){
-:root{--hero-pad-top:50px;}
 }

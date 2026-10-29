@@ -34,6 +34,10 @@
 --size-closing:clamp(1.4rem, 2.6vw, 1.9rem);
 --size-statement:clamp(1.1rem, 2vw, 1.35rem);
 --size-card-title:18px;
+--size-step-title:26px;
+--size-subsection-title:34px;
+--size-list-title:24px;
+--size-person-title:23px;
 --size-body-compact:15px;
 --size-meta:13px;
 --size-control-sm:12px;
@@ -62,6 +66,20 @@
 --track-section:-0.045em;
 --size-caption:12px;
 --track-caption:0.06em;
+--size-hero-caption:14px;
+--size-ribbon:15px;
+--size-status:12px;
+--leading-lead:1.75;
+--leading-card-title:1.25;
+--leading-list-title:1.3;
+--leading-subsection-title:1.2;
+--track-eyebrow:0.02em;
+--track-kicker:0.07em;
+--track-ribbon:0.045em;
+--track-feature-title:-0.04em;
+--track-card-title:-0.7px;
+--track-list-title:-0.6px;
+--track-subsection-title:-1px;
 
 --leading-body:1.65;
 --leading-mono:1.55;
@@ -94,8 +112,8 @@
 :root{--size-hero:60px;}
 }
 @media (max-width: 760px){
-:root{--size-hero:clamp(43px,8.5vw,62px);--size-hero-lead:17px;--size-caption:11px;--size-feature-title:34px;--size-count:44px;--size-stat-label:13px;}
+:root{--size-hero:clamp(43px,8.5vw,62px);--size-hero-lead:17px;--size-caption:11px;--size-feature-title:34px;--size-count:44px;--size-stat-label:13px;--size-step-title:25px;--size-person-title:21px;--size-ribbon:12px;}
 }
 @media (max-width: 450px){
-:root{--size-count:42px;}
+:root{--size-count:42px;--size-person-title:25px;}
 }
