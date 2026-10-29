@@ -142,6 +142,7 @@ test("template typography, layout, effect and stacking tokens are built", () => 
 test("breakpoint tokens change inside the app's media queries, in cascade order", () => {
   const { root, scoped } = buildTokens();
   const expected = {
+    "max-width: 1100px": ["--col-output-kind:140px"],
     "max-width: 1000px": [
       "--size-hero:60px",
       "--scrim-strong:color-mix(in srgb,var(--carbon-2) 85%,transparent)",
@@ -158,6 +159,8 @@ test("breakpoint tokens change inside the app's media queries, in cascade order"
       "--hero-eyebrow-measure:345px",
       "--hero-lead-measure:420px",
     ],
+    "max-width: 480px": ["--size-count:42px", "--size-person-title:25px", "--role-min-h:0"],
+    "max-width: 450px": ["--consent-offset:56px"],
   };
   for (const [css, selector] of [[root, ":root{"], [scoped, `${SCOPE}{`]]) {
     for (const [query, tokens] of Object.entries(expected)) {
@@ -166,8 +169,8 @@ test("breakpoint tokens change inside the app's media queries, in cascade order"
       const declarations = blocks.map(({ text }) => text).join("");
       for (const token of tokens) assert.ok(declarations.includes(`${token};`), `${query}: ${token}`);
     }
-    for (const name of ["--size-hero", "--hero-pad-top"]) {
-      const positions = ["max-width: 1000px", "max-width: 760px"].flatMap((query) =>
+    for (const name of ["--size-hero", "--hero-pad-top", "--size-count", "--col-output-kind"]) {
+      const positions = ["max-width: 1100px", "max-width: 1000px", "max-width: 760px", "max-width: 480px"].flatMap((query) =>
         mediaBlocks(css, query).filter(({ text }) => text.includes(`${name}:`)).map(({ at }) => at),
       );
       assert.deepEqual(positions, [...positions].sort((a, b) => a - b), name);
@@ -210,10 +213,7 @@ const NEW_TOKENS = [
   ["--col-min-footer-intro", "240px"],
   ["--col-min-label", "160px"],
   ["--col-min-note", "220px"],
-  ["--col-min-output-kind", "120px"],
-  ["--col-min-output-link", "150px"],
   ["--col-min-paper", "300px"],
-  ["--col-min-person", "220px"],
   ["--col-min-step", "110px"],
   ["--col-min-swatch", "160px"],
   ["--col-programme-number", "64px", { media: ["max-width: 900px", "40px"] }],
@@ -320,7 +320,6 @@ const NEW_TOKENS = [
   ["--rule-strong", "var(--carbon)", { carbon: "var(--paper)" }],
   ["--section-heading-gap", "55px", { media: ["max-width: 760px", "36px"] }],
   ["--section-pad-y", "80px", { media: ["max-width: 760px", "55px"] }],
-  ["--section-title-gap", "28px"],
   ["--shadow-outline-soft", "inset 0 0 0 var(--border-hair) var(--rule-soft)", { carbon: "inset 0 0 0 var(--border-hair) var(--rule-soft)" }],
   ["--shadow-outline-strong", "inset 0 0 0 var(--border-hair) var(--rule-strong)", { carbon: "inset 0 0 0 var(--border-hair) var(--rule-strong)" }],
   ["--shadow-popover", "0 8px 35px color-mix(in srgb, var(--carbon) 13%, transparent)"],
@@ -330,7 +329,7 @@ const NEW_TOKENS = [
   ["--size-closing", "clamp(1.4rem, 2.6vw, 1.9rem)"],
   ["--size-code", "0.9em"],
   ["--size-control-sm", "12px"],
-  ["--size-count", "52px", { media: [["max-width: 760px", "44px"], ["max-width: 450px", "42px"]] }],
+  ["--size-count", "52px", { media: [["max-width: 760px", "44px"], ["max-width: 480px", "42px"]] }],
   ["--size-feature-title", "clamp(30px,3.5vw,51px)", { media: ["max-width: 760px", "34px"] }],
   ["--size-figure", "10.5px"],
   ["--size-figure-lg", "26px"],
@@ -392,7 +391,6 @@ const NEW_TOKENS = [
   ["--more-link-gap", "28px"],
   ["--subsection-gap", "58px"],
   ["--subsection-pad-top", "36px"],
-  ["--output-row-gap", "14px"],
   ["--output-row-pad-y", "30px"],
   ["--output-kind-inset", "5px", { media: ["max-width: 760px", "0"] }],
   ["--paragraph-gap", "18px"],
@@ -401,7 +399,7 @@ const NEW_TOKENS = [
   ["--size-step-title", "26px", { media: ["max-width: 760px", "25px"] }],
   ["--size-subsection-title", "34px"],
   ["--leading-subsection-title", "1.2"],
-  ["--size-person-title", "23px", { media: [["max-width: 760px", "21px"], ["max-width: 450px", "25px"]] }],
+  ["--size-person-title", "23px", { media: [["max-width: 760px", "21px"], ["max-width: 480px", "25px"]] }],
   ["--size-ribbon", "15px", { media: ["max-width: 760px", "12px"] }],
   ["--size-status", "12px"],
   ["--surface-placeholder", "#E3DED3"],
@@ -421,7 +419,7 @@ const NEW_TOKENS = [
   ["--split-gap", "70px", { media: [["max-width: 1000px", "40px"], ["max-width: 760px", "28px"]] }],
   ["--split-pad-y", "95px", { media: ["max-width: 760px", "60px"] }],
   ["--card-pad-x", "30px", { media: ["max-width: 1000px", "20px"] }],
-  ["--col-output-kind", "180px", { media: ["max-width: 1000px", "140px"] }],
+  ["--col-output-kind", "180px", { media: ["max-width: 1100px", "140px"] }],
   ["--col-output-link", "205px"],
   ["--output-gap", "30px", { media: ["max-width: 760px", "14px"] }],
   ["--stats-row-gap", "28px", { media: ["max-width: 760px", "24px"] }],
@@ -429,7 +427,7 @@ const NEW_TOKENS = [
   ["--stats-offset", "44px"],
   ["--roster-row-gap", "42px", { media: ["max-width: 760px", "32px"] }],
   ["--roster-col-gap", "24px", { media: ["max-width: 760px", "18px"] }],
-  ["--role-min-h", "34px", { media: ["max-width: 450px", "0"] }],
+  ["--role-min-h", "34px", { media: ["max-width: 480px", "0"] }],
   ["--subsection-offset", "28px"],
   ["--ribbon-pad-y", "25px"],
   ["--ribbon-gap", "25px", { media: ["max-width: 760px", "14px"] }],
@@ -509,7 +507,11 @@ function sourceTokens(scope) {
 
 test("unused legacy tokens are removed", () => {
   const { root, scoped } = buildTokens();
-  for (const css of [root, scoped]) assert.ok(!css.includes("--leading-tight:"));
+  for (const css of [root, scoped]) {
+    for (const name of ["--leading-tight", "--col-min-output-kind", "--col-min-output-link", "--col-min-person", "--output-row-gap", "--section-title-gap"]) {
+      assert.ok(!css.includes(`${name}:`), name);
+    }
+  }
 });
 
 const SYNC = "out of sync with the token files; run npm run sync:manifest";

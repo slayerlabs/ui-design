@@ -49,7 +49,7 @@ these sizes.
 | `--size-section` | `clamp(34px,3.6vw,52px)` | section h2 |
 | `--size-stat-lg` | `clamp(3rem, 7vw, 5rem)` | oversized spec value |
 | `--size-stat` | `clamp(2.2rem, 4vw, 3rem)` | big numbers, swatch labels, prices |
-| `--size-count` | 52px; 44px ≤760px; 42px ≤450px | the home team counts |
+| `--size-count` | 52px; 44px ≤760px; 42px ≤480px | the home team counts |
 | `--size-initials` | 64px | portrait initials when a person has no photo |
 | `--size-feature-title` | `clamp(30px,3.5vw,51px)`; 34px ≤760px | h2 of the home feature band (Basal Omni) |
 | `--size-stat-label` | 14px; 13px ≤760px | the label next to a big number |
@@ -58,7 +58,7 @@ these sizes.
 | `--size-subsection-title` | 34px | the home sub-section heading (advisers) |
 | `--size-step-title` | 26px; 25px ≤760px | titles of the home step cards (use cases, programmes, infrastructure) |
 | `--size-list-title` | 24px | titles of the home output rows |
-| `--size-person-title` | 23px; 21px ≤760px; 25px ≤450px | names in the home team roster |
+| `--size-person-title` | 23px; 21px ≤760px; 25px ≤480px | names in the home team roster |
 | `--size-heading` | 22px | sub-section heading on other pages |
 | `--size-card-title` | 18px | card and list-item titles, small h3/h4 on other pages |
 | `--size-body-lg` | 18px | lead paragraph on every page except the home hero (no narrow value) |
@@ -123,21 +123,20 @@ legacy templates are examples, not current Fabryka telemetry or legal facts.
 
 ## Spacing, controls and breakpoints
 
-Section blocks use `--section-pad-y` (80px, 55px at ≤760px), `--section-title-gap` (28px) between a
-section h2 and its lead and `--section-heading-gap` (55px, 36px at ≤760px) between the heading block and the content. The home feature band uses `--feature-pad-y` (72px, 42px at ≤760px), `--feature-gap`
+Section blocks use `--section-pad-y` (80px, 55px at ≤760px) and `--section-heading-gap` (55px, 36px at ≤760px) between the heading block and the content. The home feature band uses `--feature-pad-y` (72px, 42px at ≤760px), `--feature-gap`
 (50px, 28px at ≤760px), `--feature-kicker-inset` (11px), `--feature-title-gap` (22px) and
 `--feature-actions-offset` (25px). Home rhythm: `--eyebrow-gap` 26px under an eyebrow, `--paragraph-gap` 18px under a
 section paragraph, `--actions-offset` 30px above a row of actions and `--actions-gap` (12px, 14px at ≤760px) between
 them, `--more-link-gap` 28px above a section's "more" link, `--card-pad-top` (29px, 28px at ≤760px) under a card rule,
-`--card-title-gap` 15px and `--list-title-gap` 10px under titles, `--output-row-gap` 14px and `--output-row-pad-y` 30px, `--output-kind-inset`
+`--card-title-gap` 15px and `--list-title-gap` 10px under titles, `--output-row-pad-y` 30px, `--output-kind-inset`
 (5px, 0 at ≤760px), `--detail-pad-top` 21px under a detail rule, `--portrait-gap` 22px, `--subsection-gap` 58px and
 `--subsection-pad-top` 36px around a sub-section rule, `--subsection-offset` 28px under a sub-section heading. Home
 structure: `--split-gap` (70px, 40px at ≤1000px, 28px at ≤760px) between the two heading columns and in the split
 bands, `--split-pad-y` (95px, 60px at ≤760px) for the split bands, `--feature-max` 1400px for the feature band,
-`--card-pad-x` (30px, 20px at ≤1000px) beside the card dividers, `--col-output-kind` (180px, 140px at ≤1000px),
+`--card-pad-x` (30px, 20px at ≤1000px) beside the card dividers, `--col-output-kind` (180px, 140px at ≤1100px),
 `--col-output-link` 205px and `--output-gap` (30px, 14px at ≤760px) for output rows, `--stats-row-gap` /
 `--stats-col-gap` (28px / 65px, 24px at ≤760px) and `--stats-offset` 44px for the counts row, `--roster-row-gap` /
-`--roster-col-gap` (42px / 24px, 32px / 18px at ≤760px) and `--role-min-h` (34px, 0 at ≤450px) for the roster,
+`--roster-col-gap` (42px / 24px, 32px / 18px at ≤760px) and `--role-min-h` (34px, 0 at ≤480px) for the roster,
 `--ribbon-pad-y` 25px, `--ribbon-gap` (25px, 14px at ≤760px) and `--ribbon-step-gap` (24px, 10px at ≤760px) for the
 ribbon, `--links-row-gap` 18px for a row of links. Page gutters are `--gutter` 24px and `--gutter-lg` 56px.
 
@@ -153,10 +152,12 @@ literally (`max-width`, in this order) and the tokens change inside the same
 
 | Breakpoint | Token changes |
 | --- | --- |
-| 1000px | hero size, hero scrims, `--split-gap` 40px, `--card-pad-x` 20px, `--col-output-kind` 140px |
+| 1100px | home output rows and roster: `--col-output-kind` 140px |
+| 1000px | hero size, hero scrims, `--split-gap` 40px, `--card-pad-x` 20px |
 | 900px | `--header-bar-h` 73px, `--col-programme-number` 40px |
 | 760px | hero layout and caption, `--section-pad-y` 55px, `--hero-crop-x` 64%, `--step-title-gap` 18px, feature band (`--feature-pad-y` 42px, `--feature-gap` 28px, `--size-feature-title` 34px), `--size-count` 44px, `--size-stat-label` 13px, `--size-step-title` 25px, `--size-person-title` 21px, `--size-ribbon` 12px, `--card-pad-top` 28px, `--output-kind-inset` 0, `--actions-gap` 14px, `--section-heading-gap` 36px, `--split-gap` 28px, `--split-pad-y` 60px, `--output-gap` 14px, `--stats-row-gap` / `--stats-col-gap` 24px, `--roster-row-gap` 32px, `--roster-col-gap` 18px, `--ribbon-gap` 14px, `--ribbon-step-gap` 10px, `--text-accent-on-image` paper |
-| 450px | narrow phone (production consent panel): `--consent-offset` 56px, `--size-count` 42px, `--size-person-title` 25px, `--role-min-h` 0 |
+| 480px | narrow phone (production home roster and counts): `--size-count` 42px, `--size-person-title` 25px, `--role-min-h` 0 |
+| 450px | narrow phone (production consent panel): `--consent-offset` 56px |
 
 ## Token families
 

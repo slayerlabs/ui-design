@@ -115,6 +115,6 @@
 @media (max-width: 760px){
 :root{--size-hero:clamp(43px,8.5vw,62px);--size-hero-lead:17px;--size-caption:11px;--size-feature-title:34px;--size-count:44px;--size-stat-label:13px;--size-step-title:25px;--size-person-title:21px;--size-ribbon:12px;}
 }
-@media (max-width: 450px){
+@media (max-width: 480px){
 :root{--size-count:42px;--size-person-title:25px;}
 }

@@ -1926,12 +1926,6 @@
       "definedIn": "tokens/spacing.css"
     },
     {
-      "name": "--section-title-gap",
-      "value": "28px",
-      "kind": "spacing",
-      "definedIn": "tokens/spacing.css"
-    },
-    {
       "name": "--section-heading-gap",
       "value": "55px",
       "kind": "spacing",
@@ -2024,12 +2018,6 @@
     {
       "name": "--output-kind-inset",
       "value": "5px",
-      "kind": "spacing",
-      "definedIn": "tokens/spacing.css"
-    },
-    {
-      "name": "--output-row-gap",
-      "value": "14px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
@@ -2382,12 +2370,6 @@
       "definedIn": "tokens/spacing.css"
     },
     {
-      "name": "--col-min-person",
-      "value": "220px",
-      "kind": "spacing",
-      "definedIn": "tokens/spacing.css"
-    },
-    {
       "name": "--col-min-note",
       "value": "220px",
       "kind": "spacing",
@@ -2432,18 +2414,6 @@
     {
       "name": "--col-min-footer-intro",
       "value": "240px",
-      "kind": "spacing",
-      "definedIn": "tokens/spacing.css"
-    },
-    {
-      "name": "--col-min-output-kind",
-      "value": "120px",
-      "kind": "spacing",
-      "definedIn": "tokens/spacing.css"
-    },
-    {
-      "name": "--col-min-output-link",
-      "value": "150px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },

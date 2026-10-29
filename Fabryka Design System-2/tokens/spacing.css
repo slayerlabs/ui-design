@@ -21,7 +21,6 @@
 --grid-cols:12; /* @kind other */
 
 --section-pad-y:80px;
---section-title-gap:28px;
 --section-heading-gap:55px;
 --feature-pad-y:72px;
 --feature-gap:50px;
@@ -38,7 +37,6 @@
 --card-title-gap:15px;
 --list-title-gap:10px;
 --output-kind-inset:5px;
---output-row-gap:14px;
 --output-row-pad-y:30px;
 --detail-pad-top:21px;
 --more-link-gap:28px;
@@ -103,7 +101,6 @@
 
 --col-min-label:160px;
 --col-min-card:240px;
---col-min-person:220px;
 --col-min-note:220px;
 --col-min-field:260px;
 --col-min-paper:300px;
@@ -112,8 +109,6 @@
 --col-min-swatch:160px;
 --col-min-step:110px;
 --col-min-footer-intro:240px;
---col-min-output-kind:120px;
---col-min-output-link:150px;
 --col-dossier-index:32px;
 --col-programme-number:64px;
 --col-publication-kind:9rem;
@@ -160,8 +155,11 @@
 --sr-only-size:1px;
 }
 
+@media (max-width: 1100px){
+:root{--col-output-kind:140px;}
+}
 @media (max-width: 1000px){
-:root{--split-gap:40px;--card-pad-x:20px;--col-output-kind:140px;}
+:root{--split-gap:40px;--card-pad-x:20px;}
 }
 @media (max-width: 900px){
 :root{--header-bar-h:73px;--col-programme-number:40px;}
@@ -169,6 +167,9 @@
 @media (max-width: 760px){
 :root{--hero-pad-top:55px;--hero-pad-bottom:65px;--hero-eyebrow-measure:345px;--hero-lead-measure:420px;--section-pad-y:55px;--step-title-gap:18px;--feature-pad-y:42px;--feature-gap:28px;--card-pad-top:28px;--output-kind-inset:0;--actions-gap:14px;--section-heading-gap:36px;--split-gap:28px;--split-pad-y:60px;--output-gap:14px;--stats-row-gap:24px;--stats-col-gap:24px;--roster-row-gap:32px;--roster-col-gap:18px;--ribbon-gap:14px;--ribbon-step-gap:10px;}
 }
+@media (max-width: 480px){
+:root{--role-min-h:0;}
+}
 @media (max-width: 450px){
-:root{--consent-offset:56px;--role-min-h:0;}
+:root{--consent-offset:56px;}
 }
