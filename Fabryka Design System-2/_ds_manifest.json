@@ -1914,6 +1914,12 @@
       "definedIn": "tokens/spacing.css"
     },
     {
+      "name": "--section-heading-gap",
+      "value": "55px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
       "name": "--feature-pad-y",
       "value": "72px",
       "kind": "spacing",
@@ -2006,6 +2012,12 @@
     {
       "name": "--output-row-gap",
       "value": "14px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--output-row-pad-y",
+      "value": "30px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },

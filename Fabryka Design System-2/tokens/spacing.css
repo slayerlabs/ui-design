@@ -22,6 +22,7 @@
 
 --section-pad-y:80px;
 --section-title-gap:28px;
+--section-heading-gap:55px;
 --feature-pad-y:72px;
 --feature-gap:50px;
 --feature-kicker-inset:11px;
@@ -38,6 +39,7 @@
 --list-title-gap:10px;
 --output-kind-inset:5px;
 --output-row-gap:14px;
+--output-row-pad-y:30px;
 --detail-pad-top:21px;
 --more-link-gap:28px;
 --subsection-gap:58px;
@@ -144,7 +146,7 @@
 :root{--header-bar-h:73px;--col-programme-number:40px;}
 }
 @media (max-width: 760px){
-:root{--hero-pad-top:55px;--hero-pad-bottom:65px;--hero-eyebrow-measure:345px;--hero-lead-measure:420px;--section-pad-y:55px;--step-title-gap:18px;--feature-pad-y:42px;--feature-gap:28px;--card-pad-top:28px;--output-kind-inset:0;--actions-gap:14px;}
+:root{--hero-pad-top:55px;--hero-pad-bottom:65px;--hero-eyebrow-measure:345px;--hero-lead-measure:420px;--section-pad-y:55px;--step-title-gap:18px;--feature-pad-y:42px;--feature-gap:28px;--card-pad-top:28px;--output-kind-inset:0;--actions-gap:14px;--section-heading-gap:36px;}
 }
 @media (max-width: 450px){
 :root{--consent-offset:56px;}

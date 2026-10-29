@@ -122,13 +122,13 @@ legacy templates are examples, not current Fabryka telemetry or legal facts.
 
 ## Spacing, controls and breakpoints
 
-Section blocks use `--section-pad-y` (80px, 55px at ≤760px) and `--section-title-gap` (28px) between a
-section h2 and its lead. The home feature band uses `--feature-pad-y` (72px, 42px at ≤760px), `--feature-gap`
+Section blocks use `--section-pad-y` (80px, 55px at ≤760px), `--section-title-gap` (28px) between a
+section h2 and its lead and `--section-heading-gap` (55px, 36px at ≤760px) between the heading block and the content. The home feature band uses `--feature-pad-y` (72px, 42px at ≤760px), `--feature-gap`
 (50px, 28px at ≤760px), `--feature-kicker-inset` (11px), `--feature-title-gap` (22px) and
 `--feature-actions-offset` (25px). Home rhythm: `--eyebrow-gap` 26px under an eyebrow, `--paragraph-gap` 18px under a
 section paragraph, `--actions-offset` 30px above a row of actions and `--actions-gap` (12px, 14px at ≤760px) between
 them, `--more-link-gap` 28px above a section's "more" link, `--card-pad-top` (29px, 28px at ≤760px) under a card rule,
-`--card-title-gap` 15px and `--list-title-gap` 10px under titles, `--output-row-gap` 14px, `--output-kind-inset`
+`--card-title-gap` 15px and `--list-title-gap` 10px under titles, `--output-row-gap` 14px and `--output-row-pad-y` 30px, `--output-kind-inset`
 (5px, 0 at ≤760px), `--detail-pad-top` 21px under a detail rule, `--portrait-gap` 22px, `--subsection-gap` 58px and
 `--subsection-pad-top` 36px around a sub-section rule. Page gutters are `--gutter` 24px and `--gutter-lg` 56px.
 
@@ -146,7 +146,7 @@ literally (`max-width`, in this order) and the tokens change inside the same
 | --- | --- |
 | 1000px | hero size, hero scrims |
 | 900px | `--header-bar-h` 73px, `--col-programme-number` 40px |
-| 760px | hero layout and caption, `--section-pad-y` 55px, `--hero-crop-x` 64%, `--step-title-gap` 18px, feature band (`--feature-pad-y` 42px, `--feature-gap` 28px, `--size-feature-title` 34px), `--size-count` 44px, `--size-stat-label` 13px, `--size-step-title` 25px, `--size-person-title` 21px, `--size-ribbon` 12px, `--card-pad-top` 28px, `--output-kind-inset` 0, `--actions-gap` 14px, `--text-accent-on-image` paper |
+| 760px | hero layout and caption, `--section-pad-y` 55px, `--hero-crop-x` 64%, `--step-title-gap` 18px, feature band (`--feature-pad-y` 42px, `--feature-gap` 28px, `--size-feature-title` 34px), `--size-count` 44px, `--size-stat-label` 13px, `--size-step-title` 25px, `--size-person-title` 21px, `--size-ribbon` 12px, `--card-pad-top` 28px, `--output-kind-inset` 0, `--actions-gap` 14px, `--section-heading-gap` 36px, `--text-accent-on-image` paper |
 | 450px | narrow phone (production consent panel): `--consent-offset` 56px, `--size-count` 42px, `--size-person-title` 25px |
 
 ## Token families
