@@ -1469,12 +1469,6 @@
       "definedIn": "tokens/typography.css"
     },
     {
-      "name": "--size-stat-lg",
-      "value": "clamp(3rem, 7vw, 5rem)",
-      "kind": "spacing",
-      "definedIn": "tokens/typography.css"
-    },
-    {
       "name": "--size-lockup",
       "value": "28px",
       "kind": "spacing",
@@ -2463,18 +2457,6 @@
     {
       "name": "--col-programme-number",
       "value": "64px",
-      "kind": "spacing",
-      "definedIn": "tokens/spacing.css"
-    },
-    {
-      "name": "--col-publication-kind",
-      "value": "9rem",
-      "kind": "spacing",
-      "definedIn": "tokens/spacing.css"
-    },
-    {
-      "name": "--col-publication-link",
-      "value": "14rem",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },

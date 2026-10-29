@@ -222,8 +222,6 @@ const NEW_TOKENS = [
   ["--col-min-step", "110px"],
   ["--col-min-swatch", "160px"],
   ["--col-programme-number", "64px", { media: ["max-width: 900px", "40px"] }],
-  ["--col-publication-kind", "9rem"],
-  ["--col-publication-link", "14rem"],
   ["--col-row-head", "120px"],
   ["--consent-gap", "10px"],
   ["--consent-inset", "20px"],
@@ -348,7 +346,6 @@ const NEW_TOKENS = [
   ["--size-page-title", "clamp(2.6rem, 6vw, 4.75rem)"],
   ["--size-stat", "clamp(2.2rem, 4vw, 3rem)"],
   ["--size-stat-label", "14px", { media: ["max-width: 760px", "13px"] }],
-  ["--size-stat-lg", "clamp(3rem, 7vw, 5rem)"],
   ["--size-statement", "clamp(1.1rem, 2vw, 1.35rem)"],
   ["--skip-offset", "100px"],
   ["--sr-only-size", "1px"],
@@ -519,7 +516,7 @@ function sourceTokens(scope) {
 test("unused legacy tokens are removed", () => {
   const { root, scoped } = buildTokens();
   for (const css of [root, scoped]) {
-    for (const name of ["--leading-tight", "--col-min-output-kind", "--col-min-output-link", "--col-min-person", "--output-row-gap", "--section-title-gap"]) {
+    for (const name of ["--leading-tight", "--col-min-output-kind", "--col-min-output-link", "--col-min-person", "--output-row-gap", "--section-title-gap", "--col-publication-kind", "--col-publication-link", "--size-stat-lg"]) {
       assert.ok(!css.includes(`${name}:`), name);
     }
   }

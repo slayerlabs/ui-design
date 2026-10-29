@@ -47,7 +47,6 @@ these sizes.
 | `--size-hero` | `clamp(48px,5.1vw,78px)`; 60px ≤1000px; `clamp(43px,8.5vw,62px)` ≤760px | home hero h1 |
 | `--size-page-title` | `clamp(2.6rem, 6vw, 4.75rem)` | h1 of every other page |
 | `--size-section` | `clamp(34px,3.6vw,52px)` | section h2 |
-| `--size-stat-lg` | `clamp(3rem, 7vw, 5rem)` | oversized spec value |
 | `--size-stat` | `clamp(2.2rem, 4vw, 3rem)` | big numbers, swatch labels, prices |
 | `--size-count` | 52px; 44px ≤760px; 42px ≤480px | the home team counts |
 | `--size-initials` | 64px | portrait initials when a person has no photo |
