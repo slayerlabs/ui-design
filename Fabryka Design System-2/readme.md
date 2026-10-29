@@ -69,6 +69,7 @@ these sizes.
 | `--size-meta` / `--size-mono` | 13px | small sans text / mono text and labels |
 | `--size-ribbon` | 15px; 12px ≤760px | the home ribbon of research steps |
 | `--size-caption` | 12px; 11px ≤760px | captions, figure legends and notes, stamps, small mono labels |
+| `--size-hero-caption` | 14px; 12px at 1601–1800px | the home hero image caption (production's 14px falls below 4.5:1 only in that band) |
 | `--size-status` | 12px | the status line under the home feature band's actions |
 | `--size-control-sm` | 12px | small control label |
 | `--size-mono-sm` / `--size-label` | 11.5px / 11px | small mono, uppercase eyebrow labels |
@@ -84,8 +85,9 @@ Line heights: `--leading-none` 1, `--display-leading` 1.04, `--leading-section`
 −0.02em (also `--track-lockup`), `--track-accent` −0.01em, `--track-card-title` −0.7px,
 `--track-list-title` −0.6px, `--track-subsection-title` −1px, `--track-mono` and `--track-eyebrow` 0.02em
 (eyebrows, step labels, tags), `--track-ribbon` 0.045em, `--track-caption` 0.06em, `--track-kicker` 0.07em,
-`--track-label` 0.14em. Weights: 400, 500, 600, 700, 900, plus `--weight-section` 450 (home section h2) and
-`--weight-feature` 550 (home feature title); the app loads Inter and EB Garamond with their variable weight axis.
+`--track-label` 0.14em. Weights: 400, 500, 600, 700, 900, plus `--weight-section` 500 (home section h2) and
+`--weight-feature` 600 (home feature title): production declares 450/550 but loads only the static 400/500/600
+faces, so those are the weights it renders; the app loads the same static weights.
 
 `--size-display-1…4` (108/86/66/42px) are the specimen display sizes: `tokens/base.css`
 sets them on the specimen h1–h3 (h4 uses `--size-heading`), and the print kit and
@@ -108,7 +110,7 @@ Do not invent a square F. logo or describe it as the primary identity.
 
 Keep panels and tables quiet: thin rules, spacious content and mostly square
 corners. The production hero uses 4px action corners, so `--radius-control`
-provides that option. Inverse sections use Ink. Avoid unnecessary elevation.
+provides that option; `--radius-media` 3px rounds the home feature band image. Inverse sections use Ink. Avoid unnecessary elevation.
 Navigation and controls use Inter and descriptive text. An account/editor entry
 must be a readable link such as “Edytuj plan”, not an unexplained icon.
 
@@ -132,7 +134,7 @@ them, `--more-link-gap` 28px above a section's "more" link, `--card-pad-top` (29
 (5px, 0 at ≤760px), `--detail-pad-top` 21px under a detail rule, `--portrait-gap` 22px, `--subsection-gap` 58px and
 `--subsection-pad-top` 36px around a sub-section rule, `--subsection-offset` 28px under a sub-section heading. Home
 structure: `--split-gap` (70px, 40px at ≤1000px, 28px at ≤760px) between the two heading columns and in the split
-bands, `--split-pad-y` (95px, 60px at ≤760px) for the split bands, `--feature-max` 1400px for the feature band,
+bands, `--split-pad-y` (95px, 60px at ≤760px) for the split bands, `--feature-max` 1400px for the feature band and `--feature-inset` 20px for its sides at ≤760px,
 `--card-pad-x` (30px, 20px at ≤1000px) beside the card dividers, `--col-output-kind` (180px, 140px at ≤1100px),
 `--col-output-link` 205px and `--output-gap` (30px, 14px at ≤760px) for output rows, `--stats-row-gap` /
 `--stats-col-gap` (28px / 65px, 24px at ≤760px) and `--stats-offset` 44px for the counts row, `--roster-row-gap` /
@@ -148,10 +150,13 @@ ribbon, `--links-row-gap` 18px for a row of links. Page gutters are `--gutter` 2
 
 Media queries cannot read custom properties, so consumers write these widths
 literally (`max-width`, in this order) and the tokens change inside the same
-`@media` blocks of the token files:
+`@media` blocks of the token files. 1800px and 1600px carry only the hero caption band, so consumers write
+neither:
 
 | Breakpoint | Token changes |
 | --- | --- |
+| 1800px | `--size-hero-caption` 12px (AA band) |
+| 1600px | `--size-hero-caption` 14px (the band ends) |
 | 1100px | home output rows and roster: `--col-output-kind` 140px |
 | 1000px | hero size, hero scrims, `--split-gap` 40px, `--card-pad-x` 20px |
 | 900px | `--header-bar-h` 73px, `--col-programme-number` 40px |
@@ -162,7 +167,7 @@ literally (`max-width`, in this order) and the tokens change inside the same
 ## Token families
 
 - Roles: `--surface-*`, `--text-*`, `--rule-*`, `--focus-ring*` (home template roles: `--surface-hero` #514437
-  behind the hero image, `--surface-placeholder` #E3DED3 for portraits without a photo, `--surface-feature` #F3EEE4 for the home feature band, `--text-accent-on-image`
+  behind the hero image, `--surface-placeholder` #E3DED3 for portraits without a photo, `--surface-feature` #F3EEE4 for the home feature band, `--overlay-ink` #211C18 for the hero scrims, the button on the image and the caption shadow, `--text-accent-on-image`
   #F0D4C0 for the hero eyebrow (paper at ≤760px, where the tint falls below 4.5:1), `--text-status` #69675D for muted meta text on the tinted bands: the feature band's status line and the ribbon label, where `--text-muted` falls to 4.36:1); `--figure-*` for
   research figures; `--data-*` for categorical series no palette colour carries;
   `--brand-mark-*` for the official mark (assets/fabryka-mark.svg).

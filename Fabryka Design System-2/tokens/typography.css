@@ -65,6 +65,7 @@
 --leading-feature-title:1.12;
 --track-section:-0.045em;
 --size-caption:12px;
+--size-hero-caption:14px;
 --track-caption:0.06em;
 --size-ribbon:15px;
 --size-status:12px;
@@ -99,9 +100,9 @@
 --underline-offset:3px;
 
 --weight-regular:400;
---weight-section:450;
+--weight-section:500;
 --weight-medium:500;
---weight-feature:550;
+--weight-feature:600;
 --weight-semibold:600;
 --weight-bold:700;
 --weight-black:900;
@@ -109,6 +110,13 @@
 
 :root{--font-ui:var(--font-text);--font-research:Geist,system-ui,sans-serif;--serif:var(--font-display);--sans:var(--font-text);--mono:var(--font-mono);--size-nav:16px;--size-nav-mobile:15px;}
 
+/* AA over the template: production's 14px hero caption falls below 4.5:1 between 1601 and 1800px only. */
+@media (max-width: 1800px){
+:root{--size-hero-caption:12px;}
+}
+@media (max-width: 1600px){
+:root{--size-hero-caption:14px;}
+}
 @media (max-width: 1000px){
 :root{--size-hero:60px;}
 }

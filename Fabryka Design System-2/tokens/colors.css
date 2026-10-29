@@ -63,14 +63,15 @@
 --grid-line:rgba(26,21,18,.08);
 --plate-tint:rgba(26,21,18,.04);
 
-/* Scrims shade imagery under text; alphas follow the production home page. */
---scrim-strong:color-mix(in srgb,var(--carbon-2) 91%,transparent);
---scrim-medium:color-mix(in srgb,var(--carbon-2) 72%,transparent);
---scrim-soft:color-mix(in srgb,var(--carbon-2) 40%,transparent);
---scrim-faint:color-mix(in srgb,var(--carbon-2) 3%,transparent);
---scrim-edge:color-mix(in srgb,var(--carbon-2) 62%,transparent);
+/* Scrims shade imagery under text; alphas and ink follow the production home page. */
+--overlay-ink:#211C18;
+--scrim-strong:color-mix(in srgb,var(--overlay-ink) 91%,transparent);
+--scrim-medium:color-mix(in srgb,var(--overlay-ink) 72%,transparent);
+--scrim-soft:color-mix(in srgb,var(--overlay-ink) 40%,transparent);
+--scrim-faint:color-mix(in srgb,var(--overlay-ink) 3%,transparent);
+--scrim-edge:color-mix(in srgb,var(--overlay-ink) 62%,transparent);
 --surface-translucent:color-mix(in srgb,var(--surface) 97%,transparent);
---surface-on-image:color-mix(in srgb,var(--carbon-2) 38%,transparent);
+--surface-on-image:color-mix(in srgb,var(--overlay-ink) 38%,transparent);
 --rule-on-image:color-mix(in srgb,var(--rule) 67%,transparent);
 
 --surface-hero:#514437;
@@ -165,7 +166,7 @@
 }
 
 @media (max-width: 1000px){
-:root{--scrim-strong:color-mix(in srgb,var(--carbon-2) 85%,transparent);--scrim-medium:color-mix(in srgb,var(--carbon-2) 70%,transparent);--scrim-soft:color-mix(in srgb,var(--carbon-2) 55%,transparent);}
+:root{--scrim-strong:color-mix(in srgb,var(--overlay-ink) 85%,transparent);--scrim-medium:color-mix(in srgb,var(--overlay-ink) 70%,transparent);--scrim-soft:color-mix(in srgb,var(--overlay-ink) 55%,transparent);}
 }
 /* AA over the template: production's eyebrow tint falls below 4.5:1 on the narrow hero image. */
 @media (max-width: 760px){

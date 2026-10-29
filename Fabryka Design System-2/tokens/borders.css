@@ -5,6 +5,7 @@
 --radius-dot:50%;
 --radius-figure:2px;
 --radius-node:3px;
+--radius-media:3px;
 --radius-header-control:6px;
 --radius-panel:8px;
 
@@ -53,7 +54,7 @@
 --shadow-stamp:3px 3px 0 var(--carbon);
 --shadow-stamp-red:3px 3px 0 var(--red);
 --shadow-overlay:0 24px 60px rgba(17,17,17,.28);
---shadow-caption:0 1px 8px var(--carbon-2);
+--shadow-caption:0 1px 8px var(--overlay-ink);
 --shadow-popover:0 8px 35px color-mix(in srgb, var(--carbon) 13%, transparent);
 --shadow-outline-soft:inset 0 0 0 var(--border-hair) var(--rule-soft);
 --shadow-outline-strong:inset 0 0 0 var(--border-hair) var(--rule-strong);

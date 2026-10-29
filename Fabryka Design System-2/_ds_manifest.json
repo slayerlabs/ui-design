@@ -665,32 +665,38 @@
       "definedIn": "tokens/colors.css"
     },
     {
+      "name": "--overlay-ink",
+      "value": "#211C18",
+      "kind": "color",
+      "definedIn": "tokens/colors.css"
+    },
+    {
       "name": "--scrim-strong",
-      "value": "color-mix(in srgb,var(--carbon-2) 91%,transparent)",
+      "value": "color-mix(in srgb,var(--overlay-ink) 91%,transparent)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--scrim-medium",
-      "value": "color-mix(in srgb,var(--carbon-2) 72%,transparent)",
+      "value": "color-mix(in srgb,var(--overlay-ink) 72%,transparent)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--scrim-soft",
-      "value": "color-mix(in srgb,var(--carbon-2) 40%,transparent)",
+      "value": "color-mix(in srgb,var(--overlay-ink) 40%,transparent)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--scrim-faint",
-      "value": "color-mix(in srgb,var(--carbon-2) 3%,transparent)",
+      "value": "color-mix(in srgb,var(--overlay-ink) 3%,transparent)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
     {
       "name": "--scrim-edge",
-      "value": "color-mix(in srgb,var(--carbon-2) 62%,transparent)",
+      "value": "color-mix(in srgb,var(--overlay-ink) 62%,transparent)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -702,7 +708,7 @@
     },
     {
       "name": "--surface-on-image",
-      "value": "color-mix(in srgb,var(--carbon-2) 38%,transparent)",
+      "value": "color-mix(in srgb,var(--overlay-ink) 38%,transparent)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -1546,6 +1552,12 @@
       "definedIn": "tokens/typography.css"
     },
     {
+      "name": "--size-hero-caption",
+      "value": "14px",
+      "kind": "spacing",
+      "definedIn": "tokens/typography.css"
+    },
+    {
       "name": "--track-caption",
       "value": "0.06em",
       "kind": "font",
@@ -1734,7 +1746,7 @@
     },
     {
       "name": "--weight-section",
-      "value": "450",
+      "value": "500",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
@@ -1746,7 +1758,7 @@
     },
     {
       "name": "--weight-feature",
-      "value": "550",
+      "value": "600",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
@@ -2060,6 +2072,12 @@
     {
       "name": "--feature-max",
       "value": "1400px",
+      "kind": "spacing",
+      "definedIn": "tokens/spacing.css"
+    },
+    {
+      "name": "--feature-inset",
+      "value": "20px",
       "kind": "spacing",
       "definedIn": "tokens/spacing.css"
     },
@@ -2670,6 +2688,12 @@
       "definedIn": "tokens/borders.css"
     },
     {
+      "name": "--radius-media",
+      "value": "3px",
+      "kind": "radius",
+      "definedIn": "tokens/borders.css"
+    },
+    {
       "name": "--radius-header-control",
       "value": "6px",
       "kind": "radius",
@@ -2917,7 +2941,7 @@
     },
     {
       "name": "--shadow-caption",
-      "value": "0 1px 8px var(--carbon-2)",
+      "value": "0 1px 8px var(--overlay-ink)",
       "kind": "shadow",
       "definedIn": "tokens/borders.css"
     },

@@ -115,15 +115,15 @@ test("template typography, layout, effect and stacking tokens are built", () => 
     "--hero-caption-inset:30px",
     "--header-bar-h:85px",
     "--section-bar-h:47px",
-    "--scrim-strong:color-mix(in srgb,var(--carbon-2) 91%,transparent)",
-    "--scrim-medium:color-mix(in srgb,var(--carbon-2) 72%,transparent)",
-    "--scrim-soft:color-mix(in srgb,var(--carbon-2) 40%,transparent)",
-    "--scrim-faint:color-mix(in srgb,var(--carbon-2) 3%,transparent)",
-    "--scrim-edge:color-mix(in srgb,var(--carbon-2) 62%,transparent)",
+    "--scrim-strong:color-mix(in srgb,var(--overlay-ink) 91%,transparent)",
+    "--scrim-medium:color-mix(in srgb,var(--overlay-ink) 72%,transparent)",
+    "--scrim-soft:color-mix(in srgb,var(--overlay-ink) 40%,transparent)",
+    "--scrim-faint:color-mix(in srgb,var(--overlay-ink) 3%,transparent)",
+    "--scrim-edge:color-mix(in srgb,var(--overlay-ink) 62%,transparent)",
     "--surface-translucent:color-mix(in srgb,var(--surface) 97%,transparent)",
-    "--surface-on-image:color-mix(in srgb,var(--carbon-2) 38%,transparent)",
+    "--surface-on-image:color-mix(in srgb,var(--overlay-ink) 38%,transparent)",
     "--rule-on-image:color-mix(in srgb,var(--rule) 67%,transparent)",
-    "--shadow-caption:0 1px 8px var(--carbon-2)",
+    "--shadow-caption:0 1px 8px var(--overlay-ink)",
     "--blur-translucent:10px",
     "--blur-on-image:5px",
     "--z-header:20",
@@ -142,12 +142,14 @@ test("template typography, layout, effect and stacking tokens are built", () => 
 test("breakpoint tokens change inside the app's media queries, in cascade order", () => {
   const { root, scoped } = buildTokens();
   const expected = {
+    "max-width: 1800px": ["--size-hero-caption:12px"],
+    "max-width: 1600px": ["--size-hero-caption:14px"],
     "max-width: 1100px": ["--col-output-kind:140px"],
     "max-width: 1000px": [
       "--size-hero:60px",
-      "--scrim-strong:color-mix(in srgb,var(--carbon-2) 85%,transparent)",
-      "--scrim-medium:color-mix(in srgb,var(--carbon-2) 70%,transparent)",
-      "--scrim-soft:color-mix(in srgb,var(--carbon-2) 55%,transparent)",
+      "--scrim-strong:color-mix(in srgb,var(--overlay-ink) 85%,transparent)",
+      "--scrim-medium:color-mix(in srgb,var(--overlay-ink) 70%,transparent)",
+      "--scrim-soft:color-mix(in srgb,var(--overlay-ink) 55%,transparent)",
     ],
     "max-width: 900px": ["--header-bar-h:73px"],
     "max-width: 760px": [
@@ -169,8 +171,8 @@ test("breakpoint tokens change inside the app's media queries, in cascade order"
       const declarations = blocks.map(({ text }) => text).join("");
       for (const token of tokens) assert.ok(declarations.includes(`${token};`), `${query}: ${token}`);
     }
-    for (const name of ["--size-hero", "--hero-pad-top", "--size-count", "--col-output-kind"]) {
-      const positions = ["max-width: 1100px", "max-width: 1000px", "max-width: 760px", "max-width: 480px"].flatMap((query) =>
+    for (const name of ["--size-hero", "--hero-pad-top", "--size-count", "--col-output-kind", "--size-hero-caption"]) {
+      const positions = ["max-width: 1800px", "max-width: 1600px", "max-width: 1100px", "max-width: 1000px", "max-width: 760px", "max-width: 480px"].flatMap((query) =>
         mediaBlocks(css, query).filter(({ text }) => text.includes(`${name}:`)).map(({ at }) => at),
       );
       assert.deepEqual(positions, [...positions].sort((a, b) => a - b), name);
@@ -413,8 +415,12 @@ const NEW_TOKENS = [
   ["--track-ribbon", "0.045em"],
   ["--track-subsection-title", "-1px"],
   ["--surface-feature", "#F3EEE4"],
-  ["--weight-section", "450"],
-  ["--weight-feature", "550"],
+  ["--weight-section", "500"],
+  ["--weight-feature", "600"],
+  ["--overlay-ink", "#211C18"],
+  ["--radius-media", "3px"],
+  ["--feature-inset", "20px"],
+  ["--size-hero-caption", "14px", { media: [["max-width: 1800px", "12px"], ["max-width: 1600px", "14px"]] }],
   ["--feature-max", "1400px"],
   ["--split-gap", "70px", { media: [["max-width: 1000px", "40px"], ["max-width: 760px", "28px"]] }],
   ["--split-pad-y", "95px", { media: ["max-width: 760px", "60px"] }],
