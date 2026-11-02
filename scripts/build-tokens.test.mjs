@@ -69,7 +69,7 @@ test("secondary text role and mono typography tokens are built", () => {
     assert.match(css, /--text-secondary:var\(--paper-3\)/);
     assert.match(css, /--size-mono:13px/);
     assert.match(css, /--leading-mono:1\.55/);
-    assert.match(css, /--track-mono:0\.02em/);
+    assert.match(css, /--track-mono:var\(--track-eyebrow\)/);
   }
   assert.match(root, /\[data-theme="carbon"\]\s*\{[^}]*--text-secondary:var\(--paper-3\)/);
   assert.match(scoped, /\[data-fabryka-ds\]\{[^}]*--text-secondary:var\(--carbon-3\)/);
@@ -100,7 +100,7 @@ test("template typography, layout, effect and stacking tokens are built", () => 
     "--display-tracking:-0.055em",
     "--size-hero:clamp(48px,5.1vw,78px)",
     "--size-hero-lead:18px",
-    "--leading-hero-lead:1.75",
+    "--leading-hero-lead:var(--leading-lead)",
     "--size-section:clamp(34px,3.6vw,52px)",
     "--leading-section:1.13",
     "--track-section:-0.045em",
@@ -342,7 +342,7 @@ const NEW_TOKENS = [
   ["--size-initials", "64px"],
   ["--size-lockup", "28px"],
   ["--size-lockup-sm", "24px"],
-  ["--size-meta", "13px"],
+  ["--size-meta", "var(--size-mono)"],
   ["--size-page-title", "clamp(2.6rem, 6vw, 4.75rem)"],
   ["--size-stat", "clamp(2.2rem, 4vw, 3rem)"],
   ["--size-stat-label", "14px", { media: ["max-width: 760px", "13px"] }],

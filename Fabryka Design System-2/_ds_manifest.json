@@ -438,7 +438,7 @@
     },
     {
       "name": "--grey-light",
-      "value": "#D7D1CA",
+      "value": "var(--paper-4)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -486,7 +486,7 @@
     },
     {
       "name": "--surface-raised",
-      "value": "#FCFAF6",
+      "value": "var(--paper)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -498,7 +498,7 @@
     },
     {
       "name": "--surface-card",
-      "value": "#FCFAF6",
+      "value": "var(--paper)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -564,7 +564,7 @@
     },
     {
       "name": "--rule",
-      "value": "#D7D1CA",
+      "value": "var(--paper-4)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -636,7 +636,7 @@
     },
     {
       "name": "--ink-2",
-      "value": "#49423D",
+      "value": "var(--carbon-3)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -1422,7 +1422,7 @@
     },
     {
       "name": "--size-meta",
-      "value": "13px",
+      "value": "var(--size-mono)",
       "kind": "spacing",
       "definedIn": "tokens/typography.css"
     },
@@ -1518,7 +1518,7 @@
     },
     {
       "name": "--leading-hero-lead",
-      "value": "1.75",
+      "value": "var(--leading-lead)",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
@@ -1704,7 +1704,7 @@
     },
     {
       "name": "--track-mono",
-      "value": "0.02em",
+      "value": "var(--track-eyebrow)",
       "kind": "spacing",
       "definedIn": "tokens/typography.css"
     },
@@ -1759,7 +1759,7 @@
     },
     {
       "name": "--weight-medium",
-      "value": "500",
+      "value": "var(--weight-section)",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
@@ -1771,7 +1771,7 @@
     },
     {
       "name": "--weight-semibold",
-      "value": "600",
+      "value": "var(--weight-feature)",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
@@ -3014,7 +3014,7 @@
     },
     {
       "name": "--radius-card",
-      "value": "0px",
+      "value": "var(--radius-0)",
       "kind": "radius",
       "definedIn": "tokens/borders.css"
     },

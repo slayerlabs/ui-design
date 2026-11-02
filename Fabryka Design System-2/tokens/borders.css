@@ -63,7 +63,7 @@
 --rivet-size:5px;
 }
 
-:root{--radius-control:4px;--radius-card:0px;}
+:root{--radius-control:4px;--radius-card:var(--radius-0);}
 
 /* var() resolves where a custom property is declared, so role-based values are re-declared for the carbon roles. */
 [data-theme="carbon"]{
