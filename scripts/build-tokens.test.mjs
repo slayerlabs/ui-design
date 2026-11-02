@@ -122,7 +122,7 @@ test("template typography, layout, effect and stacking tokens are built", () => 
     "--scrim-edge:color-mix(in srgb,var(--overlay-ink) 62%,transparent)",
     "--surface-translucent:color-mix(in srgb,var(--surface) 97%,transparent)",
     "--surface-on-image:color-mix(in srgb,var(--overlay-ink) 37.6%,transparent)",
-    "--rule-on-image:color-mix(in srgb,var(--rule) 67%,transparent)",
+    "--rule-on-image:color-mix(in srgb,var(--paper-4) 67%,transparent)",
     "--shadow-caption:0 1px 8px var(--overlay-ink)",
     "--blur-translucent:10px",
     "--blur-on-image:5px",

@@ -72,7 +72,8 @@
 --scrim-edge:color-mix(in srgb,var(--overlay-ink) 62%,transparent);
 --surface-translucent:color-mix(in srgb,var(--surface) 97%,transparent);
 --surface-on-image:color-mix(in srgb,var(--overlay-ink) 37.6%,transparent);
---rule-on-image:color-mix(in srgb,var(--rule) 67%,transparent);
+/* Imagery does not change with the theme, so the rule on it does not follow --rule. */
+--rule-on-image:color-mix(in srgb,var(--paper-4) 67%,transparent);
 
 --surface-hero:#514437;
 --surface-footer:var(--carbon-2);
@@ -123,6 +124,7 @@
 --surface-sunken:#0B0B0B;
 --surface-card:var(--carbon-2);
 --surface-inverse:var(--paper);
+--surface-translucent:color-mix(in srgb,var(--surface) 97%,transparent);
 
 --text-body:var(--paper);
 --text-secondary:var(--paper-3);

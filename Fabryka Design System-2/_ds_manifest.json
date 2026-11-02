@@ -714,7 +714,7 @@
     },
     {
       "name": "--rule-on-image",
-      "value": "color-mix(in srgb,var(--rule) 67%,transparent)",
+      "value": "color-mix(in srgb,var(--paper-4) 67%,transparent)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -959,6 +959,13 @@
     {
       "name": "--surface-inverse",
       "value": "var(--paper)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
+      "name": "--surface-translucent",
+      "value": "color-mix(in srgb,var(--surface) 97%,transparent)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"

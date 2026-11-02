@@ -48,6 +48,16 @@ test("every carbon declaration changes the token's value", () => {
   assert.deepEqual(redundant.sort(), []);
 });
 
+// A nested [data-theme="carbon"] inherits a root-only token already resolved against :root, while
+// carbon on <html> resolves it against carbon. Such a token must be re-declared or made theme-independent.
+test("a token the carbon scope does not re-declare resolves the same wherever carbon is applied", () => {
+  const carbon = sourceTokens(CARBON);
+  const placementDependent = [...sourceTokens(ROOT).keys()].filter(
+    (name) => !carbon.has(name) && resolveToken(name, ROOT) !== resolveToken(name, CARBON),
+  );
+  assert.deepEqual(placementDependent.sort(), []);
+});
+
 // WCAG 1.4.11: a focus indicator needs 3:1 against the surface it sits on.
 test("the focus ring passes 3:1 on every surface in both scopes", () => {
   for (const scope of [ROOT, CARBON]) {
