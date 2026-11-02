@@ -11,8 +11,9 @@ Patch release. No token was renamed, removed or added. Every resolved value is u
   `--rule` and `--grey-light` are `var(--paper-4)`, `--ink-2` is `var(--carbon-3)`.
 - Synonym tokens are aliases instead of copies of the same value: `--radius-card` → `--radius-0`,
   `--track-mono` → `--track-eyebrow`, `--leading-hero-lead` → `--leading-lead`,
-  `--weight-medium` → `--weight-section`, `--weight-semibold` → `--weight-feature`,
-  `--size-meta` → `--size-mono`.
+  `--weight-section` → `--weight-medium`, `--weight-feature` → `--weight-semibold`,
+  `--size-meta` → `--size-mono`. The weight roles alias the scale steps, not the reverse, so retuning
+  a role does not move every generic `--weight-medium` / `--weight-semibold` use.
 - Ten declarations in `[data-theme="carbon"]` resolved to their `:root` value and were removed:
   `--border-accent`, `--border-accent-heavy`, `--figure-accent`, `--rule-accent`, `--rule-accent-hover`,
   `--surface-accent-hover`, `--surface-footer`, `--surface-hero`, `--swatch-steel`, `--text-footer`.

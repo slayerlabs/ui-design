@@ -26,8 +26,8 @@ const SYNONYMS = [
   ["--radius-card", "--radius-0"],
   ["--track-mono", "--track-eyebrow"],
   ["--leading-hero-lead", "--leading-lead"],
-  ["--weight-medium", "--weight-section"],
-  ["--weight-semibold", "--weight-feature"],
+  ["--weight-section", "--weight-medium"],
+  ["--weight-feature", "--weight-semibold"],
   ["--size-meta", "--size-mono"],
 ];
 

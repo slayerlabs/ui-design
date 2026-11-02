@@ -99,10 +99,11 @@
 --underline-offset:3px;
 
 --weight-regular:400;
---weight-section:500;
---weight-medium:var(--weight-section);
---weight-feature:600;
---weight-semibold:var(--weight-feature);
+--weight-medium:500;
+--weight-semibold:600;
+/* Roles alias the scale, never the reverse: retuning a role must not move every generic weight. */
+--weight-section:var(--weight-medium);
+--weight-feature:var(--weight-semibold);
 --weight-bold:700;
 --weight-black:900;
 }

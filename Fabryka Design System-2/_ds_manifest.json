@@ -1703,26 +1703,26 @@
       "definedIn": "tokens/typography.css"
     },
     {
-      "name": "--weight-section",
+      "name": "--weight-medium",
       "value": "500",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
-      "name": "--weight-medium",
-      "value": "var(--weight-section)",
-      "kind": "font",
-      "definedIn": "tokens/typography.css"
-    },
-    {
-      "name": "--weight-feature",
+      "name": "--weight-semibold",
       "value": "600",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
-      "name": "--weight-semibold",
-      "value": "var(--weight-feature)",
+      "name": "--weight-section",
+      "value": "var(--weight-medium)",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--weight-feature",
+      "value": "var(--weight-semibold)",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
