@@ -438,7 +438,7 @@
     },
     {
       "name": "--grey-light",
-      "value": "#D7D1CA",
+      "value": "var(--paper-4)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -486,7 +486,7 @@
     },
     {
       "name": "--surface-raised",
-      "value": "#FCFAF6",
+      "value": "var(--paper)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -498,7 +498,7 @@
     },
     {
       "name": "--surface-card",
-      "value": "#FCFAF6",
+      "value": "var(--paper)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -564,7 +564,7 @@
     },
     {
       "name": "--rule",
-      "value": "#D7D1CA",
+      "value": "var(--paper-4)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -636,7 +636,7 @@
     },
     {
       "name": "--ink-2",
-      "value": "#49423D",
+      "value": "var(--carbon-3)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -714,7 +714,7 @@
     },
     {
       "name": "--rule-on-image",
-      "value": "color-mix(in srgb,var(--rule) 67%,transparent)",
+      "value": "color-mix(in srgb,var(--paper-4) 67%,transparent)",
       "kind": "color",
       "definedIn": "tokens/colors.css"
     },
@@ -964,6 +964,13 @@
       "scope": "[data-theme=\"carbon\"]"
     },
     {
+      "name": "--surface-translucent",
+      "value": "color-mix(in srgb,var(--surface) 97%,transparent)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
       "name": "--text-body",
       "value": "var(--paper)",
       "kind": "font",
@@ -1062,15 +1069,8 @@
       "scope": "[data-theme=\"carbon\"]"
     },
     {
-      "name": "--surface-hero",
-      "value": "#514437",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--surface-footer",
-      "value": "var(--carbon-2)",
+      "name": "--focus-ring",
+      "value": "var(--text-accent-on-carbon)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
@@ -1083,22 +1083,8 @@
       "scope": "[data-theme=\"carbon\"]"
     },
     {
-      "name": "--surface-accent-hover",
-      "value": "var(--red-dark)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
       "name": "--text-accent-on-inverse",
       "value": "var(--red)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--text-footer",
-      "value": "var(--paper-4)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
@@ -1118,20 +1104,6 @@
       "scope": "[data-theme=\"carbon\"]"
     },
     {
-      "name": "--rule-accent",
-      "value": "var(--red)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--rule-accent-hover",
-      "value": "var(--red-dark)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
       "name": "--rule-on-inverse",
       "value": "color-mix(in srgb, var(--carbon) 16%, transparent)",
       "kind": "color",
@@ -1141,13 +1113,6 @@
     {
       "name": "--focus-ring-inverse",
       "value": "var(--carbon)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--swatch-steel",
-      "value": "var(--grey-dark)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
@@ -1204,13 +1169,6 @@
     {
       "name": "--figure-fill",
       "value": "var(--carbon-3)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--figure-accent",
-      "value": "var(--red)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
@@ -1422,7 +1380,7 @@
     },
     {
       "name": "--size-meta",
-      "value": "13px",
+      "value": "var(--size-mono)",
       "kind": "spacing",
       "definedIn": "tokens/typography.css"
     },
@@ -1518,7 +1476,7 @@
     },
     {
       "name": "--leading-hero-lead",
-      "value": "1.75",
+      "value": "var(--leading-lead)",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
@@ -1704,7 +1662,7 @@
     },
     {
       "name": "--track-mono",
-      "value": "0.02em",
+      "value": "var(--track-eyebrow)",
       "kind": "spacing",
       "definedIn": "tokens/typography.css"
     },
@@ -1752,26 +1710,26 @@
       "definedIn": "tokens/typography.css"
     },
     {
-      "name": "--weight-section",
-      "value": "500",
-      "kind": "font",
-      "definedIn": "tokens/typography.css"
-    },
-    {
       "name": "--weight-medium",
       "value": "500",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
-      "name": "--weight-feature",
+      "name": "--weight-semibold",
       "value": "600",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
     {
-      "name": "--weight-semibold",
-      "value": "600",
+      "name": "--weight-section",
+      "value": "var(--weight-medium)",
+      "kind": "font",
+      "definedIn": "tokens/typography.css"
+    },
+    {
+      "name": "--weight-feature",
+      "value": "var(--weight-semibold)",
       "kind": "font",
       "definedIn": "tokens/typography.css"
     },
@@ -3014,7 +2972,7 @@
     },
     {
       "name": "--radius-card",
-      "value": "0px",
+      "value": "var(--radius-0)",
       "kind": "radius",
       "definedIn": "tokens/borders.css"
     },
@@ -3056,20 +3014,6 @@
     {
       "name": "--border-control",
       "value": "var(--border-hair) solid var(--rule-control)",
-      "kind": "color",
-      "definedIn": "tokens/borders.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--border-accent",
-      "value": "var(--border-hair) solid var(--rule-accent)",
-      "kind": "color",
-      "definedIn": "tokens/borders.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--border-accent-heavy",
-      "value": "var(--border-heavy) solid var(--rule-accent)",
       "kind": "color",
       "definedIn": "tokens/borders.css",
       "scope": "[data-theme=\"carbon\"]"
