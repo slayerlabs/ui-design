@@ -140,6 +140,8 @@
 --plate-tint:rgba(252,250,246,.04);
 --link:#FF6A52;
 --link-hover:#FF8B77;
+/* AA: --red falls to 2.94:1 on --surface-card in this scope; the dark-band accent gives 7.10:1. */
+--focus-ring:var(--text-accent-on-carbon);
 
 --surface-inverse-hover:var(--paper-3);
 --text-accent-on-inverse:var(--red);

@@ -1062,6 +1062,13 @@
       "scope": "[data-theme=\"carbon\"]"
     },
     {
+      "name": "--focus-ring",
+      "value": "var(--text-accent-on-carbon)",
+      "kind": "color",
+      "definedIn": "tokens/colors.css",
+      "scope": "[data-theme=\"carbon\"]"
+    },
+    {
       "name": "--surface-inverse-hover",
       "value": "var(--paper-3)",
       "kind": "color",

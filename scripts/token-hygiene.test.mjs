@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { CARBON, ROOT, resolveToken, sourceTokens } from "./tokens.mjs";
+import { CARBON, ROOT, contrast, resolveToken, sourceTokens } from "./tokens.mjs";
 
 const HEX = /^#[0-9a-f]{3,8}$/i;
 
@@ -46,4 +46,14 @@ test("every carbon declaration changes the token's value", () => {
     (name) => resolveToken(name, ROOT) === resolveToken(name, CARBON),
   );
   assert.deepEqual(redundant.sort(), []);
+});
+
+// WCAG 1.4.11: a focus indicator needs 3:1 against the surface it sits on.
+test("the focus ring passes 3:1 on every surface in both scopes", () => {
+  for (const scope of [ROOT, CARBON]) {
+    for (const surface of ["--surface", "--surface-raised", "--surface-sunken", "--surface-card"]) {
+      const ratio = contrast(resolveToken("--focus-ring", scope), resolveToken(surface, scope));
+      assert.ok(ratio >= 3, `--focus-ring on ${surface} in ${scope}: ${ratio.toFixed(2)}:1`);
+    }
+  }
 });
