@@ -1,9 +1,9 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 import { SCOPE, buildTokens, scopeTokens } from "./build-tokens.mjs";
+import { CARBON, DS, ROOT, contrast, declarations, resolveCarbon, sourceTokens } from "./tokens.mjs";
 
 test("scopes every :root block", () => {
   assert.equal(scopeTokens(":root{--a:1}\n:root {--b:2}", "[x]"), "[x]{--a:1}\n[x]{--b:2}");
@@ -448,30 +448,6 @@ const NEW_TOKENS = [
   ["--heading-lead-gap", "28px"],
 ];
 
-function declarations(css) {
-  const found = [];
-  const context = [];
-  let start = 0;
-  const text = css.replace(/\/\*[\s\S]*?\*\//g, "");
-  for (let i = 0; i < text.length; i++) {
-    if (text[i] === "{") {
-      context.push(text.slice(start, i).trim());
-      start = i + 1;
-    } else if (text[i] === "}") {
-      const selector = context.pop();
-      if (!selector.startsWith("@")) {
-        const media = context.find((prelude) => prelude.startsWith("@media")) ?? null;
-        for (const declaration of text.slice(start, i).split(";")) {
-          const colon = declaration.indexOf(":");
-          if (colon > 0) found.push({ media, selector, name: declaration.slice(0, colon).trim(), value: declaration.slice(colon + 1).trim() });
-        }
-      }
-      start = i + 1;
-    }
-  }
-  return found;
-}
-
 const SCOPES = [
   ["root", ":root", '[data-theme="carbon"]'],
   ["scoped", SCOPE, `${SCOPE}[data-theme="carbon"],${SCOPE} [data-theme="carbon"]`],
@@ -505,19 +481,6 @@ test("font stacks survive the font-family filter", () => {
   }
 });
 
-const DS = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "Fabryka Design System-2");
-const TOKEN_FILES = ["colors", "spacing", "borders", "motion", "typography", "effects", "stacking"];
-
-function sourceTokens(scope) {
-  const tokens = new Map();
-  for (const file of TOKEN_FILES) {
-    for (const { media, selector, name, value } of declarations(readFileSync(path.join(DS, "tokens", `${file}.css`), "utf8"))) {
-      if (media === null && selector === scope && !tokens.has(name)) tokens.set(name, value);
-    }
-  }
-  return tokens;
-}
-
 test("unused legacy tokens are removed", () => {
   const { root, scoped } = buildTokens();
   for (const css of [root, scoped]) {
@@ -527,25 +490,8 @@ test("unused legacy tokens are removed", () => {
   }
 });
 
-const luminance = (hex) => {
-  const channels = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255).map((c) => (c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
-  return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2];
-};
-const contrast = (a, b) => {
-  const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x);
-  return (hi + 0.05) / (lo + 0.05);
-};
-
-const resolveCarbon = (name) => {
-  const root = sourceTokens(":root");
-  const carbon = sourceTokens('[data-theme="carbon"]');
-  let value = carbon.get(name) ?? root.get(name);
-  for (let ref; (ref = value.match(/^var\((--[\w-]+)\)$/)); ) value = carbon.get(ref[1]) ?? root.get(ref[1]);
-  return value;
-};
-
 test("accent text in the carbon scope is production's dark-band accent", () => {
-  assert.equal(sourceTokens('[data-theme="carbon"]').get("--text-accent"), "var(--text-accent-on-carbon)");
+  assert.equal(sourceTokens(CARBON).get("--text-accent"), "var(--text-accent-on-carbon)");
   assert.equal(resolveCarbon("--text-accent"), "#F08A68");
 });
 
@@ -560,8 +506,8 @@ test("accent text in the carbon scope passes AA on every carbon surface", () => 
 const SYNC = "out of sync with the token files; run npm run sync:manifest";
 
 test("the manifest and the adherence config list every token with its value", () => {
-  const tokens = sourceTokens(":root");
-  const carbon = sourceTokens('[data-theme="carbon"]');
+  const tokens = sourceTokens(ROOT);
+  const carbon = sourceTokens(CARBON);
   const manifest = JSON.parse(readFileSync(path.join(DS, "_ds_manifest.json"), "utf8"));
   const adherence = JSON.parse(readFileSync(path.join(DS, "_adherence.oxlintrc.json"), "utf8"))["x-omelette"];
   const names = [...tokens.keys()].sort();
