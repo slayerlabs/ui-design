@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { ROOT, resolveToken, sourceTokens } from "./tokens.mjs";
+import { CARBON, ROOT, resolveToken, sourceTokens } from "./tokens.mjs";
 
 const HEX = /^#[0-9a-f]{3,8}$/i;
 
@@ -37,4 +37,13 @@ test("a synonym aliases the canonical token instead of copying its value", () =>
     assert.equal(tokens.get(alias), `var(${canonical})`, `${alias} must be var(${canonical})`);
     assert.equal(resolveToken(alias), resolveToken(canonical), `${alias} must resolve like ${canonical}`);
   }
+});
+
+// A carbon declaration exists to re-declare a token whose ingredients change in that scope.
+// If it resolves to the root value it is dead weight: :root already supplies that value.
+test("every carbon declaration changes the token's value", () => {
+  const redundant = [...sourceTokens(CARBON).keys()].filter(
+    (name) => resolveToken(name, ROOT) === resolveToken(name, CARBON),
+  );
+  assert.deepEqual(redundant.sort(), []);
 });

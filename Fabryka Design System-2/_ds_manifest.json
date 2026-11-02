@@ -1062,20 +1062,6 @@
       "scope": "[data-theme=\"carbon\"]"
     },
     {
-      "name": "--surface-hero",
-      "value": "#514437",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--surface-footer",
-      "value": "var(--carbon-2)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
       "name": "--surface-inverse-hover",
       "value": "var(--paper-3)",
       "kind": "color",
@@ -1083,22 +1069,8 @@
       "scope": "[data-theme=\"carbon\"]"
     },
     {
-      "name": "--surface-accent-hover",
-      "value": "var(--red-dark)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
       "name": "--text-accent-on-inverse",
       "value": "var(--red)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--text-footer",
-      "value": "var(--paper-4)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
@@ -1118,20 +1090,6 @@
       "scope": "[data-theme=\"carbon\"]"
     },
     {
-      "name": "--rule-accent",
-      "value": "var(--red)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--rule-accent-hover",
-      "value": "var(--red-dark)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
       "name": "--rule-on-inverse",
       "value": "color-mix(in srgb, var(--carbon) 16%, transparent)",
       "kind": "color",
@@ -1141,13 +1099,6 @@
     {
       "name": "--focus-ring-inverse",
       "value": "var(--carbon)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--swatch-steel",
-      "value": "var(--grey-dark)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
@@ -1204,13 +1155,6 @@
     {
       "name": "--figure-fill",
       "value": "var(--carbon-3)",
-      "kind": "color",
-      "definedIn": "tokens/colors.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--figure-accent",
-      "value": "var(--red)",
       "kind": "color",
       "definedIn": "tokens/colors.css",
       "scope": "[data-theme=\"carbon\"]"
@@ -3056,20 +3000,6 @@
     {
       "name": "--border-control",
       "value": "var(--border-hair) solid var(--rule-control)",
-      "kind": "color",
-      "definedIn": "tokens/borders.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--border-accent",
-      "value": "var(--border-hair) solid var(--rule-accent)",
-      "kind": "color",
-      "definedIn": "tokens/borders.css",
-      "scope": "[data-theme=\"carbon\"]"
-    },
-    {
-      "name": "--border-accent-heavy",
-      "value": "var(--border-heavy) solid var(--rule-accent)",
       "kind": "color",
       "definedIn": "tokens/borders.css",
       "scope": "[data-theme=\"carbon\"]"

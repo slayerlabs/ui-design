@@ -141,19 +141,12 @@
 --link:#FF6A52;
 --link-hover:#FF8B77;
 
---surface-hero:#514437;
---surface-footer:var(--carbon-2);
 --surface-inverse-hover:var(--paper-3);
---surface-accent-hover:var(--red-dark);
 --text-accent-on-inverse:var(--red);
---text-footer:var(--paper-4);
 --rule-strong:var(--paper);
 --rule-control:var(--grey);
---rule-accent:var(--red);
---rule-accent-hover:var(--red-dark);
 --rule-on-inverse:color-mix(in srgb, var(--carbon) 16%, transparent);
 --focus-ring-inverse:var(--carbon);
---swatch-steel:var(--grey-dark);
 
 --figure-ink:var(--paper);
 --figure-ink-soft:var(--paper-3);
@@ -163,7 +156,6 @@
 --figure-paper:var(--carbon);
 --figure-tint:var(--carbon-2);
 --figure-fill:var(--carbon-3);
---figure-accent:var(--red);
 --figure-accent-strong:var(--red);
 }
 
